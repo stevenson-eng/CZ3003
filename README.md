@@ -1,8 +1,8 @@
 # Work flow
 
-1. Fork this repository
+1. git clone
 
-2. **git clone your forked repository, not this one**
+2. git branch YOUR_BRANCH_NAME
 
 3. [Project Dashboard](https://github.com/ernestang98/CZ3003/projects/1?add_cards_query=is%3Aopen)
 
