@@ -4,20 +4,26 @@
 
    - if you have forked it, kindly delete your fork oops
 
+   - set up personal access token [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
 2. [Project Dashboard](https://github.com/ernestang98/CZ3003/projects/1?add_cards_query=is%3Aopen)
 
 # General set up
 
-1. git clone this repository
+1. git clone this repository (with access token: `git clone https://YOUR-USERNAME:YOUR-TOKEN@github.com/ernestang98/CZ3003.git`)
 
 2. git branch YOUR_FEATURE (start your development process here)
 
-3. git add .
+3. git checkout YOUR_FEATURE
 
-4. git commit -m "COMMIT MESSAGE"
+4. git add .
 
-5. git remote add origin GITHUB-REPO-LINK
+5. git commit -m "COMMIT MESSAGE"
 
-6. git push origin YOUR_FEATURE
+6. git remote add origin GITHUB-REPO-LINK (skip this if you followed step 1)
 
-7. git pull origin YOUR_FEATURE (do this before pushing if your team is working on the same branch)
+7. git push origin YOUR_FEATURE
+
+8. git pull origin YOUR_FEATURE (do this before pushing if your team is working on the same branch)
+
+9. deleteing branches remotely and locally, click [here](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely) 
