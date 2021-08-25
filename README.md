@@ -10,7 +10,7 @@
 
 2. git add .
 
-3. git commit -m "<MESSAGE>"
+3. git commit -m "COMMIT MESSAGE"
   
 4. git push
   
