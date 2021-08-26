@@ -27,3 +27,13 @@
 8. git pull origin YOUR_FEATURE (do this before pushing if your team is working on the same branch)
 
 9. deleteing branches remotely and locally, click [here](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely) 
+
+
+# Resolving merge conflicts
+1. PRs shouldn't be reviewed when FF merge isn't possible
+
+2. git checkout main && git pull (sync your local main with remote main)
+
+3. git checkout YOUR_FEATURE && git rebase -i main (rebase your changes against PROD)
+
+4. !DANGEROUS - <ENSURE YOU ARE ON YOUR BRANCH - `git branch`> git push -f (to apply your commits AFTER all of master's commits)
