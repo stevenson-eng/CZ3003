@@ -17,6 +17,10 @@
   - https://stackoverflow.com/questions/55141565/onclickevent-on-a-textobject-unity/55141856	
   - https://answers.unity.com/questions/1260393/make-music-continue-playing-through-scenes.html
   - https://gamedevelopertips.com/unity-how-fade-between-scenes/
-
+  - https://answers.unity.com/questions/1253516/playing-audio-through-multiple-scenes.html
+  - https://www.youtube.com/watch?v=OKK69bmjmJE&ab_channel=FireBrainGames%28Creagines%29
+  - https://answers.unity.com/questions/1196834/unable-to-parent-to-a-canvas.html
+  - https://forum.unity.com/threads/how-do-you-get-the-parent-canvas.311240/
+  
 - Dont change void start to public void or private void
 - add script, then from script drag to the listener or onclick or wtv

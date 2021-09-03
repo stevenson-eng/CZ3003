@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class MusicScript : MonoBehaviour
 {
-    public AudioSource _audioSource;
-    private void Awake()
+    void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
-        _audioSource = GetComponent<AudioSource>();
-    }
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("backgroundMusic1");
+        if (objs.Length > 1)
+            Destroy(this.gameObject);
 
-    public void PlayMusic()
-    {
-        if (_audioSource.isPlaying) return;
-        _audioSource.Play();
-    }
+        DontDestroyOnLoad(this.gameObject);
 
-    public void StopMusic()
-    {
-        _audioSource.Stop();
     }
 }

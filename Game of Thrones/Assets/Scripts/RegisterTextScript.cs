@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class TextScript : MonoBehaviour, IPointerClickHandler
+public class RegisterTextScript : MonoBehaviour, IPointerClickHandler
 {
     // add callbacks in the inspector like for buttons
     public UnityEvent onClick;

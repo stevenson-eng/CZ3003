@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MusicController
+  - backgroundMusic1
+  - LoginScreenCanvas
   layers:
   - Default
   - TransparentFX

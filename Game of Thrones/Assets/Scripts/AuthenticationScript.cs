@@ -9,11 +9,7 @@ public class AuthenticationScript : MonoBehaviour
     public InputField email;
     public InputField password;
     public InputField confirmPassword;
-
-    void Start()
-    {
-        GameObject.FindGameObjectWithTag("MusicController").GetComponent<MusicScript>().PlayMusic();
-    }
+    public Canvas canvas;
 
     public void onLoginButtonClick()
     {
@@ -30,6 +26,11 @@ public class AuthenticationScript : MonoBehaviour
         if (email.text != "admin" || password.text != "password")
         {
             Debug.LogWarning("Wrong username/password");
+            GameObject popup = Instantiate(Resources.Load("ErrorPopUp") as GameObject);
+            PopUpScript extractPopUp = popup.GetComponent<PopUpScript>();
+
+
+            if (extractPopUp != null) extractPopUp.Init(canvas, "Wrong username/password");
         }
         else
         {
