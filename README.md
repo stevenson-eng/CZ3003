@@ -6,6 +6,10 @@
 
    - set up personal access token [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
+   - branch name convention
+     - game/your_awesome_feature
+     - aui/your_awesome_feature (depending on whether you're on Game Team or Admin UI Team)
+
 2. [Project Dashboard](https://github.com/ernestang98/CZ3003/projects/1?add_cards_query=is%3Aopen)
 
 # General set up
@@ -26,10 +30,10 @@
 
 8. git pull origin YOUR_FEATURE (do this before pushing if your team is working on the same branch)
 
-9. deleteing branches remotely and locally, click [here](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely) 
-
+9. deleteing branches remotely and locally, click [here](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely)
 
 # Resolving merge conflicts
+
 1. PRs shouldn't be reviewed when FF merge isn't possible
 
 2. git checkout main && git pull (sync your local main with remote main)
