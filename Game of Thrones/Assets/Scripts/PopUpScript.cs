@@ -27,7 +27,7 @@ public class PopUpScript : MonoBehaviour
         Debug.Log(this.gameObject.transform.localPosition);
 
         transform.SetParent(canvas.transform);
-        transform.position = new Vector3(1251, 691, 0);
+        transform.position = new Vector3(1000, 1000, 0);
 
 
         this.errorMessage.text = errorMessage;
