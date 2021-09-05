@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{a172dc48-04e0-ed95-9268-79e6c3016641}</ProjectGuid>
+    <ProjectGuid>{e4a25e5e-5ae4-f2a5-b2d1-0e84e3f7e9a5}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -287,38 +287,38 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>C:/Users/user/MyFirstGame/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <Reference Include="GitHub.Logging">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
  </Reference>
- <Reference Include="System.IO.Compression.FileSystem">
- <HintPath>C:/Users/user/MyFirstGame/Library/PackageCache/com.unity.connect.share@4.1.1/Plugins/System.IO.Compression.FileSystem.dll</HintPath>
+ <Reference Include="Unity.Plastic.Antlr3.Runtime">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>C:/Users/user/MyFirstGame/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/user/MyFirstGame/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="unityplastic">
- <HintPath>C:/Users/user/MyFirstGame/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Logging">
- <HintPath>C:/Users/user/MyFirstGame/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
- </Reference>
- <Reference Include="sfw.net">
- <HintPath>C:/Users/user/MyFirstGame/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.Unity.45">
- <HintPath>C:/Users/user/MyFirstGame/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.UnityShim">
- <HintPath>C:/Users/user/MyFirstGame/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+ </Reference>
+ <Reference Include="sfw.net">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.Api.45">
- <HintPath>C:/Users/user/MyFirstGame/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="unityplastic">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression.FileSystem">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/PackageCache/com.unity.connect.share@4.1.1/Plugins/System.IO.Compression.FileSystem.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/user/MyFirstGame/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -669,108 +669,108 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.InteractiveTutorialsFramework">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/UnityEditor.InteractiveTutorialsFramework.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Play.Publisher.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.Play.Publisher.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InteractiveTutorials.Core">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.dll</HintPath>
- </Reference>
- <Reference Include="Unity.EditorCoroutines.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InternalAPIEditorBridgeDev.001">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.InternalAPIEditorBridgeDev.001.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PlasticSCM.Editor">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InteractiveTutorials.Core.Scripts">
- <HintPath>C:/Users/user/MyFirstGame/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.Scripts.dll</HintPath>
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.Scripts.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.InteractiveTutorialsFramework">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/UnityEditor.InteractiveTutorialsFramework.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEditorBridgeDev.001">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.InternalAPIEditorBridgeDev.001.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Play.Publisher.Editor">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.Play.Publisher.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.EditorCoroutines.Editor">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.AddOns.Editor">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.Editor">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InteractiveTutorials.Core">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+ <HintPath>C:/Users/user/RiderProjects/CZ3003/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="fps.UI.csproj">
-      <Project>{de0a2856-653e-d992-d166-629fd533fcf1}</Project>
-      <Name>fps.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="fps.Editor.csproj">
-      <Project>{b7739379-34bc-4352-97f8-2ed31d4f010b}</Project>
+      <Project>{7ea69d55-9c03-84a3-f82d-263861b486af}</Project>
       <Name>fps.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="fps.AI.csproj">
-      <Project>{631a2730-b069-4883-1b2e-8c3f88acbc1b}</Project>
-      <Name>fps.AI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Microgame.Tutorials.csproj">
-      <Project>{e0321441-d2f5-b970-297a-784fb5127fc1}</Project>
-      <Name>Unity.Microgame.Tutorials</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.FPS.Tutorials.csproj">
-      <Project>{536a25eb-a4a4-1b75-423b-c9e7135a9f62}</Project>
+      <Project>{8dcf059a-28db-4e87-a452-56cd3f54d312}</Project>
       <Name>Unity.FPS.Tutorials</Name>
     </ProjectReference>
-    <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{5594475c-8d15-0a0e-990c-c25eaf0eafee}</Project>
-      <Name>NavMeshComponents</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{08ba3b10-3647-005d-2143-510af6816350}</Project>
-      <Name>NavMeshComponentsEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="fps.Game.csproj">
-      <Project>{11b2b2e1-6973-2701-0a6b-9a08429ca255}</Project>
+      <Project>{2a71472b-f927-e0eb-f400-638035a5f259}</Project>
       <Name>fps.Game</Name>
     </ProjectReference>
     <ProjectReference Include="fps.Gameplay.csproj">
-      <Project>{02772a7f-0e65-57a2-5161-ec4738593348}</Project>
+      <Project>{f89c50f7-6f96-4b78-46f6-d96d3954a000}</Project>
       <Name>fps.Gameplay</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Microgame.Tutorials.csproj">
+      <Project>{38181133-b597-c85b-715f-0ee200eae5bf}</Project>
+      <Name>Unity.Microgame.Tutorials</Name>
+    </ProjectReference>
+    <ProjectReference Include="fps.UI.csproj">
+      <Project>{f1e9c763-b3ab-daa5-ebac-31db968b674b}</Project>
+      <Name>fps.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="fps.AI.csproj">
+      <Project>{5dde4ca9-c012-c36d-7caf-98e302dab3b8}</Project>
+      <Name>fps.AI</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{7d74b814-67a1-4b2f-0aea-ebb02ff7488c}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{b5a19cfc-ca9b-55ac-e499-c7d1df4f1de6}</Project>
+      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
