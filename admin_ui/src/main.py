@@ -12,4 +12,4 @@ models.Student.metadata.create_all(bind=engine)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "hdsada"}
+    return {"dummy": "return"}
