@@ -1,35 +1,36 @@
-from typing import List
+from hashlib import sha256
 
-from fastapi.encoders import jsonable_encoder
+import models
+import schemas
+from models.student import Student
+from schemas.student import StudentCreate, StudentUpdate
 from sqlalchemy.orm import Session
 
 from crud.base import CRUDBase
-from models.student import Item
-from schemas.student import ItemCreate, ItemUpdate
 
 
-class CRUDItem(CRUDBase[Item, ItemCreate, ItemUpdate]):
-    def create_with_owner(
-        self, db: Session, *, obj_in: ItemCreate, owner_id: int
-    ) -> Item:
-        obj_in_data = jsonable_encoder(obj_in)
-        db_obj = self.model(**obj_in_data, owner_id=owner_id)
-        db.add(db_obj)
-        db.commit()
-        db.refresh(db_obj)
-        return db_obj
-
-    def get_multi_by_owner(
-        self, db: Session, *, owner_id: int, skip: int = 0, limit: int = 100
-    ) -> List[Item]:
-        return (
-            db.query(self.model)
-            .filter(Item.owner_id == owner_id)
-            .offset(skip)
-            .limit(limit)
-            .all()
+class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
+    def create(self, db: Session, student: schemas.StudentCreate):
+        hashed_password = sha256(student.password.encode("utf-8")).hexdigest()
+        db_student = models.Student(
+            email=student.email,
+            hashed_password=hashed_password,
+            name=student.name,
+            points=student.points,
         )
+        db.add(db_student)
+        db.commit()
+        db.refresh(db_student)
+        return db_student
+
+    def read(self, db: Session, email: str) -> Student:
+        return db.query(models.Student).filter(models.Student.email == email).first()
+
+    def update(self, db: Session, new_student: schemas.StudentUpdate):
+        old_student = (
+            db.query(models.Student).filter(models.Student.id == new_student.id).first()
+        )
+        return super().update(db, db_obj=old_student, obj_in=new_student)
 
 
-student = CRUDItem(Item)
-© 2021 GitHub, Inc.
+student = CRUDStudent(Student)
