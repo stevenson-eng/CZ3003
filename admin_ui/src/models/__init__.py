@@ -6,5 +6,6 @@ from models.student import Student
 from models.teacher import Teacher
 from models.category import Category
 from models.quest import Quest
+from models.subquest import Subquest
 
 # TODO - from models.XXX import XXX (copy line above)
