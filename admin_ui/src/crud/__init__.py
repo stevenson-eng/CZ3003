@@ -4,5 +4,6 @@ from crud.crud_teacher import teacher
 from crud.crud_category import category
 from crud.crud_quest import quest
 from crud.crud_subquest import subquest
+from crud.crud_npc import npc
 
 # TODO from crud.crud_xxx import xxx
