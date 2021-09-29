@@ -4,5 +4,6 @@ from .mail import Body, Mail, MailCreate
 from .student import Student, StudentCreate, StudentInDB, StudentUpdate
 from .teacher import Teacher, TeacherCreate, TeacherInDB, TeacherUpdate
 from .category import Category, CategoryCreate, CategoryInDB, CategoryUpdate
+from .quest import Quest, QuestCreate, QuestInDB, QuestUpdate
 
 # TODO from .xxx import XXX, XXXCreate, XXXInDB, XXXUpdate
