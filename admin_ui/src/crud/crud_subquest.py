@@ -18,7 +18,7 @@ class CRUDSubquest(CRUDBase[Subquest, SubquestCreate, SubquestUpdate]):
         return db_subquest
 
     def read(self, db: Session, id: str) -> Subquest:
-        return db.query(models.Subquest).filter(models.Subquest.email == id).first()
+        return db.query(models.Subquest).filter(models.Subquest.id == id).first()
 
     def update(self, db: Session, new_subquest: schemas.SubquestUpdate):
         old_subquest = (

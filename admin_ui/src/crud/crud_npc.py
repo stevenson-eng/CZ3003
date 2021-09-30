@@ -19,7 +19,7 @@ class CRUDNpc(CRUDBase[Npc, NpcCreate, NpcUpdate]):
         return db_npc
 
     def read(self, db: Session, id: str) -> Npc:
-        return db.query(models.Npc).filter(models.Npc.email == id).first()
+        return db.query(models.Npc).filter(models.Npc.id == id).first()
 
     def update(self, db: Session, new_npc: schemas.NpcUpdate):
         old_npc = (

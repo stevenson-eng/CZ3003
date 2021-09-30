@@ -18,7 +18,7 @@ class CRUDCategory(CRUDBase[Category, CategoryCreate, CategoryUpdate]):
         return db_category
 
     def read(self, db: Session, id: str) -> Category:
-        return db.query(models.Category).filter(models.Category.email == id).first()
+        return db.query(models.Category).filter(models.Category.id == id).first()
 
     def update(self, db: Session, new_category: schemas.CategoryUpdate):
         old_category = (

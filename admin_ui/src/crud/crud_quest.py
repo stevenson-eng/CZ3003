@@ -18,7 +18,7 @@ class CRUDQuest(CRUDBase[Quest, QuestCreate, QuestUpdate]):
         return db_quest
 
     def read(self, db: Session, id: str) -> Quest:
-        return db.query(models.Quest).filter(models.Quest.email == id).first()
+        return db.query(models.Quest).filter(models.Quest.id == id).first()
 
     def update(self, db: Session, new_quest: schemas.QuestUpdate):
         old_quest = (
