@@ -42,3 +42,8 @@
 
     - Go to your browser and search `localhost:8080/store`
 
+
+
+### Other stuff
+
+- [Integrate into CI/CD pipeline](https://medium.com/cloudadventure/security-in-a-ci-cd-pipeline-876ed8541fa4)
