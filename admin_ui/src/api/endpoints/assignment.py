@@ -14,7 +14,15 @@ def read(id: str, db: Session = Depends(get_db)):
 
 @router.post("/")
 def create(assignment: schemas.AssignmentCreate, db: Session = Depends(get_db)):
-    return crud.assignment.create(db, assignment)
+    assigner_in_db = crud.teacher.read(db, assignment.assigner)
+    assignee_in_db = crud.student.read(db, assignment.assignee)
+    return crud.assignment.create(
+        db,
+        schemas.AssignmentCreate(
+            assigner=assigner_in_db.id,
+            assignee=assignee_in_db.id,
+        ),
+    )
 
 
 @router.patch("/")
