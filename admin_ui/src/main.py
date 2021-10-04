@@ -1,11 +1,11 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
+from sqlalchemy import event
+from sqlalchemy.engine import Engine
 
 import models
 from api.api import api_router
 from db.database import engine
-
-from sqlalchemy.engine import Engine
-from sqlalchemy import event
 
 
 @event.listens_for(Engine, "connect")
@@ -23,4 +23,4 @@ models.Student.metadata.create_all(bind=engine)
 
 @app.get("/")
 def read_root():
-    return {"dummy": "return"}
+    return RedirectResponse(url="/docs")

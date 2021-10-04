@@ -1,7 +1,16 @@
 from fastapi import APIRouter
 
-from api.endpoints import mail  # TODO - import the endpoint
-from api.endpoints import assignment, student, teacher, category, quest, subquest, npc
+from api.endpoints import (
+    assignment,  # TODO - import the endpoint
+    authentication,
+    category,
+    mail,
+    npc,
+    quest,
+    student,
+    subquest,
+    teacher,
+)
 
 api_router = APIRouter()
 api_router.include_router(student.router, prefix="/student", tags=["student"])
@@ -12,5 +21,9 @@ api_router.include_router(category.router, prefix="/category", tags=["category"]
 api_router.include_router(quest.router, prefix="/quest", tags=["quest"])
 api_router.include_router(subquest.router, prefix="/subquest", tags=["subquest"])
 api_router.include_router(npc.router, prefix="/npc", tags=["npc"])
+api_router.include_router(
+    authentication.router, prefix="/authentication", tags=["authentication"]
+)
+
 
 # TODO api_router.include_router(xxx.router, prefix="/xxx", tags=["xxx"])
