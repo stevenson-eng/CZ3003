@@ -19,7 +19,7 @@ class CRUDAssignment(CRUDBase[Assignment, AssignmentCreate, AssignmentUpdate]):
         return db_assignment
 
     def read(self, db: Session, id: str) -> Assignment:
-        return db.query(models.Assignment).filter(models.Assignment.email == id).first()
+        return db.query(models.Assignment).filter(models.Assignment.id == id).first()
 
     def update(self, db: Session, new_assignment: schemas.AssignmentUpdate):
         old_assignment = (

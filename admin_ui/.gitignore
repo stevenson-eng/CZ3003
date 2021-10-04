@@ -139,4 +139,4 @@ dmypy.json
 cython_debug/
 
 # Deta deployment
-./src/deta/
+admin_ui/src/.deta/

@@ -2,11 +2,12 @@
 from db.database import Base
 
 from models.assignment import Assignment
-from models.student import Student
-from models.teacher import Teacher
 from models.category import Category
-from models.quest import Quest
-from models.subquest import Subquest
+from models.mail import Mail
 from models.npc import Npc
+from models.quest import Quest
+from models.student import Student
+from models.subquest import Subquest
+from models.teacher import Teacher
 
 # TODO - from models.XXX import XXX (copy line above)
