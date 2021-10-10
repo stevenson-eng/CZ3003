@@ -10,6 +10,7 @@ from api.endpoints import (
     student,
     subquest,
     teacher,
+    question
 )
 
 api_router = APIRouter()
@@ -24,6 +25,7 @@ api_router.include_router(npc.router, prefix="/npc", tags=["npc"])
 api_router.include_router(
     authentication.router, prefix="/authentication", tags=["authentication"]
 )
+api_router.include_router(question.router, prefix="/question", tags=["question"])
 
 
 # TODO api_router.include_router(xxx.router, prefix="/xxx", tags=["xxx"])

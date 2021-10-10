@@ -7,5 +7,6 @@ from .category import Category, CategoryCreate, CategoryInDB, CategoryUpdate
 from .quest import Quest, QuestCreate, QuestInDB, QuestUpdate
 from .subquest import Subquest, SubquestCreate, SubquestInDB, SubquestUpdate
 from .npc import Npc, NpcCreate, NpcInDB, NpcUpdate
+from .question import Question, QuestionCreate, QuestionInDB, QuestionUpdate
 
 # TODO from .xxx import XXX, XXXCreate, XXXInDB, XXXUpdate
