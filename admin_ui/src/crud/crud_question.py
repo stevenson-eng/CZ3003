@@ -10,6 +10,17 @@ from crud.base import CRUDBase
 class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
     def create(self, db: Session, question: schemas.QuestionCreate):
         db_question = models.Question(
+            subquest_id=question.subquest_id,
+            assignment_id=question.assignment_id,
+            difficulty=question.difficulty,
+            points=question.points,
+            sdlc_stage=question.points,
+            prompt=question.prompt,
+            answer=question.answer,
+            choice1=question.choice1,
+            choice2=question.choice2,
+            choice3=question.choice3,
+            choice4=question.choice4,
             name=question.name,
         )
         db.add(db_question)

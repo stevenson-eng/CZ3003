@@ -24,11 +24,11 @@ class QuestionBase(BaseModel):
     points: int
     sdlc_stage: SdlcStageEnum
     prompt: str
-    answer: str
-    choice1: int
-    choice2: int
-    choice3: int
-    choice4: int
+    answer: int
+    choice1: str
+    choice2: str
+    choice3: str
+    choice4: str
     name: str
 
 
@@ -51,11 +51,11 @@ class QuestionUpdate(BaseModel):
     points: Optional[int] = None
     sdlc_stage: Optional[SdlcStageEnum] = None
     prompt: Optional[str] = None
-    answer: Optional[str] = None
-    choice1: Optional[int] = None
-    choice2: Optional[int] = None
-    choice3: Optional[int] = None
-    choice4: Optional[int] = None
+    answer: Optional[int] = None
+    choice1: Optional[str] = None
+    choice2: Optional[str] = None
+    choice3: Optional[str] = None
+    choice4: Optional[str] = None
     name: Optional[str] = None
 
 
