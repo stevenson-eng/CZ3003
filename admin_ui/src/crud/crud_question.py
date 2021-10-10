@@ -14,7 +14,7 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
             assignment_id=question.assignment_id,
             difficulty=question.difficulty,
             points=question.points,
-            sdlc_stage=question.points,
+            sdlc_stage=question.sdlc_stage,
             prompt=question.prompt,
             answer=question.answer,
             choice1=question.choice1,
