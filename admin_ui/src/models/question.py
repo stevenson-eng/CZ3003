@@ -1,9 +1,7 @@
 import uuid
 
-from sqlalchemy.sql.sqltypes import Integer
-
 from db.database import Base
-from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, String, Integer, ForeignKey
 
 
 class Question(Base):

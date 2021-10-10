@@ -68,11 +68,11 @@ class QuestionInDBBase(QuestionBase):
     points: int
     sdlc_stage: SdlcStageEnum
     prompt: str
-    answer: str
-    choice1: int
-    choice2: int
-    choice3: int
-    choice4: int
+    answer: int
+    choice1: str
+    choice2: str
+    choice3: str
+    choice4: str
     name: str
 
     class Config:
