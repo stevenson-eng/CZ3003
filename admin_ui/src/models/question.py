@@ -21,4 +21,3 @@ class Question(Base):
     choice2 = Column(String, nullable=False)
     choice3 = Column(String, nullable=False)
     choice4 = Column(String, nullable=False)
-    name = Column(String, nullable=False)

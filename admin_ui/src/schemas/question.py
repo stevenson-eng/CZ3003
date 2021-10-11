@@ -29,7 +29,6 @@ class QuestionBase(BaseModel):
     choice2: str
     choice3: str
     choice4: str
-    name: str
 
 
 # Properties to receive on question creation
@@ -56,7 +55,6 @@ class QuestionUpdate(BaseModel):
     choice2: Optional[str] = None
     choice3: Optional[str] = None
     choice4: Optional[str] = None
-    name: Optional[str] = None
 
 
 # Properties shared by models stored in DB
@@ -73,7 +71,6 @@ class QuestionInDBBase(QuestionBase):
     choice2: str
     choice3: str
     choice4: str
-    name: str
 
     class Config:
         orm_mode = True
