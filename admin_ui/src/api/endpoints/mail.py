@@ -24,4 +24,6 @@ def read_all(db: Session = Depends(get_db)):
 @router.post("/")
 async def send_async(email: schemas.MailCreate, db: Session = Depends(get_db)):
     crud.mail.create(db, email)
-    await send_mail_async(email.subject, email.recipients, email.body)
+    await send_mail_async(
+        email.subject, email.recipients, email.body_heading, email.body_text
+    )

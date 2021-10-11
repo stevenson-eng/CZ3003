@@ -22,9 +22,7 @@ class CRUDQuest(CRUDBase[Quest, QuestCreate, QuestUpdate]):
 
     def update(self, db: Session, new_quest: schemas.QuestUpdate):
         old_quest = (
-            db.query(models.Quest)
-            .filter(models.Quest.id == new_quest.id)
-            .first()
+            db.query(models.Quest).filter(models.Quest.id == new_quest.id).first()
         )
         return super().update(db, db_obj=old_quest, obj_in=new_quest)
 

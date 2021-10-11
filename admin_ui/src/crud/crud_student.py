@@ -28,7 +28,9 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
 
     def update(self, db: Session, new_student: schemas.StudentUpdate):
         old_student = (
-            db.query(models.Student).filter(models.Student.id == new_student.id).first()
+            db.query(models.Student)
+            .filter(models.Student.email == new_student.email)
+            .first()
         )
         return super().update(db, db_obj=old_student, obj_in=new_student)
 

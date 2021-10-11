@@ -22,11 +22,7 @@ class CRUDNpc(CRUDBase[Npc, NpcCreate, NpcUpdate]):
         return db.query(models.Npc).filter(models.Npc.id == id).first()
 
     def update(self, db: Session, new_npc: schemas.NpcUpdate):
-        old_npc = (
-            db.query(models.Npc)
-            .filter(models.Npc.id == new_npc.id)
-            .first()
-        )
+        old_npc = db.query(models.Npc).filter(models.Npc.id == new_npc.id).first()
         return super().update(db, db_obj=old_npc, obj_in=new_npc)
 
 

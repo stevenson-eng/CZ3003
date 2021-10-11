@@ -3,7 +3,6 @@ from pathlib import Path
 from typing import List
 from dotenv import load_dotenv
 from fastapi_mail import ConnectionConfig, FastMail, MessageSchema
-import schemas
 
 load_dotenv(".env")
 
@@ -34,12 +33,13 @@ conf = ConnectionConfig(
 async def send_mail_async(
     subject: str,
     recipients: List[str],
-    template_body: schemas.Body,
+    body_heading: str,
+    body_text: str,
 ):
     message = MessageSchema(
         subject=subject,
         recipients=recipients,
-        template_body=template_body,
+        template_body={"heading": body_heading, "text": body_text},
         subtype="html",
     )
     fm = FastMail(conf)

@@ -25,8 +25,19 @@ https://www.youtube.com/watch?v=-ykeT6kk4bk
    - pylint (linter) - lints all .py files in the directory, recursively. Fix the errors manually.
    - mypy (static type checker) - checks for wrong types in all .py files in the directory, recursively. Fix the errors manually.
 
-# Deployment
+# Deployment - Deta
+deta update --env admin_ui/src/.env (update ENV)
+cd admin_ui/src && deta deploy
 
-1. https://fastapi.tiangolo.com/deployment/deta/
-2. Ping Wei Lun for deployment after every merge - https://0kftyn.deta.dev
-3. In future, we'll setup automatic deployment via `cd admin_ui/src && deta watch .`
+# Deployment - Azure VM + HTTP Tunneling
+## Update host machine main branch
+gco main && gp
+
+## Start up application server
+cd admin_ui/src/ && uvicorn main:app &
+disown
+
+## Start up HTTP tunnel
+lt --port 8000 &
+disown
+

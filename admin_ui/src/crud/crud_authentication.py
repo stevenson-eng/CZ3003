@@ -4,7 +4,6 @@ from datetime import datetime
 from random import randint
 from typing import Dict, Optional
 
-import schemas
 from mail.send_mail import send_mail_async
 
 Session = namedtuple("Session", ["email_address", "session_id", "time_created"])
@@ -55,11 +54,12 @@ class CRUDAuthentication:
     async def send_otp_email(self, email_address: str, otp: int) -> None:
         subject = "Game of Thrones - Login OTP"
         recipients = [email_address]
-        template_body = schemas.Body(
-            heading=subject,
-            text=f"Your OTP is {otp}. It expires in {self.otp_session.ttl_in_seconds // 60} minutes.",
+        await send_mail_async(
+            subject,
+            recipients,
+            subject,
+            f"Your OTP is {otp}. It expires in {self.otp_session.ttl_in_seconds // 60} minutes.",
         )
-        await send_mail_async(subject, recipients, template_body)
 
 
 authentication = CRUDAuthentication()

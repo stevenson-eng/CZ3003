@@ -1,5 +1,4 @@
 from typing import Optional
-from uuid import UUID
 
 from pydantic import BaseModel
 
@@ -22,14 +21,12 @@ class TeacherUpdate(BaseModel):
     which must support partial updates
     """
 
-    id: str
     email: Optional[str] = None
     name: Optional[str] = None
 
 
 # Properties shared by models stored in DB
 class TeacherInDBBase(TeacherBase):
-    id: UUID
     email: str
     name: str
 
