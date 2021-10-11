@@ -1,7 +1,7 @@
 import uuid
 
 from db.database import Base
-from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, String, Integer, ForeignKey
 
 
 class Quest(Base):
