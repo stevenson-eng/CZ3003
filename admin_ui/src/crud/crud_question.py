@@ -21,7 +21,6 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
             choice2=question.choice2,
             choice3=question.choice3,
             choice4=question.choice4,
-            name=question.name,
         )
         db.add(db_question)
         db.commit()
