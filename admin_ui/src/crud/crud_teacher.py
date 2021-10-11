@@ -23,7 +23,9 @@ class CRUDTeacher(CRUDBase[Teacher, TeacherCreate, TeacherUpdate]):
 
     def update(self, db: Session, new_teacher: schemas.TeacherUpdate):
         old_teacher = (
-            db.query(models.Teacher).filter(models.Teacher.id == new_teacher.id).first()
+            db.query(models.Teacher)
+            .filter(models.Teacher.email == new_teacher.email)
+            .first()
         )
         return super().update(db, db_obj=old_teacher, obj_in=new_teacher)
 

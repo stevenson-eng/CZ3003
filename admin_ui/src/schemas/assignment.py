@@ -8,6 +8,8 @@ from pydantic import BaseModel
 class AssignmentBase(BaseModel):
     assigner: str
     assignee: str
+    points_scored: Optional[int] = None
+    time_to_complete_in_seconds: Optional[int] = None
 
 
 # Properties to receive on assignment creation
@@ -22,16 +24,15 @@ class AssignmentUpdate(BaseModel):
     which must support partial updates
     """
 
-    id: str
     assigner: Optional[str] = None
     assignee: Optional[str] = None
+    points_scored: Optional[int] = None
+    time_to_complete_in_seconds: Optional[int] = None
 
 
 # Properties shared by models stored in DB
 class AssignmentInDBBase(AssignmentBase):
     id: UUID
-    assigner: str
-    assignee: str
 
     class Config:
         orm_mode = True

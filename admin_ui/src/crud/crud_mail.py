@@ -1,12 +1,12 @@
 from typing import List, Optional
 
-import crud
 import models
 import schemas
 from models.mail import Mail
 from schemas.mail import MailCreate, MailUpdate
 from sqlalchemy.orm import Session
 
+import crud
 from crud.base import CRUDBase
 
 
@@ -17,10 +17,11 @@ class CRUDMail(CRUDBase[Mail, MailCreate, MailUpdate]):
         for recipient in mail.recipients:
             recipient_in_db = crud.student.read(db, recipient)
             db_mail = models.Mail(
-                sender_id=sender_in_db.id,
-                recipient_id=recipient_in_db.id,
+                sender=sender_in_db.email,
+                recipient=recipient_in_db.email,
                 subject=mail.subject,
-                body=mail.subject,
+                body_heading=mail.body_heading,
+                body_text=mail.body_text,
             )
             db.add(db_mail)
 

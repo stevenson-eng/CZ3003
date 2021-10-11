@@ -3,6 +3,7 @@ import schemas
 from db.database import get_db
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from typing import List
 
 router = APIRouter()
 
@@ -12,6 +13,11 @@ def read(id: str, db: Session = Depends(get_db)):
     return crud.assignment.read(db, id)
 
 
+@router.get("/", response_model=List[schemas.Assignment])
+def read_all(db: Session = Depends(get_db)):
+    return crud.assignment.read_all(db)
+
+
 @router.post("/")
 def create(assignment: schemas.AssignmentCreate, db: Session = Depends(get_db)):
     assigner_in_db = crud.teacher.read(db, assignment.assigner)
@@ -19,8 +25,8 @@ def create(assignment: schemas.AssignmentCreate, db: Session = Depends(get_db)):
     return crud.assignment.create(
         db,
         schemas.AssignmentCreate(
-            assigner=assigner_in_db.id,
-            assignee=assignee_in_db.id,
+            assigner=assigner_in_db.email,
+            assignee=assignee_in_db.email,
         ),
     )
 

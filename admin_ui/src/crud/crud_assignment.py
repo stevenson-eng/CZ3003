@@ -1,3 +1,5 @@
+from typing import List
+
 import models
 import schemas
 from models.assignment import Assignment
@@ -20,6 +22,9 @@ class CRUDAssignment(CRUDBase[Assignment, AssignmentCreate, AssignmentUpdate]):
 
     def read(self, db: Session, id: str) -> Assignment:
         return db.query(models.Assignment).filter(models.Assignment.id == id).first()
+
+    def read_all(self, db: Session) -> List[Assignment]:
+        return db.query(models.Assignment).all()
 
     def update(self, db: Session, new_assignment: schemas.AssignmentUpdate):
         old_assignment = (

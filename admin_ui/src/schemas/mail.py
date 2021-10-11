@@ -4,18 +4,10 @@ from uuid import UUID
 from pydantic import BaseModel
 
 
-class BodyBase(BaseModel):
-    heading: str
-    text: str
-
-
-class Body(BodyBase):
-    pass
-
-
 class MailBase(BaseModel):
     subject: str
-    body: Body
+    body_heading: str
+    body_text: str
     sender: str
     recipients: List[str]
 
@@ -30,10 +22,6 @@ class MailUpdate(MailBase):
 
 class MailInDBBase(BaseModel):
     id: UUID
-    sender_id: str
-    recipient_id: str
-    subject: str
-    body: str
 
     class Config:
         orm_mode = True
@@ -41,7 +29,11 @@ class MailInDBBase(BaseModel):
 
 # Properties to return to client
 class Mail(MailInDBBase):
-    pass
+    sender: str
+    recipient: str
+    subject: str
+    body_heading: str
+    body_text: str
 
 
 # Properties properties stored in DB
