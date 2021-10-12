@@ -7,6 +7,8 @@ import models
 from api.api import api_router
 from db.database import engine
 
+from starlette_exporter import PrometheusMiddleware, handle_metrics
+
 
 @event.listens_for(Engine, "connect")
 def set_sqlite_pragma(dbapi_connection, connection_record):
@@ -16,6 +18,10 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
 
 
 app = FastAPI()
+
+app.add_middleware(PrometheusMiddleware)
+app.add_route("/metrics", handle_metrics)
+
 app.include_router(api_router)
 models.Base.metadata.create_all(bind=engine)
 models.Student.metadata.create_all(bind=engine)
