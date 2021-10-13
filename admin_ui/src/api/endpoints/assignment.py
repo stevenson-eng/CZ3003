@@ -31,9 +31,9 @@ def create(assignment: schemas.AssignmentCreate, db: Session = Depends(get_db)):
         schemas.AssignmentCreate(
             assigner=assigner_in_db.email,
             assignee=assignee_in_db.email,
+            description=assignment.description,
             points_scored=assignment.points_scored,
             time_to_complete_in_seconds=assignment.time_to_complete_in_seconds,
-            description=assignment.description,
         ),
     )
 

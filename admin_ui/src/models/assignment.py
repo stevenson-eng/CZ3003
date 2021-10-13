@@ -12,6 +12,6 @@ class Assignment(Base):
     id = Column(String, primary_key=True, index=True, default=lambda: str(uuid.uuid4()))
     assigner = Column(String, ForeignKey("teacher.email"), nullable=False)
     assignee = Column(String, ForeignKey("student.email"), nullable=False)
+    description = Column(String, nullable=False)
     points_scored = Column(Integer, nullable=True)
     time_to_complete_in_seconds = Column(Integer, nullable=True)
-    description = Column(String, nullable=False)

@@ -14,9 +14,9 @@ class CRUDAssignment(CRUDBase[Assignment, AssignmentCreate, AssignmentUpdate]):
         db_assignment = models.Assignment(
             assigner=assignment.assigner,
             assignee=assignment.assignee,
+            description=assignment.description,
             points_scored=assignment.points_scored,
             time_to_complete_in_seconds=assignment.time_to_complete_in_seconds,
-            description=assignment.description,
         )
         db.add(db_assignment)
         db.commit()
