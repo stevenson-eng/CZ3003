@@ -27,9 +27,6 @@ class QuestUpdate(BaseModel):
 
 # Properties shared by models stored in DB
 class QuestInDBBase(QuestBase):
-    quest_name: str
-    category_name: str
-
     class Config:
         orm_mode = True
 

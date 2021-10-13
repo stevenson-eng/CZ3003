@@ -6,8 +6,8 @@ from pydantic import BaseModel
 
 # Shared properties
 class NpcBase(BaseModel):
+    npc_name: str
     subquest_name: str
-    name: str
 
 
 # Properties to receive on npc creation
@@ -21,18 +21,12 @@ class NpcUpdate(BaseModel):
     All update fields should be optional, as updates are done via HTTP PATCH,
     which must support partial updates
     """
-
-    id: str
+    npc_name: Optional[str] = None
     subquest_name: Optional[str] = None
-    name: Optional[str] = None
 
 
 # Properties shared by models stored in DB
 class NpcInDBBase(NpcBase):
-    id: UUID
-    subquest_name: str
-    name: str
-
     class Config:
         orm_mode = True
 

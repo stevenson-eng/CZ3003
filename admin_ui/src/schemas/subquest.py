@@ -27,9 +27,6 @@ class SubquestUpdate(BaseModel):
 
 # Properties shared by models stored in DB
 class SubquestInDBBase(SubquestBase):
-    subquest_name: str
-    quest_name: str
-
     class Config:
         orm_mode = True
 

@@ -60,18 +60,6 @@ class QuestionUpdate(BaseModel):
 # Properties shared by models stored in DB
 class QuestionInDBBase(QuestionBase):
     id: UUID
-    subquest_name: str
-    assignment_id: str
-    difficulty: DifficultyEnum
-    points: int
-    sdlc_stage: SdlcStageEnum
-    prompt: str
-    answer: int
-    choice1: str
-    choice2: str
-    choice3: str
-    choice4: str
-
     class Config:
         orm_mode = True
 

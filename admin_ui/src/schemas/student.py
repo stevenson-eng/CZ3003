@@ -29,10 +29,6 @@ class StudentUpdate(BaseModel):
 
 # Properties shared by models stored in DB
 class StudentInDBBase(StudentBase):
-    email: str
-    name: str
-    points: int
-
     class Config:
         orm_mode = True
 

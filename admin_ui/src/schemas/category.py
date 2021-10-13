@@ -25,8 +25,6 @@ class CategoryUpdate(BaseModel):
 
 # Properties shared by models stored in DB
 class CategoryInDBBase(CategoryBase):
-    category_name: str
-
     class Config:
         orm_mode = True
 
