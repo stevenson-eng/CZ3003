@@ -24,3 +24,4 @@ def create(quest: schemas.QuestCreate, db: Session = Depends(get_db)):
 @router.patch("/")
 def update(quest: schemas.QuestUpdate, db: Session = Depends(get_db)):
     return crud.quest.update(db, quest)
+

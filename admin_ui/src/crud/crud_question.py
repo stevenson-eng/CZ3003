@@ -3,9 +3,7 @@ from typing import List
 import models
 import schemas
 from models.question import Question
-from models.subquest import Subquest
-from models.quest import Quest
-from schemas.question import QuestionCreate, QuestionUpdate, DifficultyEnum
+from schemas.question import QuestionCreate, QuestionUpdate
 from sqlalchemy.orm import Session
 
 from crud.base import CRUDBase
@@ -44,11 +42,5 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
             .first()
         )
         return super().update(db, db_obj=old_question, obj_in=new_question)
-
-    def get_questions_by_quest(self, db: Session, id: str, question: schemas.QuestionInDB, difficulty: DifficultyEnum) -> Question:
-        questions_by_quest_query = db.query(models.Question, models.Subquest, models.Quest).\
-            select_from(models.Question).join(models.Subquest).join(models.Quest).\
-                filter(models.Question.difficulty == difficulty).limit(5)
-        return questions_by_quest_query
 
 question = CRUDQuestion(Question)
