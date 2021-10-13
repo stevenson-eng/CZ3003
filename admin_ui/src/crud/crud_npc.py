@@ -1,3 +1,5 @@
+from typing import List
+
 import models
 import schemas
 from models.npc import Npc
@@ -20,6 +22,9 @@ class CRUDNpc(CRUDBase[Npc, NpcCreate, NpcUpdate]):
 
     def read(self, db: Session, npc_name: str) -> Npc:
         return db.query(models.Npc).filter(models.Npc.npc_name == npc_name).first()
+
+    def read_all(self, db: Session) -> List[Npc]:
+        return db.query(models.Npc).all()
 
     def update(self, db: Session, new_npc: schemas.NpcUpdate):
         old_npc = db.query(models.Npc).filter(models.Npc.npc_name == new_npc.npc_name).first()

@@ -1,3 +1,5 @@
+from typing import List
+
 import models
 import schemas
 from models.question import Question
@@ -29,6 +31,9 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
 
     def read(self, db: Session, id: str) -> Question:
         return db.query(models.Question).filter(models.Question.id == id).first()
+
+    def read_all(self, db: Session) -> List[Question]:
+        return db.query(models.Question).all()
 
     def update(self, db: Session, new_question: schemas.QuestionUpdate):
         old_question = (
