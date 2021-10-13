@@ -22,7 +22,7 @@ def read_by_parameters(
     quest_name: Optional[str] = None, 
     subquest_name: Optional[str] = None, 
     difficulty: Optional[int]= None, 
-    limit: Optional[int] = 5, 
+    limit: Optional[int] = None, 
     db: Session = Depends(get_db)):
     return crud.question.read_by_parameters(db, category_name, 
     quest_name, subquest_name, difficulty, limit)

@@ -36,19 +36,22 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
 
     def read_by_parameters(self, db: Session, category_name: str, quest_name:str, \
         subquest_name: str, difficulty: int, limit: int) -> List[Question]:
-        questions_by_parameters=db.query(Question)
+        questions_by_parameters=db.query(Question).filter(
+            Question.category_name == category_name,
+            Question.quest_name == quest_name,
+            Question.subquest_name == subquest_name
+        )
+        # if category_name is not None:
+        #     questions_by_parameters = questions_by_parameters.filter(
+        #         Question.category_name == category_name)
 
-        if category_name is not None:
-            questions_by_parameters = questions_by_parameters.filter(
-                Question.category_name == category_name)
+        # if quest_name is not None:
+        #     questions_by_parameters = questions_by_parameters.filter(
+        #         Question.quest_name == quest_name)
 
-        if quest_name is not None:
-            questions_by_parameters = questions_by_parameters.filter(
-                Question.quest_name == quest_name)
-
-        if subquest_name is not None:
-            questions_by_parameters = questions_by_parameters.filter(
-                Question.subquest_name == subquest_name)
+        # if subquest_name is not None:
+        #     questions_by_parameters = questions_by_parameters.filter(
+        #         Question.subquest_name == subquest_name)
 
         if difficulty is not None:
             questions_by_parameters = questions_by_parameters.filter(
