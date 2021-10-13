@@ -14,4 +14,4 @@ class Assignment(Base):
     assignee = Column(String, ForeignKey("student.email"), nullable=False)
     points_scored = Column(Integer, nullable=True)
     time_to_complete_in_seconds = Column(Integer, nullable=True)
-    description = Column(String, nullable=True)
+    description = Column(String, nullable=False)
