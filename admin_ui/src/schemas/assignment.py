@@ -10,7 +10,7 @@ class AssignmentBase(BaseModel):
     assignee: str
     points_scored: Optional[int] = None
     time_to_complete_in_seconds: Optional[int] = None
-    description: Optional[str] = None
+    description: str
 
 # Properties to receive on assignment creation
 class AssignmentCreate(AssignmentBase):
