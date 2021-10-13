@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 from os import name
-=======
 from typing import List
 
->>>>>>> 77a82ed... updated asssignment time and points, added read_all endpoint for all entities except for authentication
 import models
 import schemas
 from models.category import Category
