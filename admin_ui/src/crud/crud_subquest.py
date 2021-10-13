@@ -1,3 +1,5 @@
+from typing import List
+
 import models
 import schemas
 from models.subquest import Subquest
@@ -20,6 +22,9 @@ class CRUDSubquest(CRUDBase[Subquest, SubquestCreate, SubquestUpdate]):
 
     def read(self, db: Session, subquest_name: str) -> Subquest:
         return db.query(models.Subquest).filter(models.Subquest.subquest_name == subquest_name).first()
+
+    def read_all(self, db: Session) -> List[Subquest]:
+        return db.query(models.Subquest).all()
 
     def update(self, db: Session, new_subquest: schemas.SubquestUpdate):
         old_subquest = (

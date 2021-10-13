@@ -1,3 +1,5 @@
+from typing import List
+
 import models
 import schemas
 from models.quest import Quest
@@ -20,6 +22,9 @@ class CRUDQuest(CRUDBase[Quest, QuestCreate, QuestUpdate]):
 
     def read(self, db: Session, quest_name: str) -> Quest:
         return db.query(models.Quest).filter(models.Quest.quest_name == quest_name).first()
+
+    def read_all(self, db: Session) -> List[Quest]:
+        return db.query(models.Quest).all()
 
     def update(self, db: Session, new_quest: schemas.QuestUpdate):
         old_quest = (

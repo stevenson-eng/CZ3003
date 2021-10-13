@@ -1,3 +1,5 @@
+from typing import List
+
 import models
 import schemas
 from models.teacher import Teacher
@@ -20,6 +22,9 @@ class CRUDTeacher(CRUDBase[Teacher, TeacherCreate, TeacherUpdate]):
 
     def read(self, db: Session, email: str) -> Teacher:
         return db.query(models.Teacher).filter(models.Teacher.email == email).first()
+
+    def read_all(self, db: Session) -> List[Teacher]:
+        return db.query(models.Teacher).all()
 
     def update(self, db: Session, new_teacher: schemas.TeacherUpdate):
         old_teacher = (

@@ -3,6 +3,7 @@ import schemas
 from db.database import get_db
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from typing import List
 
 router = APIRouter()
 
@@ -11,6 +12,9 @@ router = APIRouter()
 def read(email: str, db: Session = Depends(get_db)):
     return crud.student.read(db, email)
 
+@router.get("/", response_model=List[schemas.Student])
+def read_all(db: Session = Depends(get_db)):
+    return crud.student.read_all(db)
 
 @router.post("/")
 def create(student: schemas.StudentCreate, db: Session = Depends(get_db)):
