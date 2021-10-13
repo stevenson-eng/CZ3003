@@ -32,7 +32,7 @@ class AssignmentUpdate(BaseModel):
 
 # Properties shared by models stored in DB
 class AssignmentInDBBase(AssignmentBase):
-    id: UUID
+    assignment_id: UUID
 
     class Config:
         orm_mode = True
