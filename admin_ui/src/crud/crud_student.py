@@ -12,10 +12,8 @@ from typing import List
 
 class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
     def create(self, db: Session, student: schemas.StudentCreate):
-        hashed_password = sha256(student.password.encode("utf-8")).hexdigest()
         db_student = models.Student(
             email=student.email,
-            hashed_password=hashed_password,
             name=student.name,
             points=student.points,
         )

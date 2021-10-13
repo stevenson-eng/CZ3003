@@ -18,7 +18,7 @@ class SdlcStageEnum(int, Enum):
 
 # Shared properties
 class QuestionBase(BaseModel):
-    subquest_id: str
+    subquest_name: str
     assignment_id: str
     difficulty: DifficultyEnum
     points: int
@@ -44,7 +44,7 @@ class QuestionUpdate(BaseModel):
     """
 
     id: str
-    subquest_id: Optional[str] = None
+    subquest_name: Optional[str] = None
     assignment_id: Optional[str] = None
     difficulty: Optional[DifficultyEnum] = None
     points: Optional[int] = None
@@ -60,18 +60,6 @@ class QuestionUpdate(BaseModel):
 # Properties shared by models stored in DB
 class QuestionInDBBase(QuestionBase):
     id: UUID
-    subquest_id: str
-    assignment_id: str
-    difficulty: DifficultyEnum
-    points: int
-    sdlc_stage: SdlcStageEnum
-    prompt: str
-    answer: int
-    choice1: str
-    choice2: str
-    choice3: str
-    choice4: str
-
     class Config:
         orm_mode = True
 

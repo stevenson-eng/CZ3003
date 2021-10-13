@@ -6,7 +6,8 @@ from pydantic import BaseModel
 
 # Shared properties
 class QuestBase(BaseModel):
-    category_id: str
+    quest_name: str
+    category_name: str
 
 
 # Properties to receive on quest creation
@@ -20,16 +21,12 @@ class QuestUpdate(BaseModel):
     All update fields should be optional, as updates are done via HTTP PATCH,
     which must support partial updates
     """
-
-    id: str
-    category_id: Optional[str] = None
+    quest_name: Optional[str] = None
+    category_name: Optional[str] = None
 
 
 # Properties shared by models stored in DB
 class QuestInDBBase(QuestBase):
-    id: UUID
-    category_id: str
-
     class Config:
         orm_mode = True
 

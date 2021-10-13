@@ -6,7 +6,8 @@ from pydantic import BaseModel
 
 # Shared properties
 class SubquestBase(BaseModel):
-    quest_id: str
+    subquest_name: str
+    quest_name: str
 
 
 # Properties to receive on subquest creation
@@ -20,16 +21,12 @@ class SubquestUpdate(BaseModel):
     All update fields should be optional, as updates are done via HTTP PATCH,
     which must support partial updates
     """
-
-    id: str
-    quest_id: Optional[str] = None
+    subquest_name: Optional[str] = None
+    quest_name: Optional[str] = None
 
 
 # Properties shared by models stored in DB
 class SubquestInDBBase(SubquestBase):
-    id: UUID
-    quest_id: str
-
     class Config:
         orm_mode = True
 

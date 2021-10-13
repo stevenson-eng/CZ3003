@@ -9,6 +9,5 @@ class Npc(Base):
 
     # TODO - ensure that foreign key constraints, if any, are enforced
     # TODO - https://docs.sqlalchemy.org/en/14/core/constraints.html
-    id = Column(String, primary_key=True, index=True, default=lambda: str(uuid.uuid4()))
-    subquest_id = Column(String, ForeignKey("subquest.id"), nullable=False)
-    name = Column(String, nullable=False)
+    npc_name = Column(String, primary_key=True, index=True, unique=True)
+    subquest_name = Column(String, ForeignKey("subquest.subquest_name"), nullable=False)
