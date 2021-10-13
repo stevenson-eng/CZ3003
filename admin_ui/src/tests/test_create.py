@@ -44,19 +44,19 @@ def test_create_mail(client: TestClient, mail: Dict[str, Any]):
     assert res.status_code == 200
 
 
-# @pytest.mark.run(order=4)
-# def test_create_category(client: TestClient, category: Dict[str, Any]):
-#     pass  # TODO: test
+@pytest.mark.run(order=4)
+def test_create_category(client: TestClient, category: Dict[str, Any]):
+    assert validate(client.post("/category/", json=category), category)
 
 
-# @pytest.mark.run(order=5)
-# def test_create_quest(client: TestClient, quest: Dict[str, Any]):
-#     pass  # TODO: test
+@pytest.mark.run(order=5)
+def test_create_quest(client: TestClient, quest: Dict[str, Any]):
+    assert validate(client.post("/quest/", json=quest), quest)
 
 
-# @pytest.mark.run(order=6)
-# def test_create_subquest(client: TestClient, subquest: Dict[str, Any]):
-#     pass  # TODO: test
+@pytest.mark.run(order=6)
+def test_create_subquest(client: TestClient, subquest: Dict[str, Any]):
+    assert validate(client.post("/subquest/", json=subquest), subquest)
 
 
 # @pytest.mark.run(order=7)
@@ -68,7 +68,6 @@ def test_create_mail(client: TestClient, mail: Dict[str, Any]):
 # def test_create_question(client: TestClient, question: Dict[str, Any]):
 #     pass  # TODO: test
 
-
-# @pytest.mark.run(order=9)
-# def test_create_npc(client: TestClient, npc: Dict[str, Any]):
-#     pass  # TODO: test
+@pytest.mark.run(order=9)
+def test_create_npc(client: TestClient, npc: Dict[str, Any]):
+    assert validate(client.post("/npc/", json=npc), npc)

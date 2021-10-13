@@ -35,7 +35,7 @@ def client() -> TestClient:
 def student() -> Dict[str, Any]:
     return vars(
         schemas.StudentCreate(
-            email="student@e.ntu.edu.sg", name="student", points=0, password="password"
+            email="student@e.ntu.edu.sg", name="student", points=0
         )
     )
 
@@ -47,7 +47,6 @@ def student_updated() -> Dict[str, Any]:
             email="student_updated@e.ntu.edu.sg",
             name="student_updated",
             points=1000,
-            password="password_updated",
         )
     )
 
@@ -109,6 +108,81 @@ def mail_updated() -> Dict[str, Any]:
             body_text="updated_text",
             sender="updated_teacher@e.ntu.edu.sg",
             recipients=["updated_student@e.ntu.edu.sg"],
+        )
+    )
+
+
+@pytest.fixture
+def category() -> Dict[str, Any]:
+    return vars(
+        schemas.CategoryCreate(
+            category_name="category"
+        )
+    )
+
+
+@pytest.fixture
+def category_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.CategoryUpdate(
+            category_name="category_updated",
+        )
+    )
+
+
+@pytest.fixture
+def quest() -> Dict[str, Any]:
+    return vars(
+        schemas.QuestCreate(
+            quest_name="quest",
+            category_name="category"
+        )
+    )
+
+@pytest.fixture
+def quest_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.QuestUpdate(
+            quest_name="quest_updated",
+            category_name="category_updated",
+        )
+    )
+
+
+@pytest.fixture
+def subquest() -> Dict[str, Any]:
+    return vars(
+        schemas.SubquestCreate(
+            subquest_name="subquest",
+            quest_name="quest",
+        )
+    )
+
+@pytest.fixture
+def subquest_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.SubquestUpdate(
+            subquest_name="subquest_updated",
+            quest_name="quest_updated",
+        )
+    )
+
+@pytest.fixture
+def npc() -> Dict[str, Any]:
+    return vars(
+        schemas.NpcCreate(
+            npc_name="npc", 
+            subquest_name="subquest",
+        )
+    )
+
+
+@pytest.fixture
+def npc_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.NpcUpdate(
+            npc_name="npc_updated",
+            subquest_name="subquest_updated",
         )
     )
 
