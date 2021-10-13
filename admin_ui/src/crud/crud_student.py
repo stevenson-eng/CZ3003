@@ -35,10 +35,10 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
         )
         return super().update(db, db_obj=old_student, obj_in=new_student)
 
-    def getLeaderboard(self, db: Session) -> List[Student]:
+    def getLeaderboard(self, db: Session, limit: int) -> List[Student]:
         return db.query(models.Student).order_by(
             desc(Student.points),
             collate(Student.name, 'NOCASE')
-        ).limit(10).all()
+        ).limit(limit).all()
 
 student = CRUDStudent(Student)
