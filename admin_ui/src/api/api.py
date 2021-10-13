@@ -26,7 +26,8 @@ api_router.include_router(npc.router, prefix="/npc", tags=["npc"])
 api_router.include_router(
     authentication.router, prefix="/authentication", tags=["authentication"]
 )
-api_router.include_router(question.router, prefix="/question", tags=["question"])
 api_router.include_router(leaderboard.router, prefix="/leaderboard", tags=["leaderboard"])
+api_router.include_router(question.router, prefix="/question", tags=["question"])
+
 
 # TODO api_router.include_router(xxx.router, prefix="/xxx", tags=["xxx"])
