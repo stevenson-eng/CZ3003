@@ -1,4 +1,3 @@
-from admin_ui.src.schemas.question import DifficultyEnum
 import crud
 import schemas
 from db.database import get_db
@@ -25,7 +24,4 @@ def create(question: schemas.QuestionCreate, db: Session = Depends(get_db)):
 @router.patch("/")
 def update(question: schemas.QuestionUpdate, db: Session = Depends(get_db)):
     return crud.question.update(db, question)
-
-@router.get("/{id}/{difficulty}")
-def get_questions(id: str, db: Session = Depends(get_db)):
-    return crud.question.get_questions_by_quest(db, id, DifficultyEnum)
+    

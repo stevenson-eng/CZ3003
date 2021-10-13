@@ -1,15 +1,15 @@
 from typing import Optional
 from uuid import UUID
-from enum import Enum
+from enum import IntEnum
 
 from pydantic import BaseModel
 
-class DifficultyEnum(int, Enum):
+class DifficultyEnum(IntEnum):
     easy = 1
     medium = 2
     hard = 3
 
-class SdlcStageEnum(int, Enum):
+class SdlcStageEnum(IntEnum):
     planning = 1
     designing = 2
     development = 3
@@ -62,6 +62,7 @@ class QuestionInDBBase(QuestionBase):
     id: UUID
     class Config:
         orm_mode = True
+        use_enum_values = True
 
 
 # Properties to return to client

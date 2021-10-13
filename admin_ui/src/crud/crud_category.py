@@ -4,6 +4,10 @@ from typing import List
 import models
 import schemas
 from models.category import Category
+from models.subquest import Subquest
+from models.quest import Quest
+from models.question import Question
+from fastapi.encoders import jsonable_encoder
 from schemas.category import CategoryCreate, CategoryUpdate
 from sqlalchemy.orm import Session
 
@@ -33,6 +37,31 @@ class CRUDCategory(CRUDBase[Category, CategoryCreate, CategoryUpdate]):
             .first()
         )
         return super().update(db, db_obj=old_category, obj_in=new_category)
+
+    def get_questions_by_quest(self, db: Session, id: str, difficulty: int, number: int):
+        json_compatible_difficulty = jsonable_encoder(difficulty)
+        json_compatible_number=jsonable_encoder(number)
+
+        import pdb
+        pdb.set_trace()
+        # join_table = db.query(models.Question).join(models.Subquest).join(models.Quest).join(models.Category).\
+        #     filter(models.Category.id == id).all()
+        join_table=db.query(Question).join(Question.subquest_id == Subquest.id, \
+            Subquest.quest_id == Quest.id, Quest.category_id==Category.id)
+        print(join_table)
+        import pdb
+        pdb.set_trace()
+        questions_by_quest_query = join_table.\
+            filter(models.Category.id == id).filter(models.Question.difficulty == difficulty).limit(number)
+        
+        # questions_by_quest_query = db.query(Question).join(Question.subquest_id == Subquest.id, \
+        #     Subquest.quest_id == Quest.id, Quest.category_id==Category.id).\
+        #         filter(Category.id == id).filter(models.Question.difficulty == difficulty).limit(number)
+
+        # for result in questions_by_quest_query:
+        #     print(result)
+
+        return questions_by_quest_query
 
 
 category = CRUDCategory(Category)
