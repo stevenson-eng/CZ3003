@@ -19,7 +19,7 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
 
 app = FastAPI()
 
-app.add_middleware(PrometheusMiddleware)
+app.add_middleware(PrometheusMiddleware, app_name="game_of_thrones", group_paths=True, prefix='GOT')
 app.add_route("/metrics", handle_metrics)
 
 app.include_router(api_router)
