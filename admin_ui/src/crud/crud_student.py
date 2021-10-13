@@ -5,9 +5,10 @@ import schemas
 from models.student import Student
 from schemas.student import StudentCreate, StudentUpdate
 from sqlalchemy.orm import Session
+from sqlalchemy import desc, collate
 
 from crud.base import CRUDBase
-
+from typing import List
 
 class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
     def create(self, db: Session, student: schemas.StudentCreate):
@@ -34,5 +35,10 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
         )
         return super().update(db, db_obj=old_student, obj_in=new_student)
 
+    def getLeaderboard(self, db: Session) -> List[Student]:
+        return db.query(models.Student).order_by(
+            desc(Student.points),
+            collate(Student.name, 'NOCASE')
+        ).limit(10).all()
 
 student = CRUDStudent(Student)
