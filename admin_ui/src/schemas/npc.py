@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 # Shared properties
 class NpcBase(BaseModel):
-    subquest_id: str
+    subquest_name: str
     name: str
 
 
@@ -23,14 +23,14 @@ class NpcUpdate(BaseModel):
     """
 
     id: str
-    subquest_id: Optional[str] = None
+    subquest_name: Optional[str] = None
     name: Optional[str] = None
 
 
 # Properties shared by models stored in DB
 class NpcInDBBase(NpcBase):
     id: UUID
-    subquest_id: str
+    subquest_name: str
     name: str
 
     class Config:

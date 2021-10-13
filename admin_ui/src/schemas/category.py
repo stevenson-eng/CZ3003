@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 # Shared properties
 class CategoryBase(BaseModel):
-    name: str
+    category_name: str
 
 
 # Properties to receive on category creation
@@ -20,15 +20,12 @@ class CategoryUpdate(BaseModel):
     All update fields should be optional, as updates are done via HTTP PATCH,
     which must support partial updates
     """
-
-    id: str
-    name: Optional[str] = None
+    category_name: Optional[str] = None
 
 
 # Properties shared by models stored in DB
 class CategoryInDBBase(CategoryBase):
-    id: UUID
-    name: str
+    category_name: str
 
     class Config:
         orm_mode = True

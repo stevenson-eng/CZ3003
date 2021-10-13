@@ -10,7 +10,7 @@ from crud.base import CRUDBase
 class CRUDNpc(CRUDBase[Npc, NpcCreate, NpcUpdate]):
     def create(self, db: Session, npc: schemas.NpcCreate):
         db_npc = models.Npc(
-            subquest_id=npc.subquest_id,
+            subquest_name=npc.subquest_name,
             name=npc.name,
         )
         db.add(db_npc)

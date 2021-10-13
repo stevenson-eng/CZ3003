@@ -9,5 +9,6 @@ from .subquest import Subquest, SubquestCreate, SubquestInDB, SubquestUpdate
 from .npc import Npc, NpcCreate, NpcInDB, NpcUpdate
 from .question import Question, QuestionCreate, QuestionInDB, QuestionUpdate
 from .teacher import Teacher, TeacherCreate, TeacherInDB, TeacherUpdate
+# from .attempt import Attempt, AttemptCreate, AttemptInDB, AttemptUpdate
 
 # TODO from .xxx import XXX, XXXCreate, XXXInDB, XXXUpdate

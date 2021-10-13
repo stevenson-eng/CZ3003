@@ -10,7 +10,7 @@ from crud.base import CRUDBase
 class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
     def create(self, db: Session, question: schemas.QuestionCreate):
         db_question = models.Question(
-            subquest_id=question.subquest_id,
+            subquest_name=question.subquest_name,
             assignment_id=question.assignment_id,
             difficulty=question.difficulty,
             points=question.points,

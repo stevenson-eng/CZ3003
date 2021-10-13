@@ -5,7 +5,6 @@ from pydantic import BaseModel
 
 # Shared properties
 class StudentBase(BaseModel):
-    # Password should never be exposed by default, hashed or not
     email: str
     name: str
     points: int = 0
@@ -13,7 +12,7 @@ class StudentBase(BaseModel):
 
 # Properties to receive on student creation
 class StudentCreate(StudentBase):
-    password: str
+    pass
 
 
 # Properties to receive on student update
@@ -26,13 +25,11 @@ class StudentUpdate(BaseModel):
     email: Optional[str] = None
     name: Optional[str] = None
     points: Optional[int] = None
-    password: Optional[str] = None
 
 
 # Properties shared by models stored in DB
 class StudentInDBBase(StudentBase):
     email: str
-    hashed_password: str
     name: str
     points: int
 

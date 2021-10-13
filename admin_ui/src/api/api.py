@@ -10,7 +10,8 @@ from api.endpoints import (
     student,
     subquest,
     teacher,
-    question
+    question,
+    # attempt
 )
 
 api_router = APIRouter()
@@ -26,6 +27,6 @@ api_router.include_router(
     authentication.router, prefix="/authentication", tags=["authentication"]
 )
 api_router.include_router(question.router, prefix="/question", tags=["question"])
-
+# api_router.include_router(attempt.router, prefix="/attempt", tags=["attempt"])
 
 # TODO api_router.include_router(xxx.router, prefix="/xxx", tags=["xxx"])
