@@ -3,7 +3,7 @@ import schemas
 from db.database import get_db
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from typing import List
+from typing import List, Optional
 
 router = APIRouter()
 
@@ -14,8 +14,12 @@ def read(id: str, db: Session = Depends(get_db)):
 
 
 @router.get("/", response_model=List[schemas.Assignment])
-def read_all(db: Session = Depends(get_db)):
-    return crud.assignment.read_all(db)
+def read_all(
+    assigner: Optional[str] = None,
+    assignee: Optional[str] = None,
+    db: Session = Depends(get_db),
+):
+    return crud.assignment.read_all(db, assigner, assignee)
 
 
 @router.post("/")
@@ -27,6 +31,9 @@ def create(assignment: schemas.AssignmentCreate, db: Session = Depends(get_db)):
         schemas.AssignmentCreate(
             assigner=assigner_in_db.email,
             assignee=assignee_in_db.email,
+            description=assignment.description,
+            points_scored=assignment.points_scored,
+            time_to_complete_in_seconds=assignment.time_to_complete_in_seconds,
         ),
     )
 

@@ -1,4 +1,6 @@
 from os import name
+from typing import List
+
 import models
 import schemas
 from models.category import Category
@@ -20,6 +22,9 @@ class CRUDCategory(CRUDBase[Category, CategoryCreate, CategoryUpdate]):
 
     def read(self, db: Session, category_name: str) -> Category:
         return db.query(models.Category).filter(models.Category.category_name == category_name).first()
+
+    def read_all(self, db: Session) -> List[Category]:
+        return db.query(models.Category).all()
 
     def update(self, db: Session, new_category: schemas.CategoryUpdate):
         old_category = (

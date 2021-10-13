@@ -8,9 +8,9 @@ from pydantic import BaseModel
 class AssignmentBase(BaseModel):
     assigner: str
     assignee: str
+    description: str
     points_scored: Optional[int] = None
     time_to_complete_in_seconds: Optional[int] = None
-
 
 # Properties to receive on assignment creation
 class AssignmentCreate(AssignmentBase):
@@ -28,7 +28,7 @@ class AssignmentUpdate(BaseModel):
     assignee: Optional[str] = None
     points_scored: Optional[int] = None
     time_to_complete_in_seconds: Optional[int] = None
-
+    description: Optional[str] = None
 
 # Properties shared by models stored in DB
 class AssignmentInDBBase(AssignmentBase):

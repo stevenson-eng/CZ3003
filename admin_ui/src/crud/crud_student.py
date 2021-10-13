@@ -1,4 +1,5 @@
 from hashlib import sha256
+from typing import List
 
 import models
 import schemas
@@ -24,6 +25,9 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
 
     def read(self, db: Session, email: str) -> Student:
         return db.query(models.Student).filter(models.Student.email == email).first()
+    
+    def read_all(self, db: Session) -> List[Student]:
+        return db.query(models.Student).all()
 
     def update(self, db: Session, new_student: schemas.StudentUpdate):
         old_student = (

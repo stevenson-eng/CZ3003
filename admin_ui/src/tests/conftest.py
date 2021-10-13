@@ -71,7 +71,7 @@ def teacher_updated() -> Dict[str, Any]:
 def assignment() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentCreate(
-            assigner="teacher@e.ntu.edu.sg", assignee="student@e.ntu.edu.sg"
+            assigner="teacher@e.ntu.edu.sg", assignee="student@e.ntu.edu.sg", description="text",
         )
     )
 
@@ -82,6 +82,7 @@ def assignment_updated() -> Dict[str, Any]:
         schemas.AssignmentUpdate(
             assigner="updated_teacher@e.ntu.edu.sg",
             assignee="updated_student@e.ntu.edu.sg",
+            description="updated_text",
         )
     )
 
