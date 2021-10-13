@@ -9,20 +9,14 @@ class DifficultyEnum(IntEnum):
     medium = 2
     hard = 3
 
-class SdlcStageEnum(IntEnum):
-    planning = 1
-    designing = 2
-    development = 3
-    testing = 4
-    deploying = 5
-
 # Shared properties
 class QuestionBase(BaseModel):
+    category_name: str
+    quest_name: str
     subquest_name: str
     assignment_id: str
     difficulty: DifficultyEnum
     points: int
-    sdlc_stage: SdlcStageEnum
     prompt: str
     answer: int
     choice1: str
@@ -42,13 +36,13 @@ class QuestionUpdate(BaseModel):
     All update fields should be optional, as updates are done via HTTP PATCH,
     which must support partial updates
     """
-
     id: str
+    category_name: Optional[str] = None
+    quest_name: Optional[str] = None
     subquest_name: Optional[str] = None
     assignment_id: Optional[str] = None
     difficulty: Optional[DifficultyEnum] = None
     points: Optional[int] = None
-    sdlc_stage: Optional[SdlcStageEnum] = None
     prompt: Optional[str] = None
     answer: Optional[int] = None
     choice1: Optional[str] = None

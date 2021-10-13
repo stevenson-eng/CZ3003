@@ -1,22 +1,21 @@
 from typing import List
-
 import models
 import schemas
 from models.question import Question
 from schemas.question import QuestionCreate, QuestionUpdate
 from sqlalchemy.orm import Session
-
 from crud.base import CRUDBase
 
 
 class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
     def create(self, db: Session, question: schemas.QuestionCreate):
         db_question = models.Question(
+            category_name=question.category_name,
+            quest_name=question.quest_name,
             subquest_name=question.subquest_name,
             assignment_id=question.assignment_id,
             difficulty=question.difficulty,
             points=question.points,
-            sdlc_stage=question.sdlc_stage,
             prompt=question.prompt,
             answer=question.answer,
             choice1=question.choice1,
@@ -34,6 +33,30 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
 
     def read_all(self, db: Session) -> List[Question]:
         return db.query(models.Question).all()
+
+    def read_by_parameters(self, db: Session, category_name: str, quest_name:str, \
+        subquest_name: str, difficulty: int, limit: int) -> List[Question]:
+        questions_by_parameters=db.query(Question)
+
+        if category_name is not None:
+            questions_by_parameters = questions_by_parameters.filter(
+                Question.category_name == category_name)
+
+        if quest_name is not None:
+            questions_by_parameters = questions_by_parameters.filter(
+                Question.quest_name == quest_name)
+
+        if subquest_name is not None:
+            questions_by_parameters = questions_by_parameters.filter(
+                Question.subquest_name == subquest_name)
+
+        if difficulty is not None:
+            questions_by_parameters = questions_by_parameters.filter(
+                Question.difficulty == difficulty
+            )
+
+        return questions_by_parameters.limit(limit).all()
+
 
     def update(self, db: Session, new_question: schemas.QuestionUpdate):
         old_question = (

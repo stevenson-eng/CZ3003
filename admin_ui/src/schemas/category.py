@@ -37,3 +37,4 @@ class Category(CategoryInDBBase):
 # Properties properties stored in DB
 class CategoryInDB(CategoryInDBBase):
     pass
+    
