@@ -1,6 +1,7 @@
 # models/ document how the structure that correspond to our ERD
 from db.database import Base
 
+from models.attempt import Attempt
 from models.assignment import Assignment
 from models.category import Category
 from models.mail import Mail

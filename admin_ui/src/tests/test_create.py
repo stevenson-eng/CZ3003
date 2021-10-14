@@ -59,14 +59,15 @@ def test_create_subquest(client: TestClient, subquest: Dict[str, Any]):
     assert validate(client.post("/subquest/", json=subquest), subquest)
 
 
-# @pytest.mark.run(order=7)
-# def test_create_attempt(client: TestClient, attempt: Dict[str, Any]):
-#     pass  # TODO: test
+@pytest.mark.run(order=7)
+def test_create_attempt(client: TestClient, attempt: Dict[str, Any]):
+    assert validate(client.post("/attempt/", json=attempt), attempt)
 
 
 # @pytest.mark.run(order=8)
 # def test_create_question(client: TestClient, question: Dict[str, Any]):
 #     pass  # TODO: test
+
 
 @pytest.mark.run(order=9)
 def test_create_npc(client: TestClient, npc: Dict[str, Any]):

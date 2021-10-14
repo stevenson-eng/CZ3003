@@ -12,3 +12,12 @@ repos:
     hooks:
       - id: pylint
         args: [--disable=all, --enable=unused-import]
+
+  - repo: local
+    hooks:
+      - id: pytest-check
+        name: pytest-check
+        entry: bash -c "rm test.db; cd admin_ui/src && python -m pytest tests/"
+        language: system
+        pass_filenames: false
+        always_run: true
