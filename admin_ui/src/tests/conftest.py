@@ -34,9 +34,7 @@ def client() -> TestClient:
 @pytest.fixture
 def student() -> Dict[str, Any]:
     return vars(
-        schemas.StudentCreate(
-            email="student@e.ntu.edu.sg", name="student", points=0
-        )
+        schemas.StudentCreate(email="student@e.ntu.edu.sg", name="student", points=0)
     )
 
 
@@ -44,7 +42,7 @@ def student() -> Dict[str, Any]:
 def student_updated() -> Dict[str, Any]:
     return vars(
         schemas.StudentUpdate(
-            email="student_updated@e.ntu.edu.sg",
+            email="student@e.ntu.edu.sg",  # same PK to identify the object
             name="student_updated",
             points=1000,
         )
@@ -60,7 +58,7 @@ def teacher() -> Dict[str, Any]:
 def teacher_updated() -> Dict[str, Any]:
     return vars(
         schemas.TeacherUpdate(
-            email="teacher_updated@e.ntu.edu.sg",
+            email="teacher@e.ntu.edu.sg",  # same PK to identify the object
             name="teacher_updated",
         )
     )
@@ -70,7 +68,9 @@ def teacher_updated() -> Dict[str, Any]:
 def assignment() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentCreate(
-            assigner="teacher@e.ntu.edu.sg", assignee="student@e.ntu.edu.sg", description="text",
+            assigner="teacher@e.ntu.edu.sg",
+            assignee="student@e.ntu.edu.sg",
+            description="text",
         )
     )
 
@@ -79,9 +79,11 @@ def assignment() -> Dict[str, Any]:
 def assignment_updated() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentUpdate(
-            assigner="updated_teacher@e.ntu.edu.sg",
-            assignee="updated_student@e.ntu.edu.sg",
-            description="updated_text",
+            assigner="teacher@e.ntu.edu.sg",  # same PK to identify the object
+            assignee="student@e.ntu.edu.sg",  # same PK to identify the object
+            description="updated_description",
+            points_scored=100,
+            time_to_complete_in_seconds=100,
         )
     )
 
@@ -100,53 +102,13 @@ def mail() -> Dict[str, Any]:
 
 
 @pytest.fixture
-def mail_updated() -> Dict[str, Any]:
-    return vars(
-        schemas.MailCreate(
-            subject="updated_subject",
-            body_heading="updated_heading",
-            body_text="updated_text",
-            sender="updated_teacher@e.ntu.edu.sg",
-            recipients=["updated_student@e.ntu.edu.sg"],
-        )
-    )
-
-
-@pytest.fixture
 def category() -> Dict[str, Any]:
-    return vars(
-        schemas.CategoryCreate(
-            category_name="category"
-        )
-    )
-
-
-@pytest.fixture
-def category_updated() -> Dict[str, Any]:
-    return vars(
-        schemas.CategoryUpdate(
-            category_name="category_updated",
-        )
-    )
+    return vars(schemas.CategoryCreate(category_name="category"))
 
 
 @pytest.fixture
 def quest() -> Dict[str, Any]:
-    return vars(
-        schemas.QuestCreate(
-            quest_name="quest",
-            category_name="category"
-        )
-    )
-
-@pytest.fixture
-def quest_updated() -> Dict[str, Any]:
-    return vars(
-        schemas.QuestUpdate(
-            quest_name="quest_updated",
-            category_name="category_updated",
-        )
-    )
+    return vars(schemas.QuestCreate(quest_name="quest", category_name="category"))
 
 
 @pytest.fixture
@@ -158,31 +120,37 @@ def subquest() -> Dict[str, Any]:
         )
     )
 
-@pytest.fixture
-def subquest_updated() -> Dict[str, Any]:
-    return vars(
-        schemas.SubquestUpdate(
-            subquest_name="subquest_updated",
-            quest_name="quest_updated",
-        )
-    )
 
 @pytest.fixture
 def npc() -> Dict[str, Any]:
     return vars(
         schemas.NpcCreate(
-            npc_name="npc", 
+            npc_name="npc",
             subquest_name="subquest",
         )
     )
 
 
 @pytest.fixture
-def npc_updated() -> Dict[str, Any]:
+def attempt() -> Dict[str, Any]:
     return vars(
-        schemas.NpcUpdate(
-            npc_name="npc_updated",
-            subquest_name="subquest_updated",
+        schemas.AttemptCreate(
+            quest_name="quest",
+            student_email="student@e.ntu.edu.sg",
+            points_scored=100,
+            time_to_complete_in_seconds=100,
+        )
+    )
+
+
+@pytest.fixture
+def attempt_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.AttemptCreate(
+            quest_name="quest",
+            student_email="student@e.ntu.edu.sg",
+            points_scored=500,
+            time_to_complete_in_seconds=500,
         )
     )
 

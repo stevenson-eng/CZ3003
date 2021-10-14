@@ -23,10 +23,7 @@ class CRUDAssignment(CRUDBase[Assignment, AssignmentCreate, AssignmentUpdate]):
         db.refresh(db_assignment)
         return db_assignment
 
-    def read(self, db: Session, id: str) -> Assignment:
-        return db.query(models.Assignment).filter(models.Assignment.id == id).first()
-
-    def read_all(self, db: Session, assigner: str, assignee: str) -> List[Assignment]:
+    def read(self, db: Session, assigner: str, assignee: str) -> List[Assignment]:
         results = db.query(models.Assignment)
 
         if assigner is not None:
@@ -35,12 +32,15 @@ class CRUDAssignment(CRUDBase[Assignment, AssignmentCreate, AssignmentUpdate]):
         if assignee is not None:
             results = results.filter(models.Assignment.assignee == assignee)
 
-        return results.all() 
+        return results.all()
 
     def update(self, db: Session, new_assignment: schemas.AssignmentUpdate):
         old_assignment = (
             db.query(models.Assignment)
-            .filter(models.Assignment.id == new_assignment.id)
+            .filter(
+                models.Assignment.assigner == new_assignment.assigner,
+                models.Assignment.assignee == new_assignment.assignee,
+            )
             .first()
         )
         return super().update(db, db_obj=old_assignment, obj_in=new_assignment)

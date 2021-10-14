@@ -140,3 +140,6 @@ cython_debug/
 
 # Deta deployment
 admin_ui/src/.deta/
+
+# SQLite DB files
+admin_ui/src/*.db
