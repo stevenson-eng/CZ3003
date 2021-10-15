@@ -9,5 +9,6 @@ from .question import Question, QuestionCreate, QuestionInDB, QuestionUpdate
 from .student import Student, StudentCreate, StudentInDB, StudentUpdate
 from .subquest import Subquest, SubquestCreate, SubquestInDB, SubquestUpdate
 from .teacher import Teacher, TeacherCreate, TeacherInDB, TeacherUpdate
+from .assignmentQuestion import AssignmentQuestion, AssignmentQuestionCreate, AssignmentQuestionInDB, AssignmentQuestionUpdate
 
 # TODO from .xxx import XXX, XXXCreate, XXXInDB, XXXUpdate
