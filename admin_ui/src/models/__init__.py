@@ -11,5 +11,6 @@ from models.student import Student
 from models.subquest import Subquest
 from models.teacher import Teacher
 from models.question import Question
+from models.assignmentQuestion import AssignmentQuestion
 
 # TODO - from models.XXX import XXX (copy line above)

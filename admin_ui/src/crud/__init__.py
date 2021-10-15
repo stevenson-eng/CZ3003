@@ -9,5 +9,6 @@ from crud.crud_question import question
 from crud.crud_student import student
 from crud.crud_subquest import subquest
 from crud.crud_teacher import teacher
+from crud.crud_assignment_question import assignmentQuestion
 
 # TODO from crud.crud_xxx import xxx
