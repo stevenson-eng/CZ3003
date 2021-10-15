@@ -12,20 +12,22 @@ router = APIRouter()
 def read(id: str, db: Session = Depends(get_db)):
     return crud.question.read(db, id)
 
-@router.get("/", response_model=List[schemas.Question])
-def read_all(db: Session = Depends(get_db)):
-    return crud.question.read_all(db)
-
-@router.get("/{category_name}/{quest_name}/{subquest_name}", response_model=List[schemas.Question])
-def read_by_parameters(
+@router.get("/")
+def read(
     category_name: Optional[str] = None, 
     quest_name: Optional[str] = None, 
     subquest_name: Optional[str] = None, 
     difficulty: Optional[int]= None, 
     limit: Optional[int] = None, 
     db: Session = Depends(get_db)):
-    return crud.question.read_by_parameters(db, category_name, 
-    quest_name, subquest_name, difficulty, limit)
+
+    # If no parameters are provided
+    if not any([category_name, quest_name, subquest_name, difficulty]):
+        return crud.question.read_all(db)
+    
+    # If there is at least 1 filter provided
+    return crud.question.read_by_parameters(
+        db, category_name, quest_name, subquest_name, difficulty, limit)
 
 @router.post("/")
 def create(question: schemas.QuestionCreate, db: Session = Depends(get_db)):

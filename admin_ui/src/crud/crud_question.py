@@ -2,7 +2,9 @@ from typing import List
 import models
 import schemas
 from models.question import Question
-from schemas.question import QuestionCreate, QuestionUpdate
+from models.subquest import Subquest
+from models.quest import Quest
+from schemas.question import QuestionCreate, QuestionUpdate, QuestionQuery
 from sqlalchemy.orm import Session
 from crud.base import CRUDBase
 
@@ -10,10 +12,7 @@ from crud.base import CRUDBase
 class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
     def create(self, db: Session, question: schemas.QuestionCreate):
         db_question = models.Question(
-            category_name=question.category_name,
-            quest_name=question.quest_name,
             subquest_name=question.subquest_name,
-            assignment_id=question.assignment_id,
             difficulty=question.difficulty,
             points=question.points,
             prompt=question.prompt,
@@ -35,30 +34,39 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
         return db.query(models.Question).all()
 
     def read_by_parameters(self, db: Session, category_name: str, quest_name:str, \
-        subquest_name: str, difficulty: int, limit: int) -> List[Question]:
-        questions_by_parameters=db.query(Question).filter(
-            Question.category_name == category_name,
-            Question.quest_name == quest_name,
-            Question.subquest_name == subquest_name
-        )
-        # if category_name is not None:
-        #     questions_by_parameters = questions_by_parameters.filter(
-        #         Question.category_name == category_name)
+        subquest_name: str, difficulty: int, limit: int) -> List[QuestionQuery]:
+        question = db.query(
+            Question.difficulty,
+            Question.points,
+            Question.prompt,
+            Question.answer,
+            Question.choice1, 
+            Question.choice2,
+            Question.choice3,
+            Question.choice4,
+            Subquest.subquest_name, 
+            Quest.quest_name,
+            Quest.category_name)\
+            .select_from(Question).join(Subquest).join(Quest)
 
-        # if quest_name is not None:
-        #     questions_by_parameters = questions_by_parameters.filter(
-        #         Question.quest_name == quest_name)
+        if category_name is not None:
+            question = question.filter(
+                Quest.category_name == category_name)
 
-        # if subquest_name is not None:
-        #     questions_by_parameters = questions_by_parameters.filter(
-        #         Question.subquest_name == subquest_name)
+        if quest_name is not None:
+            question = question.filter(
+                Quest.quest_name == quest_name)
+
+        if subquest_name is not None:
+            question = question.filter(
+                Question.subquest_name == subquest_name)
 
         if difficulty is not None:
-            questions_by_parameters = questions_by_parameters.filter(
+            question = question.filter(
                 Question.difficulty == difficulty
             )
 
-        return questions_by_parameters.limit(limit).all()
+        return question.limit(limit).all()
 
 
     def update(self, db: Session, new_question: schemas.QuestionUpdate):

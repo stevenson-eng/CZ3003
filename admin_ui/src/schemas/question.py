@@ -1,7 +1,6 @@
-from typing import Optional
+from typing import Optional, List
 from uuid import UUID
 from enum import IntEnum
-
 from pydantic import BaseModel
 
 class DifficultyEnum(IntEnum):
@@ -11,10 +10,9 @@ class DifficultyEnum(IntEnum):
 
 # Shared properties
 class QuestionBase(BaseModel):
-    category_name: str
-    quest_name: str
+    # category_name: str
+    # quest_name: str
     subquest_name: str
-    assignment_id: str
     difficulty: DifficultyEnum
     points: int
     prompt: str
@@ -37,10 +35,9 @@ class QuestionUpdate(BaseModel):
     which must support partial updates
     """
     id: str
-    category_name: Optional[str] = None
-    quest_name: Optional[str] = None
+    # category_name: Optional[str] = None
+    # quest_name: Optional[str] = None
     subquest_name: Optional[str] = None
-    assignment_id: Optional[str] = None
     difficulty: Optional[DifficultyEnum] = None
     points: Optional[int] = None
     prompt: Optional[str] = None
@@ -67,3 +64,20 @@ class Question(QuestionInDBBase):
 # Properties properties stored in DB
 class QuestionInDB(QuestionInDBBase):
     pass
+
+
+class QuestionQuery(BaseModel):
+    category_name: str
+    quest_name: str
+    subquest_name: str
+    difficulty: DifficultyEnum
+    points: int
+    prompt: str
+    answer: int
+    choice1: str
+    choice2: str
+    choice3: str
+    choice4: str
+    class Config:
+        orm_mode = True
+        use_enum_values = True
