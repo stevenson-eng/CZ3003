@@ -24,7 +24,7 @@ class Status(IntEnum):
 class StudentBase(BaseModel):
     email: str
     status: Status = 2
-    student_name: str
+    name: str
     points: int = 0
     rank: Rank = None
     position: int = None
@@ -43,7 +43,7 @@ class StudentUpdate(BaseModel):
 
     email: Optional[str] = None
     status: Optional[int] = None
-    student_name: Optional[str] = None
+    name: Optional[str] = None
     points: Optional[int] = None
     rank: Optional[int] = None
     position: Optional[int] = None

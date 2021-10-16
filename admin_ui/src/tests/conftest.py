@@ -34,7 +34,7 @@ def client() -> TestClient:
 @pytest.fixture
 def student() -> Dict[str, Any]:
     return vars(
-        schemas.StudentCreate(email="student@e.ntu.edu.sg", name="student", points=0)
+        schemas.StudentCreate(email="student@e.ntu.edu.sg", name="student", points=0, status=1, rank=0, position=1)
     )
 
 
@@ -45,6 +45,9 @@ def student_updated() -> Dict[str, Any]:
             email="student@e.ntu.edu.sg",  # same PK to identify the object
             name="student_updated",
             points=1000,
+            status=2,
+            rank=10,
+            position=2,
         )
     )
 

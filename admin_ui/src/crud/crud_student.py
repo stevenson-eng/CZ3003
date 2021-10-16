@@ -20,7 +20,7 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
         student.rank = math.floor(student.points/100)
         db_student = models.Student(
             email=student.email,
-            student_name=student.student_name,
+            name=student.name,
             points=student.points,
             status=student.status,
             position=student.position,
