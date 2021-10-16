@@ -1,6 +1,7 @@
 from hashlib import sha256
 from typing import List
-
+import math
+import crud 
 import models
 import schemas
 from models.student import Student
@@ -14,10 +15,16 @@ from typing import List
 
 class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
     def create(self, db: Session, student: schemas.StudentCreate):
+        if student.position is None:
+            student.position = len(crud.student.read_all(db)) + 1
+        student.rank = math.floor(student.points/100)
         db_student = models.Student(
             email=student.email,
-            name=student.name,
+            student_name=student.student_name,
             points=student.points,
+            status=student.status,
+            position=student.position,
+            rank=student.rank,
         )
         db.add(db_student)
         db.commit()
@@ -52,6 +59,6 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
             db.commit()
             return Response(status_code=status.HTTP_204_NO_CONTENT)
         else:
-            return Response(status_code=status.HTTP_404_NOT_FOUND)
+            raise HTTPException(status_code=404, detail="Item not found")
 
 student = CRUDStudent(Student)

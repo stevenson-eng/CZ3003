@@ -1,14 +1,33 @@
 from typing import Optional
-
+from enum import IntEnum
 from pydantic import BaseModel
 
-
 # Shared properties
+class Rank(IntEnum):
+    Herald = 0,
+    Guardian = 1,
+    Crusader = 2,
+    Archon = 3,
+    Legend = 4,
+    Ancient = 5,
+    Divine = 6,
+    Immortal = 7,
+    Genesis = 8,
+    Challenger = 9,
+    Platinum = 10,
+    
+class Status(IntEnum):
+    online = 1
+    offline = 2
+    busy = 3
+
 class StudentBase(BaseModel):
     email: str
-    name: str
+    status: Status = 2
+    student_name: str
     points: int = 0
-
+    rank: Rank = None
+    position: int = None
 
 # Properties to receive on student creation
 class StudentCreate(StudentBase):
@@ -23,9 +42,11 @@ class StudentUpdate(BaseModel):
     """
 
     email: Optional[str] = None
-    name: Optional[str] = None
+    status: Optional[int] = None
+    student_name: Optional[str] = None
     points: Optional[int] = None
-
+    rank: Optional[int] = None
+    position: Optional[int] = None
 
 # Properties shared by models stored in DB
 class StudentInDBBase(StudentBase):
