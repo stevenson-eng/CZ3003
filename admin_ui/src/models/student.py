@@ -12,7 +12,7 @@ class Student(Base):
     # TODO - https://docs.sqlalchemy.org/en/14/core/constraints.html
     id = Column(String, primary_key=True, index=True, default=lambda: str(uuid.uuid4()))
     email = Column(String, unique=True, index=True)
-    student_name = Column(String, nullable=False)
+    name = Column(String, nullable=False)
     points = Column(Integer, nullable=True)
     status = Column(Integer, nullable=True)
     rank = Column(Integer, nullable=True)
