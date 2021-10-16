@@ -1,8 +1,9 @@
 import uuid
+import models
 
 from db.database import Base
 from sqlalchemy import Column, Integer, String
-
+from sqlalchemy.orm import relationship
 
 class Student(Base):
     __tablename__ = "student"
@@ -13,3 +14,6 @@ class Student(Base):
     email = Column(String, unique=True, index=True)
     name = Column(String)
     points = Column(Integer)
+    mail = relationship(models.Mail, cascade="all,delete", backref="student")
+    assignment = relationship(models.Assignment, cascade="all,delete", backref="student")
+    attempt = relationship(models.Attempt, cascade="all,delete", backref="student")

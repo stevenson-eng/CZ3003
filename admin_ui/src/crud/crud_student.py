@@ -7,6 +7,7 @@ from models.student import Student
 from schemas.student import StudentCreate, StudentUpdate
 from sqlalchemy.orm import Session
 from sqlalchemy import desc, collate
+from fastapi import HTTPException, status, Response
 
 from crud.base import CRUDBase
 from typing import List
@@ -42,5 +43,15 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
             desc(Student.points),
             collate(Student.name, 'NOCASE')
         ).limit(limit).all()
+
+    def delete(self, db: Session, email: str):
+        delete_student = db.query(models.Student).filter(models.Student.email == email).first()
+        if delete_student is not None:
+            print("delete", delete_student)
+            db.delete(delete_student)
+            db.commit()
+            return Response(status_code=status.HTTP_204_NO_CONTENT)
+        else:
+            return Response(status_code=status.HTTP_404_NOT_FOUND)
 
 student = CRUDStudent(Student)
