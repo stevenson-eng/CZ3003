@@ -204,5 +204,38 @@ def assignmentQuestion_updated() -> Dict[str, Any]:
     )
 
 
+@pytest.fixture
+def question() -> Dict[str, Any]:
+    return vars(
+        schemas.QuestionCreate(
+            subquest_name="subquest",
+            difficulty=1,
+            points=100,
+            prompt="assignment1qns1",
+            answer=2,
+            choice1="ca",
+            choice2="wa",
+            choice3="wa",
+            choice4="wa",
+        )
+    )
+
+
+@pytest.fixture
+def question_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.QuestionUpdate(
+            subquest_name="subquest_updated",
+            difficulty=2,
+            points=150,
+            prompt="assignment1qns1updated",
+            answer=2,
+            choice1="wa",
+            choice2="ca",
+            choice3="wa_updated",
+            choice4="wa_updated",
+        )
+    )
+
 def pysessionfinish(session, exitstatus):
     os.remove("test.db")

@@ -54,7 +54,6 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
     def delete(self, db: Session, email: str):
         delete_student = db.query(models.Student).filter(models.Student.email == email).first()
         if delete_student is not None:
-            print("delete", delete_student)
             db.delete(delete_student)
             db.commit()
             return Response(status_code=status.HTTP_204_NO_CONTENT)
