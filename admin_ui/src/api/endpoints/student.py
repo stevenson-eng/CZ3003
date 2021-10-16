@@ -20,7 +20,10 @@ def read_all(db: Session = Depends(get_db)):
 def create(student: schemas.StudentCreate, db: Session = Depends(get_db)):
     return crud.student.create(db, student)
 
-
 @router.patch("/")
 def update(student: schemas.StudentUpdate, db: Session = Depends(get_db)):
     return crud.student.update(db, student)
+
+@router.delete("/")
+def delete(email: str, db: Session = Depends(get_db)):
+    return crud.student.delete(db, email)
