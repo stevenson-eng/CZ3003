@@ -63,9 +63,9 @@ def test_create_attempt(client: TestClient, attempt: Dict[str, Any]):
     assert validate(client.post("/attempt/", json=attempt), attempt)
 
 
-# @pytest.mark.run(order=8)
-# def test_create_question(client: TestClient, question: Dict[str, Any]):
-#     pass  # TODO: test
+@pytest.mark.run(order=8)
+def test_create_question(client: TestClient, question: Dict[str, Any]):
+    assert validate(client.post("/question/", json=question), question)
 
 
 @pytest.mark.run(order=9)
