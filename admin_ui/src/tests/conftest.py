@@ -154,6 +154,7 @@ def attempt() -> Dict[str, Any]:
             student_email="student@e.ntu.edu.sg",
             points_scored=100,
             time_to_complete_in_seconds=100,
+            completion_date="2021-10-16T15:10:45.030631",
         )
     )
 
@@ -166,6 +167,7 @@ def attempt_updated() -> Dict[str, Any]:
             student_email="student@e.ntu.edu.sg",
             points_scored=500,
             time_to_complete_in_seconds=500,
+            completion_date="2021-10-16T15:10:04.435987",
         )
     )
 
