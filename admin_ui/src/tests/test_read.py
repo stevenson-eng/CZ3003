@@ -47,25 +47,61 @@ def test_read_all_mails(client: TestClient, mail: Dict[str, Any]):
             assert returned_test_mail[field] == mail[field]
 
 
-# def test_read_category(client: TestClient, category: Dict[str, Any]):
-#     pass  # TODO: test
+def test_read_category(client: TestClient, category: Dict[str, Any]):
+    res = client.get(f"/category/{category['category_name']}")
+    assert res.status_code == 200
+    data = res.json()
+
+    for field in category:
+        if field in data:
+            assert data[field] == category[field]
 
 
-# def test_read_quest(client: TestClient, quest: Dict[str, Any]):
-#     pass  # TODO: test
+def test_read_quest(client: TestClient, quest: Dict[str, Any]):
+    res = client.get(f"/quest/{quest['quest_name']}")
+    assert res.status_code == 200
+    data = res.json()
+
+    for field in quest:
+        if field in data:
+            assert data[field] == quest[field]
 
 
-# def test_read_subquest(client: TestClient, subquest: Dict[str, Any]):
-#     pass  # TODO: test
+def test_read_subquest(client: TestClient, subquest: Dict[str, Any]):
+    res = client.get(f"/subquest/{subquest['subquest_name']}")
+    assert res.status_code == 200
+    data = res.json()
+
+    for field in subquest:
+        if field in data:
+            assert data[field] == subquest[field]
 
 
-# def test_read_attempt(client: TestClient, attempt: Dict[str, Any]):
-#     pass  # TODO: test
+def test_read_attempt(client: TestClient, attempt: Dict[str, Any]):
+    res = client.get(f"/attempt/")
+    assert res.status_code == 200
+    data = res.json()
+
+    for field in attempt:
+        if field in data:
+            assert data[field] == attempt[field]
 
 
-# def test_read_question(client: TestClient, question: Dict[str, Any]):
-#     pass  # TODO: test
+def test_read_question(client: TestClient, question: Dict[str, Any]):
+    res = client.get(f"/question")
+    assert res.status_code == 200
+    data = res.json()
+
+    for field in question:
+        if field in data:
+            assert data[field] == question[field]
 
 
-# def test_read_npc(client: TestClient, npc: Dict[str, Any]):
-#     pass  # TODO: test
+def test_read_npc(client: TestClient, npc: Dict[str, Any]):
+    res = client.get(f"/npc/{npc['npc_name']}")
+    assert res.status_code == 200
+    data = res.json()
+
+    for field in npc:
+        if field in data:
+            assert data[field] == npc[field]
