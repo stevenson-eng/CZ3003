@@ -76,3 +76,8 @@ def test_create_assignmentQuestion(client: TestClient, assignmentQuestion: Dict[
 @pytest.mark.run(order=10)
 def test_create_npc(client: TestClient, npc: Dict[str, Any]):
     assert validate(client.post("/npc/", json=npc), npc)
+
+
+@pytest.mark.run(order=11)
+def test_create_challenge(client: TestClient, challenge: Dict[str, Any]):
+    assert validate(client.post("/challenge/", json=challenge), challenge)
