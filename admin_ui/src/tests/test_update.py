@@ -37,5 +37,9 @@ def test_update_attempt(client: TestClient, attempt_updated: Dict[str, Any]):
     assert validate(client.patch("/attempt/", json=attempt_updated), attempt_updated)
 
 
+# def test_update_assignmentQuestion(client: TestClient, assignmentQuestion_updated: Dict[str, Any]):
+#     assert validate(client.patch("/assignmentQuestion/", json=assignmentQuestion_updated), assignmentQuestion_updated)
+
+
 # def test_update_question(client: TestClient, question_updated: Dict[str, Any]):
 #     assert validate(client.patch("/question/", json=question_updated), question_updated)

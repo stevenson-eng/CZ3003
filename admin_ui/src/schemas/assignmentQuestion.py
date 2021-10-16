@@ -11,7 +11,7 @@ class DifficultyEnum(int, Enum):
 
 # Shared properties
 class AssignmentQuestionBase(BaseModel):
-    assignment_id: str
+    assignment_name: str
     difficulty: DifficultyEnum
     points: int
     prompt: str
@@ -35,7 +35,7 @@ class AssignmentQuestionUpdate(BaseModel):
     """
 
     id: str
-    assignment_id: Optional[str] = None
+    assignment_name: Optional[str] = None
     difficulty: Optional[DifficultyEnum] = None
     points: Optional[int] = None
     prompt: Optional[str] = None

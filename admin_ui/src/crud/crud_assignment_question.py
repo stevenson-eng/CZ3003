@@ -12,7 +12,7 @@ from crud.base import CRUDBase
 class CRUDAssignmentQuestion(CRUDBase[AssignmentQuestion, AssignmentQuestionCreate, AssignmentQuestionUpdate]):
     def create(self, db: Session, assignmentQuestion: schemas.AssignmentQuestionCreate):
         db_assignmentQuestion = models.AssignmentQuestion(
-            assignment_id=assignmentQuestion.assignment_id,
+            assignment_name=assignmentQuestion.assignment_name,
             difficulty=assignmentQuestion.difficulty,
             points=assignmentQuestion.points,
             prompt=assignmentQuestion.prompt,

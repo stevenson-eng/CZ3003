@@ -6,11 +6,12 @@ from pydantic import BaseModel
 
 # Shared properties
 class AssignmentBase(BaseModel):
+    assignment_name: str
     assigner: str
     assignee: str
-    description: str
     points_scored: Optional[int] = None
     time_to_complete_in_seconds: Optional[int] = None
+    description: str
 
 # Properties to receive on assignment creation
 class AssignmentCreate(AssignmentBase):
@@ -23,7 +24,7 @@ class AssignmentUpdate(BaseModel):
     All update fields should be optional, as updates are done via HTTP PATCH,
     which must support partial updates
     """
-
+    assignment_name: Optional[str] = None
     assigner: Optional[str] = None
     assignee: Optional[str] = None
     points_scored: Optional[int] = None
@@ -32,8 +33,6 @@ class AssignmentUpdate(BaseModel):
 
 # Properties shared by models stored in DB
 class AssignmentInDBBase(AssignmentBase):
-    assignment_id: UUID
-
     class Config:
         orm_mode = True
 

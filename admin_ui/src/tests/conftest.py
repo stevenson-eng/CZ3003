@@ -68,9 +68,12 @@ def teacher_updated() -> Dict[str, Any]:
 def assignment() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentCreate(
+            assignment_name="assignment1",
             assigner="teacher@e.ntu.edu.sg",
             assignee="student@e.ntu.edu.sg",
-            description="text",
+            points_scored=50,
+            time_to_complete_in_seconds=50,
+            description="description",
         )
     )
 
@@ -79,11 +82,12 @@ def assignment() -> Dict[str, Any]:
 def assignment_updated() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentUpdate(
-            assigner="teacher@e.ntu.edu.sg",  # same PK to identify the object
-            assignee="student@e.ntu.edu.sg",  # same PK to identify the object
-            description="updated_description",
+            assignment_name="assignment1", # same PK to identify the object
+            assigner="teacher@e.ntu.edu.sg",  
+            assignee="student@e.ntu.edu.sg",  
             points_scored=100,
             time_to_complete_in_seconds=100,
+            description="updated_description",
         )
     )
 
@@ -130,6 +134,14 @@ def npc() -> Dict[str, Any]:
         )
     )
 
+@pytest.fixture
+def npc_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.NpcUpdate(
+            npc_name="npc_updated",
+            subquest_name="subquest_updated",
+        )
+    )
 
 @pytest.fixture
 def attempt() -> Dict[str, Any]:
@@ -155,38 +167,38 @@ def attempt_updated() -> Dict[str, Any]:
     )
 
 
-# @pytest.fixture
-# def assignmentQuestion() -> Dict[str, Any]:
-#     return vars(
-#         schemas.AssignmentQuestionCreate(
-#             assignment_id="",
-#             difficulty=1,
-#             points=100,
-#             prompt="assignment1qns1",
-#             answer="1",
-#             choice1="ca",
-#             choice2="wa",
-#             choice3="wa",
-#             choice4="wa",
-#         )
-#     )
+@pytest.fixture
+def assignmentQuestion() -> Dict[str, Any]:
+    return vars(
+        schemas.AssignmentQuestionCreate(
+            assignment_name="assignment1",
+            difficulty=1,
+            points=100,
+            prompt="assignment1qns1",
+            answer="1",
+            choice1="ca",
+            choice2="wa",
+            choice3="wa",
+            choice4="wa",
+        )
+    )
 
 
-# @pytest.fixture
-# def attempt_updated() -> Dict[str, Any]:
-#     return vars(
-#         schemas.AssignmentQuestionUpdate(
-#             assignment_id="",
-#             difficulty=2,
-#             points=150,
-#             prompt="assignment1qns1updated",
-#             answer="2",
-#             choice1="wa",
-#             choice2="ca",
-#             choice3="wa_updated",
-#             choice4="wa_updated",
-#         )
-#     )
+@pytest.fixture
+def assignmentQuestion_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.AssignmentQuestionUpdate(
+            assignment_name="assignment1",
+            difficulty=2,
+            points=150,
+            prompt="assignment1qns1updated",
+            answer="2",
+            choice1="wa",
+            choice2="ca",
+            choice3="wa_updated",
+            choice4="wa_updated",
+        )
+    )
 
 
 def pysessionfinish(session, exitstatus):
