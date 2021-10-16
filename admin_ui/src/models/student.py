@@ -12,8 +12,12 @@ class Student(Base):
     # TODO - https://docs.sqlalchemy.org/en/14/core/constraints.html
     id = Column(String, primary_key=True, index=True, default=lambda: str(uuid.uuid4()))
     email = Column(String, unique=True, index=True)
-    name = Column(String)
-    points = Column(Integer)
+    student_name = Column(String, nullable=False)
+    points = Column(Integer, nullable=True)
+    status = Column(Integer, nullable=True)
+    rank = Column(Integer, nullable=True)
+    position = Column(Integer, nullable=True)
+    
     mail = relationship(models.Mail, cascade="all,delete", backref="student")
     assignment = relationship(models.Assignment, cascade="all,delete", backref="student")
     attempt = relationship(models.Attempt, cascade="all,delete", backref="student")
