@@ -12,6 +12,7 @@ from crud.base import CRUDBase
 class CRUDAssignment(CRUDBase[Assignment, AssignmentCreate, AssignmentUpdate]):
     def create(self, db: Session, assignment: schemas.AssignmentCreate):
         db_assignment = models.Assignment(
+            assignment_name = assignment.assignment_name,
             assigner=assignment.assigner,
             assignee=assignment.assignee,
             description=assignment.description,

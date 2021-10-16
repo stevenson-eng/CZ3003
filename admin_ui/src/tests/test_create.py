@@ -7,9 +7,6 @@ import pytest
 from fastapi.testclient import TestClient
 from requests import Response
 
-from admin_ui.src.schemas import assignmentQuestion
-
-
 def validate(response: Response, request_body: Dict[str, Any]) -> bool:
     # 1st creation should raise 200 OK
     assert response.status_code == 200
@@ -72,8 +69,8 @@ def test_create_attempt(client: TestClient, attempt: Dict[str, Any]):
 
 
 @pytest.mark.run(order=9)
-def test_create_attempt(client: TestClient, attempt: Dict[str, Any]):
-    assert validate(client.post("/attempt/", json=assignmentQuestion), assignmentQuestion)
+def test_create_assignmentQuestion(client: TestClient, assignmentQuestion: Dict[str, Any]):
+    assert validate(client.post("/assignmentQuestion/", json=assignmentQuestion), assignmentQuestion)
 
 
 @pytest.mark.run(order=10)

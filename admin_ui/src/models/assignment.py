@@ -9,7 +9,7 @@ class Assignment(Base):
 
     # TODO - ensure that foreign key constraints, if any, are enforced
     # TODO - https://docs.sqlalchemy.org/en/14/core/constraints.html
-    assignment_id = Column(String, primary_key=True, index=True, default=lambda: str(uuid.uuid4()))
+    assignment_name = Column(String, primary_key=True, index=True, unique=True)
     assigner = Column(String, ForeignKey("teacher.email"), nullable=False)
     assignee = Column(String, ForeignKey("student.email"), nullable=False)
     description = Column(String, nullable=False)
