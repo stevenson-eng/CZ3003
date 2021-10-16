@@ -239,5 +239,34 @@ def question_updated() -> Dict[str, Any]:
         )
     )
 
+
+@pytest.fixture
+def challenge() -> Dict[str, Any]:
+    return vars(
+        schemas.ChallengeCreate(
+            challenger_email="student@e.ntu.edu.sg",
+            challengee_email="student@e.ntu.edu.sg",
+            difficulty=1,
+            quest_name="quest",
+            category_name="category",
+            number_of_questions=5,
+        )
+    )
+
+
+@pytest.fixture
+def challenge_updated() -> Dict[str, Any]:
+    return vars(
+        schemas.ChallengeUpdate(
+            challenger_email="student@e.ntu.edu.sg",
+            challengee_email="student@e.ntu.edu.sg",
+            difficulty=2,
+            quest_name="quest",
+            category_name="category",
+            number_of_questions=10,
+        )
+    )
+
+
 def pysessionfinish(session, exitstatus):
     os.remove("test.db")
