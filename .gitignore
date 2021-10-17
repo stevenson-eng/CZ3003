@@ -32,6 +32,9 @@ MANIFEST
 *.manifest
 *.spec
 
+venv
+__pycache__
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -143,3 +146,8 @@ admin_ui/src/.deta/
 
 # SQLite DB files
 admin_ui/src/*.db
+
+
+Dockerfile
+
+
