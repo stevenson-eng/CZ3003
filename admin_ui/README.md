@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=-ykeT6kk4bk
 # Pull Requests
 
 [FOR GAME DEV TEAM] You can use `git commit --no-verify` to bypass these checks.
- 
+
 1. Git hooks are set on all commits. You won't be able to commit changes that fail **any** of these tests
    - black (formatter)
    - pylint (linter)
@@ -41,3 +41,12 @@ disown
 lt --port 8000 &
 disown
 
+
+
+## Deployment - Okteta
+
+- https://okteto.com/blog/building-and-deploying-a-fastapi-app-in-okteto-cloud/
+- https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker
+
+- https://stackoverflow.com/questions/60819376/fastapi-throws-an-error-error-loading-asgi-app-could-not-import-module-api
+- https://stackoverflow.com/questions/20632258/change-directory-command-in-docker
