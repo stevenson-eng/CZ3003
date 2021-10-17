@@ -1,0 +1,64 @@
+# https://okteto.com/blog/ci-cd-using-gh-actions-and-okteto/
+name: Oketo CI/CD Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+      - name: Install python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3
+    
+      - name: Install python dependencies
+        run: pip install -r admin_ui/src/requirements.txt
+
+      - name: Login to Okteto Cloud
+        uses: okteto/login@master
+        with:
+          token: ${{ secrets.OKTETO_SECRET }}
+
+#       - name: Deploy your preview environment
+#         uses: okteto/deploy-preview@master
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         with:
+#           name: staging-${{ github.event.number }}-ernestang98
+#           scope: personal
+#           timeout: 15m
+          
+      - name: "Deploy the preview environment"
+        uses: okteto/deploy-preview@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          name: dev-previews-cindylopez-ernestang98
+      
+      - uses: nev7n/wait_for_response@v1
+        with:
+          url: https://api-staging-${{ github.event.number }}-okteto_username.cloud.okteto.net
+          responseCode: 200
+          timeout: 4000
+          
+        # https://stackoverflow.com/questions/62044541/change-pytest-working-directory-to-test-case-directory
+#       - name: Run API tests agaisnt Staging Namespace
+#         run: pytest --rootdir=admin_ui/src
+#         env:
+#           STAGING_COUCHDB_URL: https://api-staging-${{ github.event.number }}-okteto_username.cloud.okteto.net
+
+      # The name of your Okteto namespace
+      - name: Build and deploy application container to Okteto Flask Namespace
+        if: ${{ github.event_name == 'push' }}
+        uses: okteto/deploy-stack@master
+        with:
+          name: cz3003
+          build: true
