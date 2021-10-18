@@ -15,6 +15,7 @@ class Attempt(Base):
         String, ForeignKey("student.email"), primary_key=True, index=True
     )
     points_scored = Column(Integer, nullable=False)
+    total_points = Column(Integer, nullable=False)
     time_to_complete_in_seconds = Column(Integer, nullable=False)
     completion_datetime = Column(
         DateTime(timezone=True), nullable=False, server_default=func.now()

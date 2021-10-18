@@ -34,7 +34,14 @@ def client() -> TestClient:
 @pytest.fixture
 def student() -> Dict[str, Any]:
     return vars(
-        schemas.StudentCreate(email="student@e.ntu.edu.sg", name="student", points=0, status=1, rank=0, position=1)
+        schemas.StudentCreate(
+            email="student@e.ntu.edu.sg",
+            name="student",
+            points=0,
+            status=1,
+            rank=0,
+            position=1,
+        )
     )
 
 
@@ -85,9 +92,9 @@ def assignment() -> Dict[str, Any]:
 def assignment_updated() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentUpdate(
-            assignment_name="assignment1", # same PK to identify the object
-            assigner="teacher@e.ntu.edu.sg",  
-            assignee="student@e.ntu.edu.sg",  
+            assignment_name="assignment1",  # same PK to identify the object
+            assigner="teacher@e.ntu.edu.sg",
+            assignee="student@e.ntu.edu.sg",
             points_scored=100,
             time_to_complete_in_seconds=100,
             description="updated_description",
@@ -137,6 +144,7 @@ def npc() -> Dict[str, Any]:
         )
     )
 
+
 @pytest.fixture
 def npc_updated() -> Dict[str, Any]:
     return vars(
@@ -146,6 +154,7 @@ def npc_updated() -> Dict[str, Any]:
         )
     )
 
+
 @pytest.fixture
 def attempt() -> Dict[str, Any]:
     return vars(
@@ -153,6 +162,7 @@ def attempt() -> Dict[str, Any]:
             quest_name="quest",
             student_email="student@e.ntu.edu.sg",
             points_scored=100,
+            total_points=100,
             time_to_complete_in_seconds=100,
             completion_date="2021-10-16T15:10:45.030631",
         )
@@ -165,7 +175,8 @@ def attempt_updated() -> Dict[str, Any]:
         schemas.AttemptCreate(
             quest_name="quest",
             student_email="student@e.ntu.edu.sg",
-            points_scored=500,
+            points_scored=90,
+            total_points=100,
             time_to_complete_in_seconds=500,
             completion_date="2021-10-16T15:10:04.435987",
         )

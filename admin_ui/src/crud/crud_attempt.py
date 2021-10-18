@@ -15,6 +15,7 @@ class CRUDAttempt(CRUDBase[Attempt, AttemptCreate, AttemptUpdate]):
             quest_name=attempt.quest_name,
             student_email=attempt.student_email,
             points_scored=attempt.points_scored,
+            total_points=attempt.total_points,
             time_to_complete_in_seconds=attempt.time_to_complete_in_seconds,
             completion_datetime=attempt.completion_datetime,
         )
@@ -24,10 +25,7 @@ class CRUDAttempt(CRUDBase[Attempt, AttemptCreate, AttemptUpdate]):
         return db_attempt
 
     def read(
-        self,
-        db: Session,
-        quest_name: Optional[str],
-        student_email: Optional[str]
+        self, db: Session, quest_name: Optional[str], student_email: Optional[str]
     ) -> List[Attempt]:
         results = db.query(models.Attempt)
 

@@ -7,6 +7,7 @@ class AttemptBase(BaseModel):
     quest_name: str
     student_email: str
     points_scored: int
+    total_points: int
     time_to_complete_in_seconds: int
     completion_datetime: datetime = datetime.now().strftime("%Y-%m-%dT%H:%m:%S.%f")
 

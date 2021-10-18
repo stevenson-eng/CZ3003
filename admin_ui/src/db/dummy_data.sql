@@ -99,6 +99,14 @@ VALUES ("CZ3001 Subquest 1", "CZ3001 Quest 1");
 INSERT INTO Subquest
 VALUES ("CZ3002 Subquest 1", "CZ3002 Quest 1");
 INSERT INTO Subquest
+VALUES ("CZ3002 Subquest 2", "CZ3002 Quest 1");
+INSERT INTO Subquest
+VALUES ("CZ3002 Subquest 3", "CZ3002 Quest 1");
+INSERT INTO Subquest
+VALUES ("CZ3002 Subquest 4", "CZ3002 Quest 1");
+INSERT INTO Subquest
+VALUES ("CZ3002 Subquest 5", "CZ3002 Quest 1");
+INSERT INTO Subquest
 VALUES ("CZ3003 Subquest 1", "CZ3003 Quest 1");
 DELETE FROM Npc;
 INSERT INTO Npc
@@ -153,6 +161,7 @@ VALUES (
         "CZ3001 Quest 1",
         "B190020@e.ntu.edu.sg",
         50,
+        100,
         3600,
         "2021-10-18T16:53:31.498332"
     );
@@ -160,7 +169,8 @@ INSERT INTO Attempt
 VALUES (
         "CZ3002 Quest 1",
         "B190020@e.ntu.edu.sg",
-        100,
+        85,
+        120,
         1800,
         "2021-10-18T18:10:31.498332"
     );
@@ -168,7 +178,8 @@ INSERT INTO Attempt
 VALUES (
         "CZ3003 Quest 1",
         "B190020@e.ntu.edu.sg",
-        500,
+        50,
+        150,
         600,
         "2021-10-18T20:23:31.498332"
     );
