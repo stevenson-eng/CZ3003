@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 import models
 import schemas
@@ -23,15 +23,21 @@ class CRUDAttempt(CRUDBase[Attempt, AttemptCreate, AttemptUpdate]):
         db.refresh(db_attempt)
         return db_attempt
 
-    def read(self, db: Session, quest_name: str, student_email: str) -> Attempt:
-        return (
-            db.query(models.Attempt)
-            .filter(
-                models.Attempt.quest_name == quest_name,
-                models.Attempt.student_email == student_email,
-            )
-            .first()
-        )
+    def read(
+        self,
+        db: Session,
+        quest_name: Optional[str],
+        student_email: Optional[str]
+    ) -> List[Attempt]:
+        results = db.query(models.Attempt)
+
+        if quest_name is not None:
+            results = results.filter(models.Attempt.quest_name == quest_name)
+
+        if student_email is not None:
+            results = results.filter(models.Attempt.student_email == student_email)
+
+        return results.all()
 
     def read_all(self, db: Session) -> List[Attempt]:
         return db.query(models.Attempt).all()
