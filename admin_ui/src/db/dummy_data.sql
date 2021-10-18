@@ -1,10 +1,10 @@
 /*
-This script will DELETE all rows from the following entities, 
-before inserting the dummy data - Student, Teacher, Assignment,
-Category, Quest, Subquest, Npc
-
-For live demo, we assume Assignment, Challenge, Mail will be
-created on the spot
+ This script will DELETE all rows from the following entities, 
+ before inserting the dummy data - Student, Teacher, Assignment,
+ Category, Quest, Subquest, Npc, Attempt
+ 
+ For live demo, we assume Assignment, Challenge, Mail will be
+ created on the spot
  */
 DELETE FROM Student;
 INSERT INTO Student
@@ -146,4 +146,29 @@ VALUES (
         "Layered",
         "Client-Server",
         "Message Stacks"
+    );
+DELETE FROM Attempt;
+INSERT INTO Attempt
+VALUES (
+        "CZ3001 Quest 1",
+        "B190020@e.ntu.edu.sg",
+        50,
+        3600,
+        "2021-10-18T16:53:31.498332"
+    );
+INSERT INTO Attempt
+VALUES (
+        "CZ3002 Quest 1",
+        "B190020@e.ntu.edu.sg",
+        100,
+        1800,
+        "2021-10-18T18:10:31.498332"
+    );
+INSERT INTO Attempt
+VALUES (
+        "CZ3003 Quest 1",
+        "B190020@e.ntu.edu.sg",
+        500,
+        600,
+        "2021-10-18T20:23:31.498332"
     );
