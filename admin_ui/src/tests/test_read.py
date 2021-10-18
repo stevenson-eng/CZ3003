@@ -77,14 +77,14 @@ def test_read_subquest(client: TestClient, subquest: Dict[str, Any]):
             assert data[field] == subquest[field]
 
 
-# def test_read_attempt(client: TestClient, attempt: Dict[str, Any]):
-#     res = client.get(f"/attempt/")
-#     assert res.status_code == 200
-#     data = res.json()
+def test_read_attempt(client: TestClient, attempt: Dict[str, Any]):
+    res = client.get(f"/attempt/")
+    assert res.status_code == 200
+    data = res.json()
 
-#     for field in attempt:
-#         if field in data:
-#             assert data[field] == attempt[field]
+    for field in attempt:
+        if field in data:
+            assert data[field] == attempt[field]
 
 
 def test_read_question(client: TestClient, question: Dict[str, Any]):
@@ -107,7 +107,9 @@ def test_read_npc(client: TestClient, npc: Dict[str, Any]):
             assert data[field] == npc[field]
 
 
-def test_read_assignmentQuestion(client: TestClient, assignmentQuestion: Dict[str, Any]):
+def test_read_assignmentQuestion(
+    client: TestClient, assignmentQuestion: Dict[str, Any]
+):
     res = client.get(f"/assignmentQuestion/")
     assert res.status_code == 200
     data = res.json()
