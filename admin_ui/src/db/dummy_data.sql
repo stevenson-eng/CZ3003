@@ -110,7 +110,7 @@ VALUES ("Tyrion Lannister", "CZ3003 Subquest 1");
 DELETE FROM Question;
 INSERT INTO Question
 VALUES (
-        0,
+        "0",
         "CZ3001 Subquest 1",
         0,
         5,
@@ -123,7 +123,7 @@ VALUES (
     );
 INSERT INTO Question
 VALUES (
-        1,
+        "1",
         "CZ3002 Subquest 1",
         0,
         5,
@@ -136,7 +136,7 @@ VALUES (
     );
 INSERT INTO Question
 VALUES (
-        2,
+        "2",
         "CZ3003 Subquest 1",
         0,
         5,
