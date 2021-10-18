@@ -50,3 +50,9 @@ disown
 
 - https://stackoverflow.com/questions/60819376/fastapi-throws-an-error-error-loading-asgi-app-could-not-import-module-api
 - https://stackoverflow.com/questions/20632258/change-directory-command-in-docker
+
+
+
+### Debugging things:
+
+- May have to delete and regenerate sql.db due to changes in schema
