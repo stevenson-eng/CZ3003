@@ -28,6 +28,8 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+**/*.db
+
 **/.DS_Store
 
 # PyInstaller
