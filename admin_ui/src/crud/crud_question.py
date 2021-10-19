@@ -1,6 +1,7 @@
 from typing import List
 import models
 import schemas
+import random
 from models.question import Question
 from models.subquest import Subquest
 from models.quest import Quest
@@ -31,7 +32,9 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
         return db.query(models.Question).filter(models.Question.id == id).first()
 
     def read_all(self, db: Session) -> List[Question]:
-        return db.query(models.Question).all()
+        question = db.query(models.Question).all()
+        random.shuffle(question)
+        return question
 
     def read_by_parameters(self, db: Session, category_name: str, quest_name:str, \
         subquest_name: str, difficulty: int, limit: int) -> List[QuestionQuery]:
@@ -65,7 +68,7 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
             question = question.filter(
                 Question.difficulty == difficulty
             )
-
+        random.shuffle(question)
         return question.limit(limit).all()
 
 
