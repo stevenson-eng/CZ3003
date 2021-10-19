@@ -172,7 +172,7 @@ def attempt() -> Dict[str, Any]:
 @pytest.fixture
 def attempt_updated() -> Dict[str, Any]:
     return vars(
-        schemas.AttemptCreate(
+        schemas.AttemptUpdate(
             quest_name="quest",
             student_email="student@e.ntu.edu.sg",
             points_scored=90,
