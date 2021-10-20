@@ -11,6 +11,16 @@ https://www.youtube.com/watch?v=-ykeT6kk4bk
 5. cd src && uvicorn main:app --reload
 6. http://127.0.0.1:8000 or localhost:8000
 
+# Unit Testing (pytest)
+
+\*\*Note - if you get a sqlalchemy.exc.IntegrityError, chance are your `test.db` is still there, and already contains the entities (hence duplicatre error). Delete it via `rm admin_ui/src/test.db` (ensure it isn't open in DB Browser SQLite)
+
+1. `cd admin_ui/src/`
+2. `pip install -r requirements.txt` - ensure that you've all installed
+3. [only run tests] `rm test.db & python -m pytest tests/`
+4. [run tests and re-generate docs] `rm test.db & python -m pytest tests/ --docs tests/docs/docs.md --doc-type=md`
+5. Only `.md` and `.rst` formats are supported, hence use https://www.markdowntopdf.com/ for conversion to report-friendly `.pdf`
+
 # Pull Requests
 
 [FOR GAME DEV TEAM] You can use `git commit --no-verify` to bypass these checks.
@@ -26,22 +36,25 @@ https://www.youtube.com/watch?v=-ykeT6kk4bk
    - mypy (static type checker) - checks for wrong types in all .py files in the directory, recursively. Fix the errors manually.
 
 # Deployment - Deta
+
 deta update --env admin_ui/src/.env (update ENV)
 cd admin_ui/src && deta deploy
 
 # Deployment - Azure VM + HTTP Tunneling
+
 ## Update host machine main branch
+
 gco main && gp
 
 ## Start up application server
+
 cd admin_ui/src/ && uvicorn main:app &
 disown
 
 ## Start up HTTP tunnel
+
 lt --port 8000 &
 disown
-
-
 
 ## Deployment - Okteta
 
@@ -50,8 +63,6 @@ disown
 
 - https://stackoverflow.com/questions/60819376/fastapi-throws-an-error-error-loading-asgi-app-could-not-import-module-api
 - https://stackoverflow.com/questions/20632258/change-directory-command-in-docker
-
-
 
 ### Debugging things:
 

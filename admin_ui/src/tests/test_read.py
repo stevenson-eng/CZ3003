@@ -1,29 +1,55 @@
+"""
+Unit tests for the reading process of entities within the database via the REST endpoints.
+"""
+
 from typing import Any, Dict
 
 from fastapi.testclient import TestClient
 
 
-def test_read_student(client: TestClient, student: Dict[str, Any]):
-    res = client.get(f"/student/{student['email']}")
+def validate(
+    client: TestClient, endpoint: str, expected_entity: Dict[str, any]
+) -> bool:
+    res = client.get(endpoint)
     assert res.status_code == 200
     data = res.json()
 
-    for field in student:
-        if field in data:
-            assert data[field] == student[field]
+    return all(
+        [
+            data[field] == expected_entity[field]
+            for field in expected_entity
+            if field in data
+        ]
+    )
+
+
+def test_read_student(client: TestClient, student: Dict[str, Any]):
+    """Tests the GET endpoint at /student/ for student read
+
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        student (Dict[str, Any]): Student to be read
+    """
+    assert validate(client, f"/student/{student['email']}", student)
 
 
 def test_read_teacher(client: TestClient, teacher: Dict[str, Any]):
-    res = client.get(f"/teacher/{teacher['email']}")
-    assert res.status_code == 200
-    data = res.json()
+    """Tests the GET endpoint at /teacher/ for teacher read
 
-    for field in teacher:
-        if field in data:
-            assert data[field] == teacher[field]
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        teacher (Dict[str, Any]): Teacher to be created
+    """
+    assert validate(client, f"/teacher/{teacher['email']}", teacher)
 
 
 def test_read_all_assignments(client: TestClient, assignment: Dict[str, Any]):
+    """Tests the GET endpoint at /asignment/ for asignment read
+
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        asignment (Dict[str, Any]): Assignment to be created
+    """
     res = client.get(f"/assignment/")
     assert res.status_code == 200
     data = res.json()
@@ -36,6 +62,12 @@ def test_read_all_assignments(client: TestClient, assignment: Dict[str, Any]):
 
 
 def test_read_all_mails(client: TestClient, mail: Dict[str, Any]):
+    """Tests the GET endpoint at /mail/ for mail read
+
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        mail (Dict[str, Any]): Mail to be created
+    """
     res = client.get(f"/mail/")
     assert res.status_code == 200
     data = res.json()
@@ -48,91 +80,82 @@ def test_read_all_mails(client: TestClient, mail: Dict[str, Any]):
 
 
 def test_read_category(client: TestClient, category: Dict[str, Any]):
-    res = client.get(f"/category/{category['category_name']}")
-    assert res.status_code == 200
-    data = res.json()
+    """Tests the GET endpoint at /category/ for category read
 
-    for field in category:
-        if field in data:
-            assert data[field] == category[field]
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        category (Dict[str, Any]): Category to be created
+    """
+    assert validate(client, f"/category/{category['category_name']}", category)
 
 
 def test_read_quest(client: TestClient, quest: Dict[str, Any]):
-    res = client.get(f"/quest/{quest['quest_name']}")
-    assert res.status_code == 200
-    data = res.json()
+    """Tests the GET endpoint at /quest/ for quest read
 
-    for field in quest:
-        if field in data:
-            assert data[field] == quest[field]
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        quest (Dict[str, Any]): Quest to be created
+    """
+    assert validate(client, f"/quest/{quest['quest_name']}", quest)
 
 
 def test_read_subquest(client: TestClient, subquest: Dict[str, Any]):
-    res = client.get(f"/subquest/{subquest['subquest_name']}")
-    assert res.status_code == 200
-    data = res.json()
+    """Tests the GET endpoint at /subquest/ for subquest read
 
-    for field in subquest:
-        if field in data:
-            assert data[field] == subquest[field]
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        subquest (Dict[str, Any]): Subquest to be created
+    """
+    assert validate(client, f"/subquest/{subquest['subquest_name']}", subquest)
 
 
 def test_read_attempt(client: TestClient, attempt: Dict[str, Any]):
-    res = client.get(f"/attempt/")
-    assert res.status_code == 200
-    data = res.json()
+    """Tests the GET endpoint at /attempt/ for attempt read
 
-    for field in attempt:
-        if field in data:
-            assert data[field] == attempt[field]
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        attempt (Dict[str, Any]): Attempt to be created
+    """
+    assert validate(client, f"/attempt/", attempt)
 
 
 def test_read_question(client: TestClient, question: Dict[str, Any]):
-    res = client.get(f"/question")
-    assert res.status_code == 200
-    data = res.json()
+    """Tests the GET endpoint at /question/ for question read
 
-    for field in question:
-        if field in data:
-            assert data[field] == question[field]
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        question (Dict[str, Any]): Question to be created
+    """
+    assert validate(client, f"/question/", question)
+
+
+def test_read_assignment_question(
+    client: TestClient, assignment_question: Dict[str, Any]
+):
+    """Tests the GET endpoint at /assignmentQuestion/ for assignment_question read
+
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        assignment_question (Dict[str, Any]): Question to be created
+    """
+    assert validate(client, f"/assignmentQuestion/", assignment_question)
 
 
 def test_read_npc(client: TestClient, npc: Dict[str, Any]):
-    res = client.get(f"/npc/{npc['npc_name']}")
-    assert res.status_code == 200
-    data = res.json()
+    """Tests the GET endpoint at /npc/ for npc read
 
-    for field in npc:
-        if field in data:
-            assert data[field] == npc[field]
-
-
-def test_read_assignmentQuestion(
-    client: TestClient, assignmentQuestion: Dict[str, Any]
-):
-    res = client.get(f"/assignmentQuestion/")
-    assert res.status_code == 200
-    data = res.json()
-
-    for field in assignmentQuestion:
-        if field in data:
-            assert data[field] == assignmentQuestion[field]
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        npc (Dict[str, Any]): NPC to be created
+    """
+    assert validate(client, f"/npc/{npc['npc_name']}", npc)
 
 
 def test_read_challenge(client: TestClient, challenge: Dict[str, Any]):
-    res = client.get(f"/challenge/")
-    assert res.status_code == 200
-    data = res.json()
+    """Tests the GET endpoint at /challenge/ for challenge read
 
-    for field in challenge:
-        if field in data:
-            assert data[field] == challenge[field]
-
-def test_read_student_stats(client: TestClient, student_stats: Dict[str, Any]):
-    res = client.get(f"/attempt/{student_stats['student_email']}")
-    assert res.status_code == 200
-    data = res.json()
-
-    for field in student_stats:
-        if field in data:
-            assert data[field] == student_stats[field]
+    Args:
+        client (TestClient): Client for making HTTP requests to
+        challenge (Dict[str, Any]): Challenge to be created
+    """
+    assert validate(client, f"/challenge/", challenge)
