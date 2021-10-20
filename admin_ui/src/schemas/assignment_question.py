@@ -4,10 +4,12 @@ from enum import Enum
 
 from pydantic import BaseModel
 
+
 class DifficultyEnum(int, Enum):
     easy = 1
     medium = 2
     hard = 3
+
 
 # Shared properties
 class AssignmentQuestionBase(BaseModel):
@@ -49,6 +51,7 @@ class AssignmentQuestionUpdate(BaseModel):
 # Properties shared by models stored in DB
 class AssignmentQuestionInDBBase(AssignmentQuestionBase):
     id: UUID
+
     class Config:
         orm_mode = True
 

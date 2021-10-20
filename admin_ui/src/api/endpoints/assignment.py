@@ -27,3 +27,8 @@ def create(assignment: schemas.AssignmentCreate, db: Session = Depends(get_db)):
 @router.patch("/")
 def update(assignment: schemas.AssignmentUpdate, db: Session = Depends(get_db)):
     return crud.assignment.update(db, assignment)
+
+
+@router.delete("/", status_code=204)
+def delete(assignment_name: str, db: Session = Depends(get_db)):
+    return crud.assignment.delete(db, assignment_name)

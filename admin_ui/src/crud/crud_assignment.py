@@ -2,6 +2,7 @@ from typing import List
 
 import models
 import schemas
+from fastapi import HTTPException, Response, status
 from models.assignment import Assignment
 from schemas.assignment import AssignmentCreate, AssignmentUpdate
 from sqlalchemy.orm import Session
@@ -12,7 +13,7 @@ from crud.base import CRUDBase
 class CRUDAssignment(CRUDBase[Assignment, AssignmentCreate, AssignmentUpdate]):
     def create(self, db: Session, assignment: schemas.AssignmentCreate):
         db_assignment = models.Assignment(
-            assignment_name = assignment.assignment_name,
+            assignment_name=assignment.assignment_name,
             assigner=assignment.assigner,
             assignee=assignment.assignee,
             description=assignment.description,
@@ -45,6 +46,20 @@ class CRUDAssignment(CRUDBase[Assignment, AssignmentCreate, AssignmentUpdate]):
             .first()
         )
         return super().update(db, db_obj=old_assignment, obj_in=new_assignment)
+
+    def delete(self, db: Session, assignment_name: str) -> Response:
+        assignment_to_delete = (
+            db.query(models.Assignment)
+            .filter(models.Assignment.assignment_name == assignment_name)
+            .first()
+        )
+
+        if assignment_to_delete is not None:
+            db.delete(assignment_to_delete)
+            db.commit()
+            return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+        raise HTTPException(status_code=404, detail="Item not found")
 
 
 assignment = CRUDAssignment(Assignment)
