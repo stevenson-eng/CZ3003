@@ -1,6 +1,6 @@
 # schemas/ document how the structure that request and response bodies must follow
 from .assignment import Assignment, AssignmentCreate, AssignmentInDB, AssignmentUpdate
-from .attempt import Attempt, AttemptCreate, AttemptInDB, AttemptUpdate
+from .attempt import Attempt, AttemptCreate, AttemptInDB, AttemptUpdate, StudentReportStats
 from .category import Category, CategoryCreate, CategoryInDB, CategoryUpdate
 from .mail import Mail, MailCreate, MailUpdate
 from .npc import Npc, NpcCreate, NpcInDB, NpcUpdate

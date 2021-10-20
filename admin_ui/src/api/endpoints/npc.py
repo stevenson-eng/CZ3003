@@ -8,9 +8,9 @@ from typing import List
 router = APIRouter()
 
 
-@router.get("/{id}", response_model=schemas.Npc)
-def read(id: str, db: Session = Depends(get_db)):
-    return crud.npc.read(db, id)
+@router.get("/{npc_name}", response_model=schemas.Npc)
+def read(npc_name: str, db: Session = Depends(get_db)):
+    return crud.npc.read(db, npc_name)
 
 @router.get("/", response_model=List[schemas.Npc])
 def read_all(db: Session = Depends(get_db)):
