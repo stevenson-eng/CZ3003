@@ -127,3 +127,12 @@ def test_read_challenge(client: TestClient, challenge: Dict[str, Any]):
     for field in challenge:
         if field in data:
             assert data[field] == challenge[field]
+
+def test_read_student_stats(client: TestClient, student_stats: Dict[str, Any]):
+    res = client.get(f"/attempt/{student_stats['student_email']}")
+    assert res.status_code == 200
+    data = res.json()
+
+    for field in student_stats:
+        if field in data:
+            assert data[field] == student_stats[field]

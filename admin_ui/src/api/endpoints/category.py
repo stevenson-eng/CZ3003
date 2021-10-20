@@ -10,9 +10,9 @@ from typing import List
 router = APIRouter()
 
 
-@router.get("/{id}", response_model=schemas.Category)
-def read(id: str, db: Session = Depends(get_db)):
-    return crud.category.read(db, id)
+@router.get("/{category_name}", response_model=schemas.Category)
+def read(category_name: str, db: Session = Depends(get_db)):
+    return crud.category.read(db, category_name)
 
 @router.get("/", response_model=List[schemas.Category])
 def read_all(db: Session = Depends(get_db)):

@@ -184,6 +184,17 @@ def attempt_updated() -> Dict[str, Any]:
 
 
 @pytest.fixture
+def student_stats() -> Dict[str, Any]:
+    return vars(
+        schemas.StudentReportStats(
+            student_email="student@e.ntu.edu.sg",
+            points_earned=100,
+            max_points_earnable=100,
+        )
+    )
+
+
+@pytest.fixture
 def assignmentQuestion() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentQuestionCreate(

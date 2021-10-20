@@ -33,3 +33,9 @@ class Attempt(AttemptInDBBase):
 # Properties properties stored in DB
 class AttemptInDB(AttemptInDBBase):
     pass
+
+
+class StudentReportStats(BaseModel):
+    student_email: str
+    points_earned: int
+    max_points_earnable: int 

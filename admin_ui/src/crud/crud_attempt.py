@@ -3,9 +3,9 @@ from typing import List, Optional
 import models
 import schemas
 from models.attempt import Attempt
-from schemas.attempt import AttemptCreate, AttemptUpdate
+from schemas.attempt import AttemptCreate, AttemptUpdate, StudentReportStats
 from sqlalchemy.orm import Session
-
+from sqlalchemy.sql import func
 from crud.base import CRUDBase
 
 
@@ -39,6 +39,15 @@ class CRUDAttempt(CRUDBase[Attempt, AttemptCreate, AttemptUpdate]):
 
     def read_all(self, db: Session) -> List[Attempt]:
         return db.query(models.Attempt).all()
+
+    def read_student_stats(self, db: Session, student_email: str) -> StudentReportStats:
+        student_results = db.query(
+            Attempt.student_email,
+            func.sum(Attempt.points_scored).label("points_earned"),
+            func.sum(Attempt.total_points).label("max_points_earnable")
+        ).filter(Attempt.student_email == student_email)
+
+        return student_results.all()
 
     def update(self, db: Session, new_attempt: schemas.AttemptUpdate):
         old_attempt = (

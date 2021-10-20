@@ -22,6 +22,10 @@ def read(
     """
     return crud.attempt.read(db, quest_name, student_email)
 
+@router.get("/{student_email}")
+def student_stats(student_email: str, db: Session = Depends(get_db)):
+    return crud.attempt.read_student_stats(db, student_email)
+
 
 @router.post("/")
 def create(attempt: schemas.AttemptCreate, db: Session = Depends(get_db)):
