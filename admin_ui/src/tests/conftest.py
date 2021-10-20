@@ -195,7 +195,7 @@ def student_stats() -> Dict[str, Any]:
 
 
 @pytest.fixture
-def assignmentQuestion() -> Dict[str, Any]:
+def assignment_question() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentQuestionCreate(
             assignment_name="assignment1",
@@ -212,7 +212,7 @@ def assignmentQuestion() -> Dict[str, Any]:
 
 
 @pytest.fixture
-def assignmentQuestion_updated() -> Dict[str, Any]:
+def assignment_question_updated() -> Dict[str, Any]:
     return vars(
         schemas.AssignmentQuestionUpdate(
             assignment_name="assignment1",
