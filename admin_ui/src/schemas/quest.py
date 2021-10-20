@@ -1,6 +1,6 @@
 from typing import Optional
 from uuid import UUID
-
+from datetime import datetime
 from pydantic import BaseModel
 
 
@@ -39,3 +39,12 @@ class Quest(QuestInDBBase):
 # Properties properties stored in DB
 class QuestInDB(QuestInDBBase):
     pass
+
+
+class QuestQuery(BaseModel):
+    category_name: str
+    quest_name: str
+    student_email: str
+    points_scored: int
+    time_to_complete_in_seconds: int
+    completion_datetime: str

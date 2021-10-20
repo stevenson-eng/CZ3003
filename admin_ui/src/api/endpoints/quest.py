@@ -3,7 +3,7 @@ import schemas
 from db.database import get_db
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from typing import List
+from typing import List, Optional
 
 router = APIRouter()
 
@@ -15,6 +15,14 @@ def read(id: str, db: Session = Depends(get_db)):
 @router.get("/", response_model=List[schemas.Quest])
 def read_all(db: Session = Depends(get_db)):
     return crud.quest.read_all(db)
+
+@router.get("/category/")
+def read(
+    category_name: Optional[str] = None, 
+    student_email: Optional[str] = None, 
+    db: Session = Depends(get_db)):
+
+    return crud.quest.read_by_category(db, category_name, student_email)
 
 @router.post("/")
 def create(quest: schemas.QuestCreate, db: Session = Depends(get_db)):
