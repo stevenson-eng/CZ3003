@@ -1,7 +1,7 @@
 """
 Unit tests for the reading process of entities within the database via the REST endpoints.
 """
-
+import math
 from typing import Any, Dict
 
 from fastapi.testclient import TestClient
@@ -30,6 +30,16 @@ def test_read_student(client: TestClient, student: Dict[str, Any]):
         client (TestClient): Client for making HTTP requests to
         student (Dict[str, Any]): Student to be read
     """
+    attempt_res = client.get(f"/attempt/{student['email']}")
+    attempt_data = attempt_res.json()
+
+    for attempt in attempt_data:
+        if student['email'] == attempt['student_email']:
+            student['points'] += attempt['points_earned']
+        student['rank'] = math.floor(student['points']/100) + 1
+        if student['rank'] > 11:
+            student['rank'] = 11
+
     assert validate(client, f"/student/{student['email']}", student)
 
 
