@@ -12,6 +12,7 @@ router = APIRouter()
 def read(email: str, db: Session = Depends(get_db)):
     return crud.student.read(db, email)
 
+
 @router.get("/", response_model=List[schemas.Student])
 def read_all(db: Session = Depends(get_db)):
     """
@@ -26,14 +27,17 @@ def read_all(db: Session = Depends(get_db)):
     """
     return crud.student.read_all(db)
 
+
 @router.post("/")
 def create(student: schemas.StudentCreate, db: Session = Depends(get_db)):
     return crud.student.create(db, student)
+
 
 @router.patch("/")
 def update(student: schemas.StudentUpdate, db: Session = Depends(get_db)):
     return crud.student.update(db, student)
 
-@router.delete("/")
+
+@router.delete("/", status_code=204)
 def delete(email: str, db: Session = Depends(get_db)):
     return crud.student.delete(db, email)

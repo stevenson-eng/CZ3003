@@ -1,9 +1,9 @@
-import uuid
-from models.assignmentQuestion import AssignmentQuestion
+from models.assignment_question import AssignmentQuestion
 
 from db.database import Base
 from sqlalchemy import Column, String, ForeignKey, Integer
 from sqlalchemy.orm import relationship
+
 
 class Assignment(Base):
     __tablename__ = "assignment"
@@ -16,4 +16,6 @@ class Assignment(Base):
     description = Column(String, nullable=False)
     points_scored = Column(Integer, nullable=True)
     time_to_complete_in_seconds = Column(Integer, nullable=True)
-    assignmentQuestion = relationship(AssignmentQuestion, cascade="all,delete", backref="assignment")
+    assignmentQuestion = relationship(
+        AssignmentQuestion, cascade="all,delete", backref="assignment"
+    )
