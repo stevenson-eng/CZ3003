@@ -2,12 +2,13 @@ from typing import List, Optional
 
 import models
 import schemas
+import crud
+import math
 from models.attempt import Attempt
 from schemas.attempt import AttemptCreate, AttemptUpdate, StudentReportStats
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import func
 from crud.base import CRUDBase
-
 
 class CRUDAttempt(CRUDBase[Attempt, AttemptCreate, AttemptUpdate]):
     def create(self, db: Session, attempt: schemas.AttemptCreate):
@@ -19,9 +20,23 @@ class CRUDAttempt(CRUDBase[Attempt, AttemptCreate, AttemptUpdate]):
             time_to_complete_in_seconds=attempt.time_to_complete_in_seconds,
             completion_datetime=attempt.completion_datetime,
         )
+
+        #update student's points and rank
+        db_student = crud.student.read(db, attempt.student_email)
+        db_student.points += attempt.points_scored
+        db_student.rank = math.floor(db_student.points/100) + 1
+        if db_student.rank > 11:
+            db_student.rank = 11
+        db.add(db_student)
+        db.commit()
+        db.refresh(db_student)
+        #update all students position based on updated points and rank
+        crud.student.updateLeaderboard(db)
+
         db.add(db_attempt)
         db.commit()
         db.refresh(db_attempt)
+
         return db_attempt
 
     def read(

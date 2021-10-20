@@ -15,6 +15,10 @@ def read(email: str, db: Session = Depends(get_db)):
 
 @router.get("/", response_model=List[schemas.Student])
 def read_all(db: Session = Depends(get_db)):
+    return crud.student.read_all(db)
+
+@router.post("/")
+def create(student: schemas.StudentCreate, db: Session = Depends(get_db)):
     """
     Create a student with all the information:
 
@@ -25,11 +29,6 @@ def read_all(db: Session = Depends(get_db)):
     - **rank**: do not input, default value = None, rank will be calculated from points
     - **position**: do not input, default value = None, position will be calculated based on number of current students
     """
-    return crud.student.read_all(db)
-
-
-@router.post("/")
-def create(student: schemas.StudentCreate, db: Session = Depends(get_db)):
     return crud.student.create(db, student)
 
 
