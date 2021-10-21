@@ -34,8 +34,7 @@ def test_read_student(client: TestClient, student: Dict[str, Any]):
     attempt_data = attempt_res.json()
 
     for attempt in attempt_data:
-        if student['email'] == attempt['student_email']:
-            student['points'] += attempt['points_earned']
+        student['points'] += attempt['points_earned']
         student['rank'] = math.floor(student['points']/100) + 1
         if student['rank'] > 11:
             student['rank'] = 11
