@@ -5,7 +5,7 @@ import schemas
 from models.quest import Quest
 from models.attempt import Attempt
 from models.student import Student
-from schemas.quest import QuestCreate, QuestUpdate, QuestQuery
+from schemas.quest import QuestCreate, QuestUpdate, QuestQuery, BestAttempt
 from sqlalchemy.orm import Session
 
 from crud.base import CRUDBase
@@ -32,6 +32,7 @@ class CRUDQuest(CRUDBase[Quest, QuestCreate, QuestUpdate]):
         quest = db.query(
             Attempt.student_email,
             Attempt.points_scored,
+            Attempt.total_points,
             Attempt.time_to_complete_in_seconds,
             Attempt.completion_datetime,
             Quest.quest_name, 
@@ -48,6 +49,22 @@ class CRUDQuest(CRUDBase[Quest, QuestCreate, QuestUpdate]):
 
         return quest.order_by(models.Attempt.time_to_complete_in_seconds.asc()).all()
 
+    def best_quest_attempt(self, db: Session, student_email: str, category_name: str, quest_name: str) -> List[BestAttempt]:
+        best_attempt = db.query(
+            Attempt.student_email,
+            Attempt.points_scored,
+            Attempt.total_points,
+            Attempt.time_to_complete_in_seconds,
+            Attempt.completion_datetime,
+            Quest.quest_name, 
+            Quest.category_name, 
+        ).join(Quest, Attempt.quest_name == Quest.quest_name)
+        
+        return best_attempt.filter(
+            Attempt.student_email == student_email,
+            Quest.category_name == category_name,
+            Quest.quest_name == quest_name
+        ).all()
 
     def update(self, db: Session, new_quest: schemas.QuestUpdate):
         old_quest = (
