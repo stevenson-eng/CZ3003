@@ -5,6 +5,7 @@ import schemas
 import crud
 import math
 from models.attempt import Attempt
+from models.student import Student
 from schemas.attempt import AttemptCreate, AttemptUpdate, StudentReportStats
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import func
@@ -55,12 +56,23 @@ class CRUDAttempt(CRUDBase[Attempt, AttemptCreate, AttemptUpdate]):
     def read_all(self, db: Session) -> List[Attempt]:
         return db.query(models.Attempt).all()
 
-    def read_student_stats(self, db: Session, student_email: str) -> StudentReportStats:
+    def read_student_stats(self, db: Session, student_email: Optional[str]) -> List[StudentReportStats]:
         student_results = db.query(
             Attempt.student_email,
             func.sum(Attempt.points_scored).label("points_earned"),
-            func.sum(Attempt.total_points).label("max_points_earnable")
-        ).filter(Attempt.student_email == student_email)
+            func.sum(Attempt.total_points).label("max_points_earnable"),
+            Student.status,
+            Student.name,
+            Student.points,
+            Student.rank,
+            Student.position,
+            [Attempt.quest_name.group_by(Attempt.student_email).distinct()]
+        ).group_by(Attempt.student_email).join(
+            Student, Attempt.student_email == Student.email
+        )
+        
+        if student_email is not None:
+            student_results = student_results.filter(Attempt.student_email == student_email)
 
         return student_results.all()
 

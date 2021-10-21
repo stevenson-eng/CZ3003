@@ -22,8 +22,10 @@ def read(
     """
     return crud.attempt.read(db, quest_name, student_email)
 
-@router.get("/{student_email}")
-def student_stats(student_email: str, db: Session = Depends(get_db)):
+@router.get("/cohortresults/")
+def student_stats(
+    student_email: Optional[str] = None, 
+    db: Session = Depends(get_db)):
     return crud.attempt.read_student_stats(db, student_email)
 
 
