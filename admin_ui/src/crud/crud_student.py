@@ -18,6 +18,8 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
         if student.position is None:
             student.position = len(crud.student.read_all(db)) + 1
         student.rank = math.floor(student.points/100)
+        if student.rank > 11:
+            student.rank = 11
         db_student = models.Student(
             email=student.email,
             name=student.name,
@@ -50,6 +52,14 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
             desc(Student.points),
             collate(Student.name, 'NOCASE')
         ).limit(limit).all()
+
+    def updateLeaderboard(self, db: Session):
+        students = db.query(models.Student).order_by(desc(models.Student.points)).all()
+        for new_position, student in enumerate(students, 1):
+            student.position = new_position
+            db.add(student)
+            db.commit()
+            db.refresh(student)
 
     def delete(self, db: Session, email: str):
         delete_student = db.query(models.Student).filter(models.Student.email == email).first()
