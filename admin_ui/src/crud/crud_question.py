@@ -1,13 +1,13 @@
 from typing import List
 import models
 import schemas
-import random
 from models.question import Question
 from models.subquest import Subquest
 from models.quest import Quest
 from schemas.question import QuestionCreate, QuestionUpdate, QuestionQuery
 from sqlalchemy.orm import Session
 from crud.base import CRUDBase
+from sqlalchemy import func
 
 
 class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
@@ -32,9 +32,7 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
         return db.query(models.Question).filter(models.Question.id == id).first()
 
     def read_all(self, db: Session) -> List[Question]:
-        question = db.query(models.Question).all()
-        random.shuffle(question)
-        return question
+        return db.query(models.Question).order_by(func.random()).all()
 
     def read_by_parameters(self, db: Session, category_name: str, quest_name:str, \
         subquest_name: str, difficulty: int, limit: int) -> List[QuestionQuery]:
@@ -68,8 +66,7 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
             question = question.filter(
                 Question.difficulty == difficulty
             )
-        random.shuffle(question)
-        return question.limit(limit).all()
+        return question.limit(limit).order_by(func.random()).all()
 
 
     def update(self, db: Session, new_question: schemas.QuestionUpdate):
