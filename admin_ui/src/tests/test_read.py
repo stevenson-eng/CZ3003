@@ -30,11 +30,11 @@ def test_read_student(client: TestClient, student: Dict[str, Any]):
         client (TestClient): Client for making HTTP requests to
         student (Dict[str, Any]): Student to be read
     """
-    attempt_res = client.get(f"/attempt/{student['email']}")
+    attempt_res = client.get(f"/attempt/")
     attempt_data = attempt_res.json()
 
     for attempt in attempt_data:
-        student['points'] += attempt['points_earned']
+        student['points'] += attempt['points_scored']
         student['rank'] = math.floor(student['points']/100) + 1
         if student['rank'] > 11:
             student['rank'] = 11

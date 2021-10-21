@@ -2,6 +2,9 @@ from datetime import datetime
 
 from pydantic import BaseModel
 
+from schemas.student import Status, Rank
+from typing import List
+
 
 class AttemptBase(BaseModel):
     quest_name: str
@@ -39,3 +42,9 @@ class StudentReportStats(BaseModel):
     student_email: str
     points_earned: int
     max_points_earnable: int 
+    status: Status
+    name: str
+    points: int
+    rank: Rank
+    position: int
+    quests_attempted: List[str]
