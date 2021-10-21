@@ -60,13 +60,17 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
 
         if subquest_name is not None:
             question = question.filter(
-                Question.subquest_name == subquest_name)
+                Subquest.subquest_name == subquest_name)
 
         if difficulty is not None:
             question = question.filter(
                 Question.difficulty == difficulty
             )
-        return question.limit(limit).order_by(func.random()).all()
+
+        if limit > len(question.all()):
+            limit = len(question.all())
+
+        return question.order_by(func.random()).limit(limit).all()
 
 
     def update(self, db: Session, new_question: schemas.QuestionUpdate):
