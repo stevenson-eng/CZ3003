@@ -24,6 +24,14 @@ def read(
 
     return crud.quest.read_by_category(db, category_name, student_email)
 
+@router.get("/best_attempt/{student_email}")
+def get_best_attempt(
+    student_email: str, 
+    category_name: str, 
+    quest_name: str,
+    db: Session = Depends(get_db)):
+    return crud.quest.best_quest_attempt(db, student_email, category_name, quest_name)
+
 @router.post("/")
 def create(quest: schemas.QuestCreate, db: Session = Depends(get_db)):
     return crud.quest.create(db, quest)

@@ -46,5 +46,10 @@ class QuestQuery(BaseModel):
     quest_name: str
     student_email: str
     points_scored: int
+    total_points: int
     time_to_complete_in_seconds: int
-    completion_datetime: str
+    completion_datetime: datetime
+
+
+class BestAttempt(QuestQuery):
+    pass
