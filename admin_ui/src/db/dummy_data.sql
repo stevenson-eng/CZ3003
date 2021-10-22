@@ -335,6 +335,37 @@ INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 24", "CZ2006 Quest 5");
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 25", "CZ2006 Quest 5");
+DELETE FROM Challenge;
+INSERT INTO Challenge
+VALUES (
+        "sdaqwij-21-321jidjq123",
+        "ERNE0009@e.ntu.edu.sg",
+        "looy0018@e.ntu.edu.sg",
+        1,
+        "CZ3001 Quest 1",
+        "CZ3001 Advanced Computer Organization and Architecture",
+        5
+    );
+INSERT INTO Challenge
+VALUES (
+        "wdq2e123-21-321jidjq123",
+        "ERNE0009@e.ntu.edu.sg",
+        "B190020@e.ntu.edu.sg",
+        2,
+        "CZ3001 Quest 1",
+        "CZ3001 Advanced Computer Organization and Architecture",
+        10
+    );
+INSERT INTO Challenge
+VALUES (
+        "dsqwe325-21-321jidjq123",
+        "ERNE0009@e.ntu.edu.sg",
+        "student4@gmail.com",
+        3,
+        "CZ3001 Quest 1",
+        "CZ3001 Advanced Computer Organization and Architecture",
+        15
+    );
 DELETE FROM Npc;
 INSERT INTO Npc
 VALUES ("Daenerys Targaryen", "CZ3001 Subquest 1");

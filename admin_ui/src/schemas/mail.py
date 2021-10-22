@@ -1,5 +1,4 @@
 from typing import List
-from uuid import UUID
 
 from pydantic import BaseModel
 
@@ -21,7 +20,7 @@ class MailUpdate(MailBase):
 
 
 class MailInDBBase(BaseModel):
-    id: UUID
+    id: str
 
     class Config:
         orm_mode = True

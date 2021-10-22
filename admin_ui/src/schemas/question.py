@@ -1,12 +1,13 @@
 from typing import Optional
-from uuid import UUID
 from enum import IntEnum
 from pydantic import BaseModel
+
 
 class DifficultyEnum(IntEnum):
     easy = 1
     medium = 2
     hard = 3
+
 
 # Shared properties
 class QuestionBase(BaseModel):
@@ -34,6 +35,7 @@ class QuestionUpdate(BaseModel):
     All update fields should be optional, as updates are done via HTTP PATCH,
     which must support partial updates
     """
+
     id: str
     # category_name: Optional[str] = None
     # quest_name: Optional[str] = None
@@ -50,7 +52,8 @@ class QuestionUpdate(BaseModel):
 
 # Properties shared by models stored in DB
 class QuestionInDBBase(QuestionBase):
-    id: UUID
+    id: str
+
     class Config:
         orm_mode = True
         use_enum_values = True
@@ -78,6 +81,7 @@ class QuestionQuery(BaseModel):
     choice2: str
     choice3: str
     choice4: str
+
     class Config:
         orm_mode = True
         use_enum_values = True

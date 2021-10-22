@@ -2,14 +2,13 @@ from typing import List
 
 import models
 import schemas
+from fastapi import HTTPException, Response, status
 from models.assignment_question import AssignmentQuestion
 from schemas.assignment_question import (
     AssignmentQuestionCreate,
     AssignmentQuestionUpdate,
 )
 from sqlalchemy.orm import Session
-from fastapi import HTTPException, Response, status
-
 
 from crud.base import CRUDBase
 
