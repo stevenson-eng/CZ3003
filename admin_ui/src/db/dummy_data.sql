@@ -1,11 +1,3 @@
-/*
- This script will DELETE all rows from the following entities, 
- before inserting the dummy data - Student, Teacher, Assignment,
- Category, Quest, Subquest, Npc, Attempt
- 
- For live demo, we assume Assignment, Challenge, Mail will be
- created on the spot
- */
 DELETE FROM Student;
 INSERT INTO Student
 VALUES (
@@ -127,7 +119,6 @@ VALUES (
         1,
         8
     );
-
 DELETE FROM Teacher;
 INSERT INTO Teacher
 VALUES (0, "wtan132@e.ntu.edu.sg", "Tan Wei Lun");
@@ -158,6 +149,74 @@ VALUES (
         "Covering materials from lectures 1 - 3",
         NULL,
         NULL
+    );
+DELETE FROM assignmentQuestion;
+INSERT INTO assignmentQuestion
+VALUES (
+        "dsada-12-31-dasd-1-231",
+        "CZ3001 Assignment 1",
+        1,
+        10,
+        "Which of the following is not a type of cache miss?",
+        2,
+        "Conflict Miss",
+        "Starvation Miss",
+        "Capacity Miss",
+        "Compulsory Miss"
+    );
+INSERT INTO assignmentQuestion
+VALUES (
+        "ikediqas321kodas-12-31-dasd-1-231",
+        "CZ3001 Assignment 1",
+        2,
+        20,
+        "Which of the following is not a typical internal component of a microprocessor?",
+        4,
+        "ALU",
+        "L2 Cache",
+        "Control Unit",
+        "SSD"
+    );
+INSERT INTO assignmentQuestion
+VALUES (
+        "idsi4i9csioksa-12-31-dasd-1-231",
+        "CZ3001 Assignment 1",
+        3,
+        30,
+        "Which of the following is false?",
+        1,
+        "A TLB hit will incur a lookup in the page table",
+        "A page table miss will incur a lookup in the disk",
+        "A virtual address cannot be used to directly access a page on memory",
+        "A page table entry must have a dirty flag"
+    );
+DELETE FROM Mail;
+INSERT INTO Mail
+VALUES (
+        "dassqd21-3-213-1",
+        "wtan132@e.ntu.edu.sg",
+        "ERNE0009@e.ntu.edu.sg",
+        "CZ3001 Assignment 1 is due soon",
+        "CZ3001 Assignment 1 is due soon",
+        "Hi Ernest, CZ3001 Assignment 1 is due soon. QPlease remember to complete it."
+    );
+INSERT INTO Mail
+VALUES (
+        "ytmihokrogkf-3-213-1",
+        "wtan132@e.ntu.edu.sg",
+        "looy0018@e.ntu.edu.sg",
+        "CZ3002 Assignment 1 is due soon",
+        "CZ3002 Assignment 1 is due soon",
+        "Hi Phoebe, CZ3002 Assignment 1 is due soon. Please remember to complete it."
+    );
+INSERT INTO Mail
+VALUES (
+        "ujfasdujsqu-3-213-1",
+        "wtan132@e.ntu.edu.sg",
+        "B190020@e.ntu.edu.sg",
+        "CZ3003 Assignment 1 is due soon",
+        "CZ3003 Assignment 1 is due soon",
+        "Hi Hao Zhi, CZ3003 Assignment 1 is due soon. Please remember to complete it."
     );
 DELETE FROM Category;
 INSERT INTO Category
@@ -226,10 +285,6 @@ INSERT INTO Subquest
 VALUES ("CZ3002 Subquest 5", "CZ3002 Quest 1");
 INSERT INTO Subquest
 VALUES ("CZ3003 Subquest 1", "CZ3003 Quest 1");
-
-
-
-
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 1", "CZ2006 Quest 1");
 INSERT INTO Subquest
@@ -240,7 +295,6 @@ INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 4", "CZ2006 Quest 1");
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 5", "CZ2006 Quest 1");
-
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 6", "CZ2006 Quest 2");
 INSERT INTO Subquest
@@ -251,7 +305,6 @@ INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 9", "CZ2006 Quest 2");
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 10", "CZ2006 Quest 2");
-
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 11", "CZ2006 Quest 3");
 INSERT INTO Subquest
@@ -262,7 +315,6 @@ INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 14", "CZ2006 Quest 3");
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 15", "CZ2006 Quest 3");
-
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 16", "CZ2006 Quest 4");
 INSERT INTO Subquest
@@ -273,7 +325,6 @@ INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 19", "CZ2006 Quest 4");
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 20", "CZ2006 Quest 4");
-
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 21", "CZ2006 Quest 5");
 INSERT INTO Subquest
@@ -284,8 +335,6 @@ INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 24", "CZ2006 Quest 5");
 INSERT INTO Subquest
 VALUES ("CZ2006 Subquest 25", "CZ2006 Quest 5");
-
-
 DELETE FROM Npc;
 INSERT INTO Npc
 VALUES ("Daenerys Targaryen", "CZ3001 Subquest 1");
@@ -333,22 +382,6 @@ VALUES (
         "Client-Server",
         "Message Stacks"
     );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CZ2006 Subquest 1, 5 questions, 3 difficulty each */
 INSERT INTO Question
 VALUES (
@@ -402,7 +435,6 @@ VALUES (
         "Client-Server",
         "Message Stacks"
     );
-
 INSERT INTO Question
 VALUES (
         "7",
@@ -546,22 +578,6 @@ VALUES (
         "maiores alias consequatur",
         "tenetur a sapiente"
     );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 INSERT INTO Question
 VALUES (
         "1113",
@@ -614,7 +630,6 @@ VALUES (
         "Client-Server",
         "Message Stacks"
     );
-
 INSERT INTO Question
 VALUES (
         "1117",
@@ -758,20 +773,6 @@ VALUES (
         "maiores alias consequatur",
         "tenetur a sapiente"
     );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 INSERT INTO Question
 VALUES (
         "2223",
@@ -824,7 +825,6 @@ VALUES (
         "Client-Server",
         "Message Stacks"
     );
-
 INSERT INTO Question
 VALUES (
         "2227",
@@ -968,20 +968,6 @@ VALUES (
         "maiores alias consequatur",
         "tenetur a sapiente"
     );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 INSERT INTO Question
 VALUES (
         "4443",
@@ -1034,7 +1020,6 @@ VALUES (
         "Client-Server",
         "Message Stacks"
     );
-
 INSERT INTO Question
 VALUES (
         "4447",
@@ -1089,7 +1074,7 @@ VALUES (
     );
 INSERT INTO Question
 VALUES (
-        "442",
+        "441",
         "CZ2006 Subquest 4",
         2,
         5,
@@ -1102,7 +1087,7 @@ VALUES (
     );
 INSERT INTO Question
 VALUES (
-        "443",
+        "442",
         "CZ2006 Subquest 4",
         2,
         5,
@@ -1178,18 +1163,6 @@ VALUES (
         "maiores alias consequatur",
         "tenetur a sapiente"
     );
-
-
-
-
-
-
-
-
-
-
-
-
 INSERT INTO Question
 VALUES (
         "3333",
@@ -1242,7 +1215,6 @@ VALUES (
         "Client-Server",
         "Message Stacks"
     );
-
 INSERT INTO Question
 VALUES (
         "3337",
@@ -1386,22 +1358,6 @@ VALUES (
         "maiores alias consequatur",
         "tenetur a sapiente"
     );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 DELETE FROM Attempt;
 INSERT INTO Attempt
 VALUES (
