@@ -344,7 +344,7 @@ VALUES (
         1,
         "CZ3001 Quest 1",
         "CZ3001 Advanced Computer Organization and Architecture",
-        5
+        5,
         0,
         0,
         0
