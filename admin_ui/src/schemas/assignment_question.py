@@ -1,5 +1,4 @@
 from typing import Optional
-from uuid import UUID
 from enum import Enum
 
 from pydantic import BaseModel
@@ -50,7 +49,7 @@ class AssignmentQuestionUpdate(BaseModel):
 
 # Properties shared by models stored in DB
 class AssignmentQuestionInDBBase(AssignmentQuestionBase):
-    id: UUID
+    id: str
 
     class Config:
         orm_mode = True

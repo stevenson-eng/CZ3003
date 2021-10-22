@@ -1,5 +1,4 @@
 from typing import Optional
-from uuid import UUID
 
 from pydantic import BaseModel
 
@@ -21,6 +20,7 @@ class SubquestUpdate(BaseModel):
     All update fields should be optional, as updates are done via HTTP PATCH,
     which must support partial updates
     """
+
     subquest_name: Optional[str] = None
     quest_name: Optional[str] = None
 
