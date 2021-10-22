@@ -64,7 +64,10 @@ class CRUDQuest(CRUDBase[Quest, QuestCreate, QuestUpdate]):
             Attempt.student_email == student_email,
             Quest.category_name == category_name,
             Quest.quest_name == quest_name
-        ).all()
+        ).order_by(
+            Attempt.points_scored.asc(),
+            Attempt.time_to_complete_in_seconds.desc()
+        ).limit(1).all()
 
     def update(self, db: Session, new_quest: schemas.QuestUpdate):
         old_quest = (
