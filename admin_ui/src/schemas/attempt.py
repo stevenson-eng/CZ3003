@@ -47,4 +47,3 @@ class StudentReportStats(BaseModel):
     points: int
     rank: Rank
     position: int
-    quests_attempted: List[str]
