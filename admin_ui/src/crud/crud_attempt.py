@@ -65,8 +65,7 @@ class CRUDAttempt(CRUDBase[Attempt, AttemptCreate, AttemptUpdate]):
             Student.name,
             Student.points,
             Student.rank,
-            Student.position,
-            [Attempt.quest_name.group_by(Attempt.student_email).distinct()]
+            Student.position
         ).group_by(Attempt.student_email).join(
             Student, Attempt.student_email == Student.email
         )
