@@ -19,6 +19,9 @@ class CRUDChallenge(CRUDBase[Challenge, ChallengeCreate, ChallengeUpdate]):
             quest_name=challenge.quest_name,
             category_name=challenge.category_name,
             number_of_questions=challenge.number_of_questions,
+            challengee_accepted = challenge.challengee_accepted,
+            challenger_completed = challenge.challenger_completed,
+            challengee_completed = challenge.challengee_completed
         )
         db.add(db_challenge)
         db.commit()
