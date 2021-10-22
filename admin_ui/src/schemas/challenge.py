@@ -12,7 +12,9 @@ class ChallengeBase(BaseModel):
     quest_name: str
     category_name: str
     number_of_questions: int
-
+    challengee_accepted: bool = False
+    challenger_completed: bool = False
+    challengee_completed: bool = False
 
 # Properties to receive on challenge creation
 class ChallengeCreate(ChallengeBase):
@@ -32,6 +34,9 @@ class ChallengeUpdate(BaseModel):
     quest_name: Optional[str] = None
     category_name: Optional[str] = None
     number_of_questions: Optional[int] = None
+    challengee_accepted: Optional[bool] = False
+    challenger_completed: Optional[bool] = False
+    challengee_completed: Optional[bool] = False
 
 
 # Properties shared by models stored in DB

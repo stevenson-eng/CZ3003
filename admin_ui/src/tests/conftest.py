@@ -272,6 +272,9 @@ def challenge() -> Dict[str, Any]:
             quest_name="quest",
             category_name="category",
             number_of_questions=5,
+            challengee_accepted = False,
+            challenger_completed = False,
+            challengee_completed = False
         )
     )
 
@@ -286,6 +289,9 @@ def challenge_updated() -> Dict[str, Any]:
             quest_name="quest",
             category_name="category",
             number_of_questions=10,
+            challengee_accepted = True,
+            challenger_completed = True,
+            challengee_completed = True
         )
     )
 

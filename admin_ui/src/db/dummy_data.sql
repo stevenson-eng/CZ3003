@@ -345,6 +345,9 @@ VALUES (
         "CZ3001 Quest 1",
         "CZ3001 Advanced Computer Organization and Architecture",
         5
+        0,
+        0,
+        0
     );
 INSERT INTO Challenge
 VALUES (
@@ -354,7 +357,10 @@ VALUES (
         2,
         "CZ3001 Quest 1",
         "CZ3001 Advanced Computer Organization and Architecture",
-        10
+        10,
+        0,
+        0,
+        0
     );
 INSERT INTO Challenge
 VALUES (
@@ -364,7 +370,10 @@ VALUES (
         3,
         "CZ3001 Quest 1",
         "CZ3001 Advanced Computer Organization and Architecture",
-        15
+        15,
+        0,
+        0,
+        0
     );
 DELETE FROM Npc;
 INSERT INTO Npc
