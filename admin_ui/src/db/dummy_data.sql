@@ -1,7 +1,6 @@
 DELETE FROM Student;
 INSERT INTO Student
 VALUES (
-        1,
         "B190020@e.ntu.edu.sg",
         "Leong Hao Zhi",
         0,
@@ -11,7 +10,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        2,
         "looy0018@e.ntu.edu.sg",
         "Loo Yi Ying Phoebe",
         0,
@@ -21,7 +19,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        3,
         "ERNE0009@e.ntu.edu.sg",
         "Ernest Ang Cheng Han",
         0,
@@ -31,7 +28,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        4,
         "student4@gmail.com",
         "student 4",
         0,
@@ -41,7 +37,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        5,
         "student5@gmail.com",
         "student 5",
         0,
@@ -51,7 +46,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        6,
         "student6@gmail.com",
         "student 6",
         0,
@@ -61,7 +55,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        11,
         "student11@gmail.com",
         "student 11",
         0,
@@ -71,7 +64,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        10,
         "student10@gmail.com",
         "student 10",
         0,
@@ -81,7 +73,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        12,
         "student12@gmail.com",
         "student 12",
         0,
@@ -91,7 +82,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        7,
         "student7@gmail.com",
         "student 7",
         0,
@@ -101,7 +91,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        8,
         "student8@gmail.com",
         "student 8",
         0,
@@ -111,7 +100,6 @@ VALUES (
     );
 INSERT INTO Student
 VALUES (
-        9,
         "student9@gmail.com",
         "student 9",
         0,
@@ -121,7 +109,7 @@ VALUES (
     );
 DELETE FROM Teacher;
 INSERT INTO Teacher
-VALUES (0, "wtan132@e.ntu.edu.sg", "Tan Wei Lun");
+VALUES ("wtan132@e.ntu.edu.sg", "Tan Wei Lun");
 DELETE FROM Assignment;
 INSERT INTO Assignment
 VALUES (
