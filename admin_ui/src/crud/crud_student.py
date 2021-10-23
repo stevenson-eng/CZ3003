@@ -15,8 +15,6 @@ from typing import List
 
 class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
     def create(self, db: Session, student: schemas.StudentCreate):
-        if student.position is None:
-            student.position = len(crud.student.read_all(db)) + 1
         student.rank = math.floor(student.points/100)
         if student.rank > 11:
             student.rank = 11
@@ -31,7 +29,8 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
         db.add(db_student)
         db.commit()
         db.refresh(db_student)
-        return db_student
+        crud.student.updateLeaderboard(db)
+        return db.query(models.Student).filter(models.Student.email == student.email).first()
 
     def read(self, db: Session, email: str) -> Student:
         return db.query(models.Student).filter(models.Student.email == email).first()
@@ -54,7 +53,7 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
         ).limit(limit).all()
 
     def updateLeaderboard(self, db: Session):
-        students = db.query(models.Student).order_by(desc(models.Student.points)).all()
+        students = db.query(models.Student).order_by(desc(models.Student.points),collate(Student.name, 'NOCASE')).all()
         for new_position, student in enumerate(students, 1):
             student.position = new_position
             db.add(student)
