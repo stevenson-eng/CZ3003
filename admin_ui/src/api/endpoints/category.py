@@ -12,14 +12,26 @@ router = APIRouter()
 
 @router.get("/{category_name}", response_model=schemas.Category)
 def read(category_name: str, db: Session = Depends(get_db)):
+    """
+    Read specific category with following parameters:
+    - **category_name**: required
+    """
     return crud.category.read(db, category_name)
 
 @router.get("/", response_model=List[schemas.Category])
 def read_all(db: Session = Depends(get_db)):
+    """
+    Read all category, no parameters required
+    """
     return crud.category.read_all(db)
 
 @router.post("/")
 def create(category: schemas.CategoryCreate, db: Session = Depends(get_db)):
+    """
+    Create a category with the following information:
+    
+    - **category_name**: required
+    """
     return crud.category.create(db, category)
 
 
