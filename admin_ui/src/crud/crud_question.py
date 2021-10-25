@@ -67,7 +67,7 @@ class CRUDQuestion(CRUDBase[Question, QuestionCreate, QuestionUpdate]):
                 Question.difficulty == difficulty
             )
 
-        if limit > len(question.all()):
+        if limit is not None and limit > len(question.all()):
             limit = len(question.all())
 
         return question.order_by(func.random()).limit(limit).all()
