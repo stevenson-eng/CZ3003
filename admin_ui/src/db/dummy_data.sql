@@ -4,17 +4,13 @@ VALUES (
         "B190020@e.ntu.edu.sg",
         "Leong Hao Zhi",
         0,
-        2,
-        1,
-        1
+        2
     );
 INSERT INTO Student
 VALUES (
         "looy0018@e.ntu.edu.sg",
         "Loo Yi Ying Phoebe",
         0,
-        2,
-        1,
         2
     );
 INSERT INTO Student
@@ -22,90 +18,70 @@ VALUES (
         "ERNE0009@e.ntu.edu.sg",
         "Ernest Ang Cheng Han",
         0,
-        2,
-        1,
-        3
+        2
     );
 INSERT INTO Student
 VALUES (
         "student4@gmail.com",
         "student 4",
         0,
-        2,
-        1,
-        4
+        2
     );
 INSERT INTO Student
 VALUES (
         "student5@gmail.com",
         "student 5",
         0,
-        2,
-        1,
-        5
+        2
     );
 INSERT INTO Student
 VALUES (
         "student6@gmail.com",
         "student 6",
         0,
-        2,
-        1,
-        6
+        2
     );
 INSERT INTO Student
 VALUES (
         "student11@gmail.com",
         "student 11",
         0,
-        2,
-        1,
-        4
+        2
     );
 INSERT INTO Student
 VALUES (
         "student10@gmail.com",
         "student 10",
         0,
-        2,
-        1,
-        5
+        2
     );
 INSERT INTO Student
 VALUES (
         "student12@gmail.com",
         "student 12",
         0,
-        2,
-        1,
-        6
+        2
     );
 INSERT INTO Student
 VALUES (
         "student7@gmail.com",
         "student 7",
         0,
-        2,
-        1,
-        7
+        2
     );
 INSERT INTO Student
 VALUES (
         "student8@gmail.com",
         "student 8",
         0,
-        2,
-        1,
-        8
+        2
     );
 INSERT INTO Student
 VALUES (
         "student9@gmail.com",
         "student 9",
         0,
-        2,
-        1,
-        8
+        2
     );
 DELETE FROM Teacher;
 INSERT INTO Teacher
@@ -375,7 +351,7 @@ INSERT INTO Question
 VALUES (
         "0",
         "CZ3001 Subquest 1",
-        0,
+        2,
         5,
         "Which of the following is not a type of cache miss?",
         2,
@@ -388,7 +364,7 @@ INSERT INTO Question
 VALUES (
         "1",
         "CZ3002 Subquest 1",
-        0,
+        2,
         5,
         "Which of the following is not a testing strategy?",
         1,
@@ -401,7 +377,7 @@ INSERT INTO Question
 VALUES (
         "2",
         "CZ3003 Subquest 1",
-        0,
+        2,
         5,
         "Which of the following is not an architectural style?",
         4,
@@ -415,7 +391,7 @@ INSERT INTO Question
 VALUES (
         "3",
         "CZ2006 Subquest 1",
-        0,
+        1,
         5,
         "CZ2006 Subquest 1, Easy Question. Answer is 1",
         1,
@@ -428,7 +404,7 @@ INSERT INTO Question
 VALUES (
         "4",
         "CZ2006 Subquest 1",
-        0,
+        1,
         5,
         "CZ2006 Subquest 1, Easy Question.Answer is 2",
         2,
@@ -441,7 +417,7 @@ INSERT INTO Question
 VALUES (
         "5",
         "CZ2006 Subquest 1",
-        0,
+        1,
         5,
         "CZ2006 Subquest 1, Easy Question. Answer is 3",
         3,
@@ -454,7 +430,7 @@ INSERT INTO Question
 VALUES (
         "6",
         "CZ2006 Subquest 1",
-        0,
+        1,
         5,
         "CZ2006 Subquest 1, Easy Question. Answer is 4",
         4,
@@ -467,7 +443,7 @@ INSERT INTO Question
 VALUES (
         "7",
         "CZ2006 Subquest 1",
-        1,
+        2,
         5,
         "CZ2006 Subquest 1, Medium Question. Answer is 1",
         1,
@@ -480,7 +456,7 @@ INSERT INTO Question
 VALUES (
         "8",
         "CZ2006 Subquest 1",
-        1,
+        2,
         5,
         "CZ2006 Subquest 1, Medium Question. Answer is 2",
         2,
@@ -493,7 +469,7 @@ INSERT INTO Question
 VALUES (
         "9",
         "CZ2006 Subquest 1",
-        1,
+        2,
         5,
         "CZ2006 Subquest 1, Medium Question. Answer is 3",
         3,
@@ -506,7 +482,7 @@ INSERT INTO Question
 VALUES (
         "10",
         "CZ2006 Subquest 1",
-        1,
+        2,
         5,
         "CZ2006 Subquest 1, Medium Question. Answer is 4",
         4,
@@ -519,7 +495,7 @@ INSERT INTO Question
 VALUES (
         "11",
         "CZ2006 Subquest 1",
-        2,
+        3,
         5,
         "CZ2006 Subquest 1, Hard Question. Answer is 1",
         1,
@@ -532,7 +508,7 @@ INSERT INTO Question
 VALUES (
         "12",
         "CZ2006 Subquest 1",
-        2,
+        3,
         5,
         "CZ2006 Subquest 1, Hard Question. Answer is 2",
         2,
@@ -545,7 +521,7 @@ INSERT INTO Question
 VALUES (
         "13",
         "CZ2006 Subquest 1",
-        2,
+        3,
         5,
         "CZ2006 Subquest 1, Hard Question. Answer is 3",
         3,
@@ -558,7 +534,7 @@ INSERT INTO Question
 VALUES (
         "14",
         "CZ2006 Subquest 1",
-        2,
+        3,
         5,
         "CZ2006 Subquest 1, Hard Question. Answer is 4",
         4,
@@ -571,7 +547,7 @@ INSERT INTO Question
 VALUES (
         "15",
         "CZ2006 Subquest 1",
-        0,
+        1,
         5,
         "CZ2006 Subquest 1, Easy Question. Answer is 4",
         4,
@@ -584,7 +560,7 @@ INSERT INTO Question
 VALUES (
         "16",
         "CZ2006 Subquest 1",
-        1,
+        2,
         5,
         "CZ2006 Subquest 1, Medium Question. Answer is 4",
         4,
@@ -597,7 +573,7 @@ INSERT INTO Question
 VALUES (
         "17",
         "CZ2006 Subquest 1",
-        2,
+        3,
         5,
         "CZ2006 Subquest 1, Hard Question. Answer is 4",
         4,
@@ -610,7 +586,7 @@ INSERT INTO Question
 VALUES (
         "1113",
         "CZ2006 Subquest 2",
-        0,
+        1,
         5,
         "CZ2006 Subquest 2, Easy Question. Answer is 1",
         1,
@@ -623,7 +599,7 @@ INSERT INTO Question
 VALUES (
         "1114",
         "CZ2006 Subquest 2",
-        0,
+        1,
         5,
         "CZ2006 Subquest 2, Easy Question.Answer is 2",
         2,
@@ -636,7 +612,7 @@ INSERT INTO Question
 VALUES (
         "1115",
         "CZ2006 Subquest 2",
-        0,
+        1,
         5,
         "CZ2006 Subquest 2, Easy Question. Answer is 3",
         3,
@@ -649,7 +625,7 @@ INSERT INTO Question
 VALUES (
         "1116",
         "CZ2006 Subquest 2",
-        0,
+        1,
         5,
         "CZ2006 Subquest 2, Easy Question. Answer is 4",
         4,
@@ -662,7 +638,7 @@ INSERT INTO Question
 VALUES (
         "1117",
         "CZ2006 Subquest 2",
-        1,
+        2,
         5,
         "CZ2006 Subquest 2, Medium Question. Answer is 1",
         1,
@@ -675,7 +651,7 @@ INSERT INTO Question
 VALUES (
         "1118",
         "CZ2006 Subquest 2",
-        1,
+        2,
         5,
         "CZ2006 Subquest 2, Medium Question. Answer is 2",
         2,
@@ -688,7 +664,7 @@ INSERT INTO Question
 VALUES (
         "1119",
         "CZ2006 Subquest 2",
-        1,
+        2,
         5,
         "CZ2006 Subquest 2, Medium Question. Answer is 3",
         3,
@@ -701,7 +677,7 @@ INSERT INTO Question
 VALUES (
         "110",
         "CZ2006 Subquest 2",
-        1,
+        2,
         5,
         "CZ2006 Subquest 2, Medium Question. Answer is 4",
         4,
@@ -714,7 +690,7 @@ INSERT INTO Question
 VALUES (
         "111",
         "CZ2006 Subquest 2",
-        2,
+        3,
         5,
         "CZ2006 Subquest 2, Hard Question. Answer is 1",
         1,
@@ -727,7 +703,7 @@ INSERT INTO Question
 VALUES (
         "112",
         "CZ2006 Subquest 2",
-        2,
+        3,
         5,
         "CZ2006 Subquest 2, Hard Question. Answer is 2",
         2,
@@ -740,7 +716,7 @@ INSERT INTO Question
 VALUES (
         "113",
         "CZ2006 Subquest 2",
-        2,
+        3,
         5,
         "CZ2006 Subquest 2, Hard Question. Answer is 3",
         3,
@@ -753,7 +729,7 @@ INSERT INTO Question
 VALUES (
         "114",
         "CZ2006 Subquest 2",
-        2,
+        3,
         5,
         "CZ2006 Subquest 2, Hard Question. Answer is 4",
         4,
@@ -766,7 +742,7 @@ INSERT INTO Question
 VALUES (
         "115",
         "CZ2006 Subquest 2",
-        0,
+        1,
         5,
         "CZ2006 Subquest 2, Easy Question. Answer is 4",
         4,
@@ -779,7 +755,7 @@ INSERT INTO Question
 VALUES (
         "116",
         "CZ2006 Subquest 2",
-        1,
+        2,
         5,
         "CZ2006 Subquest 2, Medium Question. Answer is 4",
         4,
@@ -792,7 +768,7 @@ INSERT INTO Question
 VALUES (
         "117",
         "CZ2006 Subquest 2",
-        2,
+        3,
         5,
         "CZ2006 Subquest 2, Hard Question. Answer is 4",
         4,
@@ -805,7 +781,7 @@ INSERT INTO Question
 VALUES (
         "2223",
         "CZ2006 Subquest 3",
-        0,
+        1,
         5,
         "CZ2006 Subquest 3, Easy Question. Answer is 1",
         1,
@@ -818,7 +794,7 @@ INSERT INTO Question
 VALUES (
         "2224",
         "CZ2006 Subquest 3",
-        0,
+        1,
         5,
         "CZ2006 Subquest 3, Easy Question.Answer is 2",
         2,
@@ -831,7 +807,7 @@ INSERT INTO Question
 VALUES (
         "2225",
         "CZ2006 Subquest 3",
-        0,
+        1,
         5,
         "CZ2006 Subquest 3, Easy Question. Answer is 3",
         3,
@@ -844,7 +820,7 @@ INSERT INTO Question
 VALUES (
         "2226",
         "CZ2006 Subquest 3",
-        0,
+        1,
         5,
         "CZ2006 Subquest 3, Easy Question. Answer is 4",
         4,
@@ -857,7 +833,7 @@ INSERT INTO Question
 VALUES (
         "2227",
         "CZ2006 Subquest 3",
-        1,
+        2,
         5,
         "CZ2006 Subquest 3, Medium Question. Answer is 1",
         1,
@@ -870,7 +846,7 @@ INSERT INTO Question
 VALUES (
         "2228",
         "CZ2006 Subquest 3",
-        1,
+        2,
         5,
         "CZ2006 Subquest 3, Medium Question. Answer is 2",
         2,
@@ -883,7 +859,7 @@ INSERT INTO Question
 VALUES (
         "2229",
         "CZ2006 Subquest 3",
-        1,
+        2,
         5,
         "CZ2006 Subquest 3, Medium Question. Answer is 3",
         3,
@@ -896,7 +872,7 @@ INSERT INTO Question
 VALUES (
         "220",
         "CZ2006 Subquest 3",
-        1,
+        2,
         5,
         "CZ2006 Subquest 3, Medium Question. Answer is 4",
         4,
@@ -909,7 +885,7 @@ INSERT INTO Question
 VALUES (
         "221",
         "CZ2006 Subquest 3",
-        2,
+        3,
         5,
         "CZ2006 Subquest 3, Hard Question. Answer is 1",
         1,
@@ -922,7 +898,7 @@ INSERT INTO Question
 VALUES (
         "222",
         "CZ2006 Subquest 3",
-        2,
+        3,
         5,
         "CZ2006 Subquest 3, Hard Question. Answer is 2",
         2,
@@ -935,7 +911,7 @@ INSERT INTO Question
 VALUES (
         "223",
         "CZ2006 Subquest 3",
-        2,
+        3,
         5,
         "CZ2006 Subquest 3, Hard Question. Answer is 3",
         3,
@@ -948,7 +924,7 @@ INSERT INTO Question
 VALUES (
         "224",
         "CZ2006 Subquest 3",
-        2,
+        3,
         5,
         "CZ2006 Subquest 3, Hard Question. Answer is 4",
         4,
@@ -961,7 +937,7 @@ INSERT INTO Question
 VALUES (
         "225",
         "CZ2006 Subquest 3",
-        0,
+        1,
         5,
         "CZ2006 Subquest 3, Easy Question. Answer is 4",
         4,
@@ -974,7 +950,7 @@ INSERT INTO Question
 VALUES (
         "226",
         "CZ2006 Subquest 3",
-        1,
+        2,
         5,
         "CZ2006 Subquest 3, Medium Question. Answer is 4",
         4,
@@ -987,7 +963,7 @@ INSERT INTO Question
 VALUES (
         "227",
         "CZ2006 Subquest 3",
-        2,
+        3,
         5,
         "CZ2006 Subquest 3, Hard Question. Answer is 4",
         4,
@@ -1000,7 +976,7 @@ INSERT INTO Question
 VALUES (
         "4443",
         "CZ2006 Subquest 4",
-        0,
+        1,
         5,
         "CZ2006 Subquest 4, Easy Question. Answer is 1",
         1,
@@ -1013,7 +989,7 @@ INSERT INTO Question
 VALUES (
         "4444",
         "CZ2006 Subquest 4",
-        0,
+        1,
         5,
         "CZ2006 Subquest 4, Easy Question.Answer is 2",
         2,
@@ -1026,7 +1002,7 @@ INSERT INTO Question
 VALUES (
         "4445",
         "CZ2006 Subquest 4",
-        0,
+        1,
         5,
         "CZ2006 Subquest 4, Easy Question. Answer is 3",
         3,
@@ -1039,7 +1015,7 @@ INSERT INTO Question
 VALUES (
         "4446",
         "CZ2006 Subquest 4",
-        0,
+        1,
         5,
         "CZ2006 Subquest 4, Easy Question. Answer is 4",
         4,
@@ -1052,7 +1028,7 @@ INSERT INTO Question
 VALUES (
         "4447",
         "CZ2006 Subquest 4",
-        1,
+        2,
         5,
         "CZ2006 Subquest 4, Medium Question. Answer is 1",
         1,
@@ -1065,7 +1041,7 @@ INSERT INTO Question
 VALUES (
         "4448",
         "CZ2006 Subquest 4",
-        1,
+        2,
         5,
         "CZ2006 Subquest 4, Medium Question. Answer is 2",
         2,
@@ -1078,7 +1054,7 @@ INSERT INTO Question
 VALUES (
         "4449",
         "CZ2006 Subquest 4",
-        1,
+        2,
         5,
         "CZ2006 Subquest 4, Medium Question. Answer is 3",
         3,
@@ -1091,7 +1067,7 @@ INSERT INTO Question
 VALUES (
         "440",
         "CZ2006 Subquest 4",
-        1,
+        2,
         5,
         "CZ2006 Subquest 4, Medium Question. Answer is 4",
         4,
@@ -1104,7 +1080,7 @@ INSERT INTO Question
 VALUES (
         "441",
         "CZ2006 Subquest 4",
-        2,
+        3,
         5,
         "CZ2006 Subquest 4, Hard Question. Answer is 1",
         1,
@@ -1117,7 +1093,7 @@ INSERT INTO Question
 VALUES (
         "442",
         "CZ2006 Subquest 4",
-        2,
+        3,
         5,
         "CZ2006 Subquest 4, Hard Question. Answer is 2",
         2,
@@ -1130,7 +1106,7 @@ INSERT INTO Question
 VALUES (
         "443",
         "CZ2006 Subquest 4",
-        2,
+        3,
         5,
         "CZ2006 Subquest 4, Hard Question. Answer is 3",
         3,
@@ -1143,7 +1119,7 @@ INSERT INTO Question
 VALUES (
         "444",
         "CZ2006 Subquest 4",
-        2,
+        3,
         5,
         "CZ2006 Subquest 4, Hard Question. Answer is 4",
         4,
@@ -1156,7 +1132,7 @@ INSERT INTO Question
 VALUES (
         "445",
         "CZ2006 Subquest 4",
-        0,
+        1,
         5,
         "CZ2006 Subquest 4, Easy Question. Answer is 4",
         4,
@@ -1169,7 +1145,7 @@ INSERT INTO Question
 VALUES (
         "446",
         "CZ2006 Subquest 4",
-        1,
+        2,
         5,
         "CZ2006 Subquest 4, Medium Question. Answer is 4",
         4,
@@ -1182,7 +1158,7 @@ INSERT INTO Question
 VALUES (
         "447",
         "CZ2006 Subquest 4",
-        2,
+        3,
         5,
         "CZ2006 Subquest 4, Hard Question. Answer is 4",
         4,
@@ -1195,7 +1171,7 @@ INSERT INTO Question
 VALUES (
         "3333",
         "CZ2006 Subquest 5",
-        0,
+        1,
         5,
         "CZ2006 Subquest 5, Easy Question. Answer is 1",
         1,
@@ -1208,7 +1184,7 @@ INSERT INTO Question
 VALUES (
         "3334",
         "CZ2006 Subquest 5",
-        0,
+        1,
         5,
         "CZ2006 Subquest 5, Easy Question.Answer is 2",
         2,
@@ -1221,7 +1197,7 @@ INSERT INTO Question
 VALUES (
         "3335",
         "CZ2006 Subquest 5",
-        0,
+        1,
         5,
         "CZ2006 Subquest 5, Easy Question. Answer is 3",
         3,
@@ -1234,7 +1210,7 @@ INSERT INTO Question
 VALUES (
         "3336",
         "CZ2006 Subquest 5",
-        0,
+        1,
         5,
         "CZ2006 Subquest 5, Easy Question. Answer is 4",
         4,
@@ -1247,7 +1223,7 @@ INSERT INTO Question
 VALUES (
         "3337",
         "CZ2006 Subquest 5",
-        1,
+        2,
         5,
         "CZ2006 Subquest 5, Medium Question. Answer is 1",
         1,
@@ -1260,7 +1236,7 @@ INSERT INTO Question
 VALUES (
         "3338",
         "CZ2006 Subquest 5",
-        1,
+        2,
         5,
         "CZ2006 Subquest 5, Medium Question. Answer is 2",
         2,
@@ -1273,7 +1249,7 @@ INSERT INTO Question
 VALUES (
         "3339",
         "CZ2006 Subquest 5",
-        1,
+        2,
         5,
         "CZ2006 Subquest 5, Medium Question. Answer is 3",
         3,
@@ -1286,7 +1262,7 @@ INSERT INTO Question
 VALUES (
         "330",
         "CZ2006 Subquest 5",
-        1,
+        2,
         5,
         "CZ2006 Subquest 5, Medium Question. Answer is 4",
         4,
@@ -1299,7 +1275,7 @@ INSERT INTO Question
 VALUES (
         "331",
         "CZ2006 Subquest 5",
-        2,
+        3,
         5,
         "CZ2006 Subquest 5, Hard Question. Answer is 1",
         1,
@@ -1312,7 +1288,7 @@ INSERT INTO Question
 VALUES (
         "332",
         "CZ2006 Subquest 5",
-        2,
+        3,
         5,
         "CZ2006 Subquest 5, Hard Question. Answer is 2",
         2,
@@ -1325,7 +1301,7 @@ INSERT INTO Question
 VALUES (
         "333",
         "CZ2006 Subquest 5",
-        2,
+        3,
         5,
         "CZ2006 Subquest 5, Hard Question. Answer is 3",
         3,
@@ -1338,7 +1314,7 @@ INSERT INTO Question
 VALUES (
         "334",
         "CZ2006 Subquest 5",
-        2,
+        3,
         5,
         "CZ2006 Subquest 5, Hard Question. Answer is 4",
         4,
@@ -1351,7 +1327,7 @@ INSERT INTO Question
 VALUES (
         "335",
         "CZ2006 Subquest 5",
-        0,
+        1,
         5,
         "CZ2006 Subquest 5, Easy Question. Answer is 4",
         4,
@@ -1364,7 +1340,7 @@ INSERT INTO Question
 VALUES (
         "336",
         "CZ2006 Subquest 5",
-        1,
+        2,
         5,
         "CZ2006 Subquest 5, Medium Question. Answer is 4",
         4,
@@ -1377,7 +1353,7 @@ INSERT INTO Question
 VALUES (
         "337",
         "CZ2006 Subquest 5",
-        2,
+        3,
         5,
         "CZ2006 Subquest 5, Hard Question. Answer is 4",
         4,

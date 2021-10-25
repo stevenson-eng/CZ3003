@@ -47,6 +47,7 @@ class CRUDStudent(CRUDBase[Student, StudentCreate, StudentUpdate]):
         return super().update(db, db_obj=old_student, obj_in=new_student)
 
     def getLeaderboard(self, db: Session, limit: int) -> List[Student]:
+        crud.student.updateLeaderboard(db)
         return db.query(models.Student).order_by(
             desc(Student.points),
             collate(Student.name, 'NOCASE')
