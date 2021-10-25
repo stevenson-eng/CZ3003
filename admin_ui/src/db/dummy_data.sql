@@ -375,7 +375,7 @@ INSERT INTO Question
 VALUES (
         "0",
         "CZ3001 Subquest 1",
-        0,
+        1,
         5,
         "Which of the following is not a type of cache miss?",
         2,
@@ -388,7 +388,7 @@ INSERT INTO Question
 VALUES (
         "1",
         "CZ3002 Subquest 1",
-        0,
+        1,
         5,
         "Which of the following is not a testing strategy?",
         1,
@@ -401,7 +401,7 @@ INSERT INTO Question
 VALUES (
         "2",
         "CZ3003 Subquest 1",
-        0,
+        1,
         5,
         "Which of the following is not an architectural style?",
         4,
@@ -410,14 +410,26 @@ VALUES (
         "Client-Server",
         "Message Stacks"
     );
-/* CZ2006 Subquest 1, 5 questions, 3 difficulty each */
+
+
+
+
+
+
+
+
+
+
+
+
+
 INSERT INTO Question
 VALUES (
         "3",
         "CZ2006 Subquest 1",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 1, Easy Question. Answer is 1",
+        "CZ2006 Subquest 1, Hard Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -428,9 +440,9 @@ INSERT INTO Question
 VALUES (
         "4",
         "CZ2006 Subquest 1",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 1, Easy Question.Answer is 2",
+        "CZ2006 Subquest 1, Hard Question.Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -441,9 +453,9 @@ INSERT INTO Question
 VALUES (
         "5",
         "CZ2006 Subquest 1",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 1, Easy Question. Answer is 3",
+        "CZ2006 Subquest 1, Hard Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -454,9 +466,9 @@ INSERT INTO Question
 VALUES (
         "6",
         "CZ2006 Subquest 1",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 1, Easy Question. Answer is 4",
+        "CZ2006 Subquest 1, Hard Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -469,7 +481,7 @@ VALUES (
         "CZ2006 Subquest 1",
         1,
         5,
-        "CZ2006 Subquest 1, Medium Question. Answer is 1",
+        "CZ2006 Subquest 1, Easy Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -482,7 +494,7 @@ VALUES (
         "CZ2006 Subquest 1",
         1,
         5,
-        "CZ2006 Subquest 1, Medium Question. Answer is 2",
+        "CZ2006 Subquest 1, Easy Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -495,7 +507,7 @@ VALUES (
         "CZ2006 Subquest 1",
         1,
         5,
-        "CZ2006 Subquest 1, Medium Question. Answer is 3",
+        "CZ2006 Subquest 1, Easy Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -508,7 +520,7 @@ VALUES (
         "CZ2006 Subquest 1",
         1,
         5,
-        "CZ2006 Subquest 1, Medium Question. Answer is 4",
+        "CZ2006 Subquest 1, Easy Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -521,7 +533,7 @@ VALUES (
         "CZ2006 Subquest 1",
         2,
         5,
-        "CZ2006 Subquest 1, Hard Question. Answer is 1",
+        "CZ2006 Subquest 1, Medium Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -534,7 +546,7 @@ VALUES (
         "CZ2006 Subquest 1",
         2,
         5,
-        "CZ2006 Subquest 1, Hard Question. Answer is 2",
+        "CZ2006 Subquest 1, Medium Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -547,7 +559,7 @@ VALUES (
         "CZ2006 Subquest 1",
         2,
         5,
-        "CZ2006 Subquest 1, Hard Question. Answer is 3",
+        "CZ2006 Subquest 1, Medium Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -560,7 +572,7 @@ VALUES (
         "CZ2006 Subquest 1",
         2,
         5,
-        "CZ2006 Subquest 1, Hard Question. Answer is 4",
+        "CZ2006 Subquest 1, Medium Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -571,9 +583,9 @@ INSERT INTO Question
 VALUES (
         "15",
         "CZ2006 Subquest 1",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 1, Easy Question. Answer is 4",
+        "CZ2006 Subquest 1, Hard Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -586,7 +598,7 @@ VALUES (
         "CZ2006 Subquest 1",
         1,
         5,
-        "CZ2006 Subquest 1, Medium Question. Answer is 4",
+        "CZ2006 Subquest 1, Easy Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -599,7 +611,7 @@ VALUES (
         "CZ2006 Subquest 1",
         2,
         5,
-        "CZ2006 Subquest 1, Hard Question. Answer is 4",
+        "CZ2006 Subquest 1, Medium Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -610,9 +622,9 @@ INSERT INTO Question
 VALUES (
         "1113",
         "CZ2006 Subquest 2",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 2, Easy Question. Answer is 1",
+        "CZ2006 Subquest 2, Hard Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -623,9 +635,9 @@ INSERT INTO Question
 VALUES (
         "1114",
         "CZ2006 Subquest 2",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 2, Easy Question.Answer is 2",
+        "CZ2006 Subquest 2, Hard Question.Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -636,9 +648,9 @@ INSERT INTO Question
 VALUES (
         "1115",
         "CZ2006 Subquest 2",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 2, Easy Question. Answer is 3",
+        "CZ2006 Subquest 2, Hard Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -649,9 +661,9 @@ INSERT INTO Question
 VALUES (
         "1116",
         "CZ2006 Subquest 2",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 2, Easy Question. Answer is 4",
+        "CZ2006 Subquest 2, Hard Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -664,7 +676,7 @@ VALUES (
         "CZ2006 Subquest 2",
         1,
         5,
-        "CZ2006 Subquest 2, Medium Question. Answer is 1",
+        "CZ2006 Subquest 2, Easy Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -677,7 +689,7 @@ VALUES (
         "CZ2006 Subquest 2",
         1,
         5,
-        "CZ2006 Subquest 2, Medium Question. Answer is 2",
+        "CZ2006 Subquest 2, Easy Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -690,7 +702,7 @@ VALUES (
         "CZ2006 Subquest 2",
         1,
         5,
-        "CZ2006 Subquest 2, Medium Question. Answer is 3",
+        "CZ2006 Subquest 2, Easy Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -703,7 +715,7 @@ VALUES (
         "CZ2006 Subquest 2",
         1,
         5,
-        "CZ2006 Subquest 2, Medium Question. Answer is 4",
+        "CZ2006 Subquest 2, Easy Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -716,7 +728,7 @@ VALUES (
         "CZ2006 Subquest 2",
         2,
         5,
-        "CZ2006 Subquest 2, Hard Question. Answer is 1",
+        "CZ2006 Subquest 2, Medium Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -729,7 +741,7 @@ VALUES (
         "CZ2006 Subquest 2",
         2,
         5,
-        "CZ2006 Subquest 2, Hard Question. Answer is 2",
+        "CZ2006 Subquest 2, Medium Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -742,7 +754,7 @@ VALUES (
         "CZ2006 Subquest 2",
         2,
         5,
-        "CZ2006 Subquest 2, Hard Question. Answer is 3",
+        "CZ2006 Subquest 2, Medium Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -755,7 +767,7 @@ VALUES (
         "CZ2006 Subquest 2",
         2,
         5,
-        "CZ2006 Subquest 2, Hard Question. Answer is 4",
+        "CZ2006 Subquest 2, Medium Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -766,9 +778,9 @@ INSERT INTO Question
 VALUES (
         "115",
         "CZ2006 Subquest 2",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 2, Easy Question. Answer is 4",
+        "CZ2006 Subquest 2, Hard Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -781,7 +793,7 @@ VALUES (
         "CZ2006 Subquest 2",
         1,
         5,
-        "CZ2006 Subquest 2, Medium Question. Answer is 4",
+        "CZ2006 Subquest 2, Easy Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -794,7 +806,7 @@ VALUES (
         "CZ2006 Subquest 2",
         2,
         5,
-        "CZ2006 Subquest 2, Hard Question. Answer is 4",
+        "CZ2006 Subquest 2, Medium Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -805,9 +817,9 @@ INSERT INTO Question
 VALUES (
         "2223",
         "CZ2006 Subquest 3",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 3, Easy Question. Answer is 1",
+        "CZ2006 Subquest 3, Hard Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -818,9 +830,9 @@ INSERT INTO Question
 VALUES (
         "2224",
         "CZ2006 Subquest 3",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 3, Easy Question.Answer is 2",
+        "CZ2006 Subquest 3, Hard Question.Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -831,9 +843,9 @@ INSERT INTO Question
 VALUES (
         "2225",
         "CZ2006 Subquest 3",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 3, Easy Question. Answer is 3",
+        "CZ2006 Subquest 3, Hard Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -844,9 +856,9 @@ INSERT INTO Question
 VALUES (
         "2226",
         "CZ2006 Subquest 3",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 3, Easy Question. Answer is 4",
+        "CZ2006 Subquest 3, Hard Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -859,7 +871,7 @@ VALUES (
         "CZ2006 Subquest 3",
         1,
         5,
-        "CZ2006 Subquest 3, Medium Question. Answer is 1",
+        "CZ2006 Subquest 3, Easy Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -872,7 +884,7 @@ VALUES (
         "CZ2006 Subquest 3",
         1,
         5,
-        "CZ2006 Subquest 3, Medium Question. Answer is 2",
+        "CZ2006 Subquest 3, Easy Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -885,7 +897,7 @@ VALUES (
         "CZ2006 Subquest 3",
         1,
         5,
-        "CZ2006 Subquest 3, Medium Question. Answer is 3",
+        "CZ2006 Subquest 3, Easy Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -898,7 +910,7 @@ VALUES (
         "CZ2006 Subquest 3",
         1,
         5,
-        "CZ2006 Subquest 3, Medium Question. Answer is 4",
+        "CZ2006 Subquest 3, Easy Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -911,7 +923,7 @@ VALUES (
         "CZ2006 Subquest 3",
         2,
         5,
-        "CZ2006 Subquest 3, Hard Question. Answer is 1",
+        "CZ2006 Subquest 3, Medium Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -924,7 +936,7 @@ VALUES (
         "CZ2006 Subquest 3",
         2,
         5,
-        "CZ2006 Subquest 3, Hard Question. Answer is 2",
+        "CZ2006 Subquest 3, Medium Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -937,7 +949,7 @@ VALUES (
         "CZ2006 Subquest 3",
         2,
         5,
-        "CZ2006 Subquest 3, Hard Question. Answer is 3",
+        "CZ2006 Subquest 3, Medium Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -950,7 +962,7 @@ VALUES (
         "CZ2006 Subquest 3",
         2,
         5,
-        "CZ2006 Subquest 3, Hard Question. Answer is 4",
+        "CZ2006 Subquest 3, Medium Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -961,9 +973,9 @@ INSERT INTO Question
 VALUES (
         "225",
         "CZ2006 Subquest 3",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 3, Easy Question. Answer is 4",
+        "CZ2006 Subquest 3, Hard Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -976,7 +988,7 @@ VALUES (
         "CZ2006 Subquest 3",
         1,
         5,
-        "CZ2006 Subquest 3, Medium Question. Answer is 4",
+        "CZ2006 Subquest 3, Easy Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -989,7 +1001,7 @@ VALUES (
         "CZ2006 Subquest 3",
         2,
         5,
-        "CZ2006 Subquest 3, Hard Question. Answer is 4",
+        "CZ2006 Subquest 3, Medium Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -1000,9 +1012,9 @@ INSERT INTO Question
 VALUES (
         "4443",
         "CZ2006 Subquest 4",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 4, Easy Question. Answer is 1",
+        "CZ2006 Subquest 4, Hard Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -1013,9 +1025,9 @@ INSERT INTO Question
 VALUES (
         "4444",
         "CZ2006 Subquest 4",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 4, Easy Question.Answer is 2",
+        "CZ2006 Subquest 4, Hard Question.Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -1026,9 +1038,9 @@ INSERT INTO Question
 VALUES (
         "4445",
         "CZ2006 Subquest 4",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 4, Easy Question. Answer is 3",
+        "CZ2006 Subquest 4, Hard Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -1039,9 +1051,9 @@ INSERT INTO Question
 VALUES (
         "4446",
         "CZ2006 Subquest 4",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 4, Easy Question. Answer is 4",
+        "CZ2006 Subquest 4, Hard Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -1054,7 +1066,7 @@ VALUES (
         "CZ2006 Subquest 4",
         1,
         5,
-        "CZ2006 Subquest 4, Medium Question. Answer is 1",
+        "CZ2006 Subquest 4, Easy Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -1067,7 +1079,7 @@ VALUES (
         "CZ2006 Subquest 4",
         1,
         5,
-        "CZ2006 Subquest 4, Medium Question. Answer is 2",
+        "CZ2006 Subquest 4, Easy Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -1080,7 +1092,7 @@ VALUES (
         "CZ2006 Subquest 4",
         1,
         5,
-        "CZ2006 Subquest 4, Medium Question. Answer is 3",
+        "CZ2006 Subquest 4, Easy Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -1093,7 +1105,7 @@ VALUES (
         "CZ2006 Subquest 4",
         1,
         5,
-        "CZ2006 Subquest 4, Medium Question. Answer is 4",
+        "CZ2006 Subquest 4, Easy Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -1106,7 +1118,7 @@ VALUES (
         "CZ2006 Subquest 4",
         2,
         5,
-        "CZ2006 Subquest 4, Hard Question. Answer is 1",
+        "CZ2006 Subquest 4, Medium Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -1119,7 +1131,7 @@ VALUES (
         "CZ2006 Subquest 4",
         2,
         5,
-        "CZ2006 Subquest 4, Hard Question. Answer is 2",
+        "CZ2006 Subquest 4, Medium Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -1132,7 +1144,7 @@ VALUES (
         "CZ2006 Subquest 4",
         2,
         5,
-        "CZ2006 Subquest 4, Hard Question. Answer is 3",
+        "CZ2006 Subquest 4, Medium Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -1145,7 +1157,7 @@ VALUES (
         "CZ2006 Subquest 4",
         2,
         5,
-        "CZ2006 Subquest 4, Hard Question. Answer is 4",
+        "CZ2006 Subquest 4, Medium Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -1156,9 +1168,9 @@ INSERT INTO Question
 VALUES (
         "445",
         "CZ2006 Subquest 4",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 4, Easy Question. Answer is 4",
+        "CZ2006 Subquest 4, Hard Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -1171,7 +1183,7 @@ VALUES (
         "CZ2006 Subquest 4",
         1,
         5,
-        "CZ2006 Subquest 4, Medium Question. Answer is 4",
+        "CZ2006 Subquest 4, Easy Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -1184,7 +1196,7 @@ VALUES (
         "CZ2006 Subquest 4",
         2,
         5,
-        "CZ2006 Subquest 4, Hard Question. Answer is 4",
+        "CZ2006 Subquest 4, Medium Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -1195,9 +1207,9 @@ INSERT INTO Question
 VALUES (
         "3333",
         "CZ2006 Subquest 5",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 5, Easy Question. Answer is 1",
+        "CZ2006 Subquest 5, Hard Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -1208,9 +1220,9 @@ INSERT INTO Question
 VALUES (
         "3334",
         "CZ2006 Subquest 5",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 5, Easy Question.Answer is 2",
+        "CZ2006 Subquest 5, Hard Question.Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -1221,9 +1233,9 @@ INSERT INTO Question
 VALUES (
         "3335",
         "CZ2006 Subquest 5",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 5, Easy Question. Answer is 3",
+        "CZ2006 Subquest 5, Hard Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -1234,9 +1246,9 @@ INSERT INTO Question
 VALUES (
         "3336",
         "CZ2006 Subquest 5",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 5, Easy Question. Answer is 4",
+        "CZ2006 Subquest 5, Hard Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -1249,7 +1261,7 @@ VALUES (
         "CZ2006 Subquest 5",
         1,
         5,
-        "CZ2006 Subquest 5, Medium Question. Answer is 1",
+        "CZ2006 Subquest 5, Easy Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -1262,7 +1274,7 @@ VALUES (
         "CZ2006 Subquest 5",
         1,
         5,
-        "CZ2006 Subquest 5, Medium Question. Answer is 2",
+        "CZ2006 Subquest 5, Easy Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -1275,7 +1287,7 @@ VALUES (
         "CZ2006 Subquest 5",
         1,
         5,
-        "CZ2006 Subquest 5, Medium Question. Answer is 3",
+        "CZ2006 Subquest 5, Easy Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -1288,7 +1300,7 @@ VALUES (
         "CZ2006 Subquest 5",
         1,
         5,
-        "CZ2006 Subquest 5, Medium Question. Answer is 4",
+        "CZ2006 Subquest 5, Easy Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -1301,7 +1313,7 @@ VALUES (
         "CZ2006 Subquest 5",
         2,
         5,
-        "CZ2006 Subquest 5, Hard Question. Answer is 1",
+        "CZ2006 Subquest 5, Medium Question. Answer is 1",
         1,
         "Pipe-and-filter",
         "Layered",
@@ -1314,7 +1326,7 @@ VALUES (
         "CZ2006 Subquest 5",
         2,
         5,
-        "CZ2006 Subquest 5, Hard Question. Answer is 2",
+        "CZ2006 Subquest 5, Medium Question. Answer is 2",
         2,
         "Pipe-and-filter",
         "Layered",
@@ -1327,7 +1339,7 @@ VALUES (
         "CZ2006 Subquest 5",
         2,
         5,
-        "CZ2006 Subquest 5, Hard Question. Answer is 3",
+        "CZ2006 Subquest 5, Medium Question. Answer is 3",
         3,
         "Pipe-and-filter",
         "Layered",
@@ -1340,7 +1352,7 @@ VALUES (
         "CZ2006 Subquest 5",
         2,
         5,
-        "CZ2006 Subquest 5, Hard Question. Answer is 4",
+        "CZ2006 Subquest 5, Medium Question. Answer is 4",
         4,
         "Pipe-and-filter",
         "Layered",
@@ -1351,9 +1363,9 @@ INSERT INTO Question
 VALUES (
         "335",
         "CZ2006 Subquest 5",
-        0,
+        3,
         5,
-        "CZ2006 Subquest 5, Easy Question. Answer is 4",
+        "CZ2006 Subquest 5, Hard Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -1366,7 +1378,7 @@ VALUES (
         "CZ2006 Subquest 5",
         1,
         5,
-        "CZ2006 Subquest 5, Medium Question. Answer is 4",
+        "CZ2006 Subquest 5, Easy Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
@@ -1379,13 +1391,1051 @@ VALUES (
         "CZ2006 Subquest 5",
         2,
         5,
-        "CZ2006 Subquest 5, Hard Question. Answer is 4",
+        "CZ2006 Subquest 5, Medium Question. Answer is 4",
         4,
         "Lorem Ipsum",
         "expedita distinctio",
         "maiores alias consequatur",
         "tenetur a sapiente"
     );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO Question
+VALUES (
+        "32323",
+        "CZ2006 Subquest 6",
+        3,
+        5,
+        "CZ2006 Subquest 6, Hard Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "42323",
+        "CZ2006 Subquest 6",
+        3,
+        5,
+        "CZ2006 Subquest 6, Hard Question.Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "52323",
+        "CZ2006 Subquest 6",
+        3,
+        5,
+        "CZ2006 Subquest 6, Hard Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "62323",
+        "CZ2006 Subquest 6",
+        3,
+        5,
+        "CZ2006 Subquest 6, Hard Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "72323",
+        "CZ2006 Subquest 6",
+        1,
+        5,
+        "CZ2006 Subquest 6, Easy Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "82323",
+        "CZ2006 Subquest 6",
+        1,
+        5,
+        "CZ2006 Subquest 6, Easy Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "92323",
+        "CZ2006 Subquest 6",
+        1,
+        5,
+        "CZ2006 Subquest 6, Easy Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "102323",
+        "CZ2006 Subquest 6",
+        1,
+        5,
+        "CZ2006 Subquest 6, Easy Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "112323",
+        "CZ2006 Subquest 6",
+        2,
+        5,
+        "CZ2006 Subquest 6, Medium Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "122323",
+        "CZ2006 Subquest 6",
+        2,
+        5,
+        "CZ2006 Subquest 6, Medium Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "132323",
+        "CZ2006 Subquest 6",
+        2,
+        5,
+        "CZ2006 Subquest 6, Medium Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "142323",
+        "CZ2006 Subquest 6",
+        2,
+        5,
+        "CZ2006 Subquest 6, Medium Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "152323",
+        "CZ2006 Subquest 6",
+        3,
+        5,
+        "CZ2006 Subquest 6, Hard Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "162323",
+        "CZ2006 Subquest 6",
+        1,
+        5,
+        "CZ2006 Subquest 6, Easy Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "172323",
+        "CZ2006 Subquest 6",
+        2,
+        5,
+        "CZ2006 Subquest 6, Medium Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "11132323",
+        "CZ2006 Subquest 7",
+        3,
+        5,
+        "CZ2006 Subquest 7, Hard Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "11142323",
+        "CZ2006 Subquest 7",
+        3,
+        5,
+        "CZ2006 Subquest 7, Hard Question.Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "11152323",
+        "CZ2006 Subquest 7",
+        3,
+        5,
+        "CZ2006 Subquest 7, Hard Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "11162323",
+        "CZ2006 Subquest 7",
+        3,
+        5,
+        "CZ2006 Subquest 7, Hard Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "11172323",
+        "CZ2006 Subquest 7",
+        1,
+        5,
+        "CZ2006 Subquest 7, Easy Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "11182323",
+        "CZ2006 Subquest 7",
+        1,
+        5,
+        "CZ2006 Subquest 7, Easy Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "11192323",
+        "CZ2006 Subquest 7",
+        1,
+        5,
+        "CZ2006 Subquest 7, Easy Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "1102323",
+        "CZ2006 Subquest 7",
+        1,
+        5,
+        "CZ2006 Subquest 7, Easy Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "1112323",
+        "CZ2006 Subquest 7",
+        2,
+        5,
+        "CZ2006 Subquest 7, Medium Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "1122323",
+        "CZ2006 Subquest 7",
+        2,
+        5,
+        "CZ2006 Subquest 7, Medium Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "1132323",
+        "CZ2006 Subquest 7",
+        2,
+        5,
+        "CZ2006 Subquest 7, Medium Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "1142323",
+        "CZ2006 Subquest 7",
+        2,
+        5,
+        "CZ2006 Subquest 7, Medium Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "1152323",
+        "CZ2006 Subquest 7",
+        3,
+        5,
+        "CZ2006 Subquest 7, Hard Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "1162323",
+        "CZ2006 Subquest 7",
+        1,
+        5,
+        "CZ2006 Subquest 7, Easy Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "1172323",
+        "CZ2006 Subquest 7",
+        2,
+        5,
+        "CZ2006 Subquest 7, Medium Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "22232323",
+        "CZ2006 Subquest 8",
+        3,
+        5,
+        "CZ2006 Subquest 8, Hard Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "22242323",
+        "CZ2006 Subquest 8",
+        3,
+        5,
+        "CZ2006 Subquest 8, Hard Question.Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "22252323",
+        "CZ2006 Subquest 8",
+        3,
+        5,
+        "CZ2006 Subquest 8, Hard Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "22262323",
+        "CZ2006 Subquest 8",
+        3,
+        5,
+        "CZ2006 Subquest 8, Hard Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "22272323",
+        "CZ2006 Subquest 8",
+        1,
+        5,
+        "CZ2006 Subquest 8, Easy Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "22282323",
+        "CZ2006 Subquest 8",
+        1,
+        5,
+        "CZ2006 Subquest 8, Easy Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "22292323",
+        "CZ2006 Subquest 8",
+        1,
+        5,
+        "CZ2006 Subquest 8, Easy Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "2202323",
+        "CZ2006 Subquest 8",
+        1,
+        5,
+        "CZ2006 Subquest 8, Easy Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "2212323",
+        "CZ2006 Subquest 8",
+        2,
+        5,
+        "CZ2006 Subquest 8, Medium Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "2222323",
+        "CZ2006 Subquest 8",
+        2,
+        5,
+        "CZ2006 Subquest 8, Medium Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "2232323",
+        "CZ2006 Subquest 8",
+        2,
+        5,
+        "CZ2006 Subquest 8, Medium Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "2242323",
+        "CZ2006 Subquest 8",
+        2,
+        5,
+        "CZ2006 Subquest 8, Medium Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "2252323",
+        "CZ2006 Subquest 8",
+        3,
+        5,
+        "CZ2006 Subquest 8, Hard Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "2262323",
+        "CZ2006 Subquest 8",
+        1,
+        5,
+        "CZ2006 Subquest 8, Eay Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "2272323",
+        "CZ2006 Subquest 8",
+        2,
+        5,
+        "CZ2006 Subquest 8, Medium Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "44432323",
+        "CZ2006 Subquest 9",
+        3,
+        5,
+        "CZ2006 Subquest 9, Hard Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "44442323",
+        "CZ2006 Subquest 9",
+        3,
+        5,
+        "CZ2006 Subquest 9, Hard Question.Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "44452323",
+        "CZ2006 Subquest 9",
+        3,
+        5,
+        "CZ2006 Subquest 9, Hard Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "44462323",
+        "CZ2006 Subquest 9",
+        3,
+        5,
+        "CZ2006 Subquest 9, Hard Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "44472323",
+        "CZ2006 Subquest 9",
+        1,
+        5,
+        "CZ2006 Subquest 9, Easy Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "44482323",
+        "CZ2006 Subquest 9",
+        1,
+        5,
+        "CZ2006 Subquest 9, Easy Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "44492323",
+        "CZ2006 Subquest 9",
+        1,
+        5,
+        "CZ2006 Subquest 9, Easy Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "4402323",
+        "CZ2006 Subquest 9",
+        1,
+        5,
+        "CZ2006 Subquest 9, Easy Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "4412323",
+        "CZ2006 Subquest 9",
+        2,
+        5,
+        "CZ2006 Subquest 9, Medium Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "4422323",
+        "CZ2006 Subquest 9",
+        2,
+        5,
+        "CZ2006 Subquest 9, Medium Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "4432323",
+        "CZ2006 Subquest 9",
+        2,
+        5,
+        "CZ2006 Subquest 9, Medium Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "4442323",
+        "CZ2006 Subquest 9",
+        2,
+        5,
+        "CZ2006 Subquest 9, Medium Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "4452323",
+        "CZ2006 Subquest 9",
+        3,
+        5,
+        "CZ2006 Subquest 9, Hard Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "4462323",
+        "CZ2006 Subquest 9",
+        1,
+        5,
+        "CZ2006 Subquest 9, Easy Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "4472323",
+        "CZ2006 Subquest 9",
+        2,
+        5,
+        "CZ2006 Subquest 9, Medium Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "33332323",
+        "CZ2006 Subquest 10",
+        3,
+        5,
+        "CZ2006 Subquest 10, Hard Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "33342323",
+        "CZ2006 Subquest 10",
+        3,
+        5,
+        "CZ2006 Subquest 10, Hard Question.Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "33352323",
+        "CZ2006 Subquest 10",
+        3,
+        5,
+        "CZ2006 Subquest 10, Hard Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "33362323",
+        "CZ2006 Subquest 10",
+        3,
+        5,
+        "CZ2006 Subquest 10, Hard Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "33372323",
+        "CZ2006 Subquest 10",
+        1,
+        5,
+        "CZ2006 Subquest 10, Easy Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "33382323",
+        "CZ2006 Subquest 10",
+        1,
+        5,
+        "CZ2006 Subquest 10, Easy Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "33392323",
+        "CZ2006 Subquest 10",
+        1,
+        5,
+        "CZ2006 Subquest 10, Easy Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "3302323",
+        "CZ2006 Subquest 10",
+        1,
+        5,
+        "CZ2006 Subquest 10, Easy Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "3312323",
+        "CZ2006 Subquest 10",
+        2,
+        5,
+        "CZ2006 Subquest 10, Medium Question. Answer is 1",
+        1,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "3322323",
+        "CZ2006 Subquest 10",
+        2,
+        5,
+        "CZ2006 Subquest 10, Medium Question. Answer is 2",
+        2,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "3332323",
+        "CZ2006 Subquest 10",
+        2,
+        5,
+        "CZ2006 Subquest 10, Medium Question. Answer is 3",
+        3,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "3342323",
+        "CZ2006 Subquest 10",
+        2,
+        5,
+        "CZ2006 Subquest 10, Medium Question. Answer is 4",
+        4,
+        "Pipe-and-filter",
+        "Layered",
+        "Client-Server",
+        "Message Stacks"
+    );
+INSERT INTO Question
+VALUES (
+        "3352323",
+        "CZ2006 Subquest 10",
+        3,
+        5,
+        "CZ2006 Subquest 10, Hard Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "3362323",
+        "CZ2006 Subquest 10",
+        1,
+        5,
+        "CZ2006 Subquest 10, Easy Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+INSERT INTO Question
+VALUES (
+        "3372323",
+        "CZ2006 Subquest 10",
+        2,
+        5,
+        "CZ2006 Subquest 10, Medium Question. Answer is 4",
+        4,
+        "Lorem Ipsum",
+        "expedita distinctio",
+        "maiores alias consequatur",
+        "tenetur a sapiente"
+    );
+
+
+
+
+
 DELETE FROM Attempt;
 INSERT INTO Attempt
 VALUES (
