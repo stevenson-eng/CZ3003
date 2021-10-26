@@ -1,21 +1,57 @@
-===================== Starting Test: cicada-test-06ffd350 ======================
+===================== Starting Test: cicada-test-cbb0c82b ======================
 
---------------------------- Collected 1 Scenario(s) ----------------------------
+--------------------------- Collected 6 Scenario(s) ----------------------------
 
-------------- Started scenario: my_first_test (scenario-e103bb73) --------------
+------------- Started scenario: base_api_test (scenario-9f71262a) --------------
 
----------------------------- my_first_test: Passed -----------------------------
+------------- Started scenario: read_all_users (scenario-c0f60217) -------------
 
-Result: Passed!
+------- Started scenario: create_user_for_load_test (scenario-40bc55bb) --------
+
+---------------------------- base_api_test: Passed -----------------------------
+
+Result: Root API Test Passed!
 
 
------------------------- Finished running 1 Scenario(s) ------------------------
+---------------------- create_user_for_load_test: Failed -----------------------
+
+Exception: Timed out waiting for results
+
+
+--------------------- read_created_user_valid_test: Failed ---------------------
+
+Exception: Skipped
+
+
+----------------- read_created_user_test_invalid_test: Failed ------------------
+
+Exception: Skipped
+
+
+---------------------- delete_user_for_load_test: Failed -----------------------
+
+Exception: Skipped
+
+
+---------------------------- read_all_users: Passed ----------------------------
+
+Result: READ ALL Student API Test Passed!
+
+
+------------------------ Finished running 6 Scenario(s) ------------------------
 
 ================================ Test Complete =================================
 
 Passed:
 
-* my_first_test
+* base_api_test
+* read_all_users
+Failed:
 
-============================== 1 passed, 0 failed ==============================
+* create_user_for_load_test
+* read_created_user_valid_test
+* read_created_user_test_invalid_test
+* delete_user_for_load_test
+
+============================== 2 passed, 4 failed ==============================
 

@@ -19,4 +19,24 @@
 ### Cicadad (Cicada distributed)
 
 - first time `cicada-distributed start-cluster` takes damn long (looks like hanged but not)
+
 - running most command with `cicada-distributed` takes very long...
+
+- If there is any syntax error and stuff, load test will hang at:
+
+  - ```bash
+    (base) ernestang98@Ernests-MacBook-Pro load-test % cicada-distributed run
+    ======================= Starting Test: cicada-test-eb33c966 =======================
+    ```
+
+  - Tried to pull logs from docker containers but to no avail... hard to debug
+
+  - Ensure code has no syntax errors!
+
+
+
+### Relevant links used:
+
+- Python random string generator for CREATE requests
+  - https://www.educative.io/edpresso/how-to-generate-a-random-string-in-python
+  - https://stackoverflow.com/questions/2257441/random-string-generation-with-upper-case-letters-and-digits
