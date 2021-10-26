@@ -42,4 +42,3 @@
 
 4. !DANGEROUS - <ENSURE YOU ARE ON YOUR BRANCH - `git branch`> git push -f (to apply your commits AFTER all of master's commits)
 
-
